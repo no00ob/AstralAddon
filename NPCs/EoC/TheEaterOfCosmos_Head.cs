@@ -10,6 +10,7 @@ namespace AstralVoyage.NPCs.EoC
     [AutoloadBossHead]
     public class TheEaterOfCosmos_Head : ModNPC
     {
+        public bool expertAI;
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("The Eater Of Cosmos");
@@ -29,7 +30,7 @@ namespace AstralVoyage.NPCs.EoC
             npc.noTileCollide = true;        //this make the npc go thru walls
             npc.HitSound = SoundID.NPCHit4;
             npc.DeathSound = SoundID.NPCDeath14;
-            music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/boss2");
+            music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/bird_boss1");
             //music = MusicID.OverworldDay;
             npc.behindTiles = true;
             Main.npcFrameCount[npc.type] = 1;
@@ -52,6 +53,7 @@ namespace AstralVoyage.NPCs.EoC
             npc.buffImmune[BuffID.CursedInferno] = true;
             npc.buffImmune[BuffID.Confused] = true;
             npc.buffImmune[BuffID.Slow] = true;
+            expertAI = false;
         }
 
         public override void BossLoot(ref string name, ref int potionType)
@@ -64,6 +66,7 @@ namespace AstralVoyage.NPCs.EoC
         {
             npc.lifeMax = (int)(npc.lifeMax * 1.4f * bossLifeScale);  //boss life scale in expertmode
             npc.damage = (int)(npc.damage * 1.6f);  //boss damage increase in expermode
+            expertAI = true;
         }
 
         public static bool bossOn = false;
@@ -86,7 +89,7 @@ namespace AstralVoyage.NPCs.EoC
 
                     // Here we determine the length of the worm.
                     // In this case the worm will have a length of 10 to 14 body parts.
-                    int randomWormLength = Main.rand.Next(22, 34);
+                    int randomWormLength = Main.rand.Next(32, 44);
                     for (int i = 0; i < randomWormLength; ++i)
                     {
                         // We spawn a new NPC, setting latestNPC to the newer NPC, whilst also using that same variable

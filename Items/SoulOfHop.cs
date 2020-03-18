@@ -10,8 +10,8 @@ namespace AstralVoyage.Items
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Soul of Hop");
-            Tooltip.SetDefault("'The essence of jumping creatures'");
+            DisplayName.SetDefault("Soul of Delight");
+            Tooltip.SetDefault("'The essence of happy creatures'");
             // ticksperframe, frameCount
             Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(5, 4));
             ItemID.Sets.AnimatesAsSoul[item.type] = true;
