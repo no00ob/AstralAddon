@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8298EAB6-0586-4BDA-9483-83624B66B13A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NoobyMod2</RootNamespace>
+    <AssemblyName>NoobyMod2</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AstralVoyage.cs" />
+    <Compile Include="Items\Accessories\WorkerEmblem.cs" />
+    <Compile Include="Items\Ammo\BigWoodenBall.cs" />
+    <Compile Include="Items\Ammo\HolyBullet.cs" />
+    <Compile Include="Items\Ammo\JestersBullet.cs" />
+    <Compile Include="Items\Ammo\Magazine.cs" />
+    <Compile Include="Items\Ammo\WoodenBall.cs" />
+    <Compile Include="Items\Ammo\WoodenMagazine.cs" />
+    <Compile Include="Items\Armor\BetaTestVest.cs" />
+    <Compile Include="Items\Armor\TrueCrown.cs" />
+    <Compile Include="Items\Armor\WoodriteBreastplate.cs" />
+    <Compile Include="Items\Armor\WoodriteHelmet.cs" />
+    <Compile Include="Items\Armor\WoodriteLeggings.cs" />
+    <Compile Include="Items\BetaToken.cs" />
+    <Compile Include="Items\Ores\NobotetskiumBar.cs" />
+    <Compile Include="Items\Ores\NobotetskiumOre.cs" />
+    <Compile Include="Items\Summoners\CometCrystal.cs" />
+    <Compile Include="Items\Ores\AcorniteBar.cs" />
+    <Compile Include="Items\Ores\BrassBar.cs" />
+    <Compile Include="Items\Ores\BronzeBar.cs" />
+    <Compile Include="Items\Ores\DioxideBar.cs" />
+    <Compile Include="Items\Ores\DioxideOre.cs" />
+    <Compile Include="Items\Ores\MushmiteBar.cs" />
+    <Compile Include="Items\Ores\ShinyIronBar.cs" />
+    <Compile Include="Items\Ores\ShinyLeadBar.cs" />
+    <Compile Include="Items\Ores\UniversiteBar.cs" />
+    <Compile Include="Items\Ores\UniversiteOre.cs" />
+    <Compile Include="Items\Ores\WoodriteBar.cs" />
+    <Compile Include="Items\Ores\WoodriteOre.cs" />
+    <Compile Include="Items\Ores\ZincBar.cs" />
+    <Compile Include="Items\Ores\ZincOre.cs" />
+    <Compile Include="Items\Plastic.cs" />
+    <Compile Include="Items\Polish.cs" />
+    <Compile Include="Items\Rag.cs" />
+    <Compile Include="Items\CosmosFragment.cs" />
+    <Compile Include="Items\Sapling.cs" />
+    <Compile Include="Items\SoulOfHop.cs" />
+    <Compile Include="Items\Summoners\BlackholeCrystal.cs" />
+    <Compile Include="Items\Summoners\WormholeCrystal.cs" />
+    <Compile Include="Items\Summoners\SuspiciousLookingSprout.cs" />
+    <Compile Include="Items\Tools\BrassHammer.cs" />
+    <Compile Include="Items\Tools\CrimstoneAxe.cs" />
+    <Compile Include="Items\Tools\CrimstoneHammer.cs" />
+    <Compile Include="Items\Tools\CrimstonePickaxe.cs" />
+    <Compile Include="Items\Tools\DirtAxe.cs" />
+    <Compile Include="Items\Tools\DirtHammer.cs" />
+    <Compile Include="Items\Tools\DirtPickaxe.cs" />
+    <Compile Include="Items\Tools\EbonstoneAxe.cs" />
+    <Compile Include="Items\Tools\EbonstoneHammer.cs" />
+    <Compile Include="Items\Tools\EbonstonePickaxe.cs" />
+    <Compile Include="Items\Tools\IceAxe.cs" />
+    <Compile Include="Items\Tools\IceHammer.cs" />
+    <Compile Include="Items\Tools\IcePickaxe.cs" />
+    <Compile Include="Items\Tools\MudAxe.cs" />
+    <Compile Include="Items\Tools\MudHammer.cs" />
+    <Compile Include="Items\Tools\MudPickaxe.cs" />
+    <Compile Include="Items\Tools\RustyShovel.cs" />
+    <Compile Include="Items\Tools\SandAxe.cs" />
+    <Compile Include="Items\Tools\SandHammer.cs" />
+    <Compile Include="Items\Tools\SandPickaxe.cs" />
+    <Compile Include="Items\Tools\SandstoneAxe.cs" />
+    <Compile Include="Items\Tools\SandstoneHammer.cs" />
+    <Compile Include="Items\Tools\SandstonePickaxe.cs" />
+    <Compile Include="Items\Tools\SnowAxe.cs" />
+    <Compile Include="Items\Tools\SnowHammer.cs" />
+    <Compile Include="Items\Tools\SnowPickaxe.cs" />
+    <Compile Include="Items\Tools\StoneAxe.cs" />
+    <Compile Include="Items\Tools\StoneHammer.cs" />
+    <Compile Include="Items\Tools\StonePickaxe.cs" />
+    <Compile Include="Items\Tools\WoodenAxe.cs" />
+    <Compile Include="Items\Tools\WoodenPickaxe.cs" />
+    <Compile Include="Items\Weapons\AssaultRifle.cs" />
+    <Compile Include="Items\Weapons\AutomaticShotgun.cs" />
+    <Compile Include="Items\Weapons\BladeOfCosmos.cs" />
+    <Compile Include="Items\Weapons\BladeOfPlants.cs" />
+    <Compile Include="Items\Weapons\BrassSickle.cs" />
+    <Compile Include="Items\Weapons\BunnyBlade.cs" />
+    <Compile Include="Items\Weapons\CrimstoneBow.cs" />
+    <Compile Include="Items\Weapons\CrimstoneShortsword.cs" />
+    <Compile Include="Items\Weapons\CrimstoneSword.cs" />
+    <Compile Include="Items\Weapons\DirtBow.cs" />
+    <Compile Include="Items\Weapons\DirtSword.cs" />
+    <Compile Include="Items\Weapons\EbonstoneBow.cs" />
+    <Compile Include="Items\Weapons\EbonstoneShortsword.cs" />
+    <Compile Include="Items\Weapons\EbonstoneSword.cs" />
+    <Compile Include="Items\Weapons\ElementalBlade.cs" />
+    <Compile Include="Items\Weapons\Flaren.cs" />
+    <Compile Include="Items\Weapons\HeroSword.cs" />
+    <Compile Include="Items\Weapons\IceBow.cs" />
+    <Compile Include="Items\Weapons\IceShortsword.cs" />
+    <Compile Include="Items\Weapons\IceSword.cs" />
+    <Compile Include="Items\Weapons\LeafBlade.cs" />
+    <Compile Include="Items\Weapons\MudBow.cs" />
+    <Compile Include="Items\Weapons\MudSword.cs" />
+    <Compile Include="Items\Weapons\OPTerraBlade.cs" />
+    <Compile Include="Items\Weapons\SandBow.cs" />
+    <Compile Include="Items\Weapons\SandstoneShortsword.cs" />
+    <Compile Include="Items\Weapons\SandstoneSword.cs" />
+    <Compile Include="Items\Weapons\Sandstone_ShortSword.cs" />
+    <Compile Include="Items\Weapons\SandSword.cs" />
+    <Compile Include="Items\Weapons\SnowBow.cs" />
+    <Compile Include="Items\Weapons\SnowSword.cs" />
+    <Compile Include="Items\Weapons\Stick.cs" />
+    <Compile Include="Items\Weapons\StoneBow.cs" />
+    <Compile Include="Items\Weapons\StoneShortsword.cs" />
+    <Compile Include="Items\Weapons\StoneSword.cs" />
+    <Compile Include="Items\Weapons\TheLostSword.cs" />
+    <Compile Include="Items\Weapons\TrueTerraBlade.cs" />
+    <Compile Include="Items\Weapons\WoodenAssaultRifle.cs" />
+    <Compile Include="Items\Weapons\WoodenCannon.cs" />
+    <Compile Include="Items\Weapons\WoodenLauncher.cs" />
+    <Compile Include="Items\Weapons\WoodenMinigun.cs" />
+    <Compile Include="Items\Weapons\WoodenPistol.cs" />
+    <Compile Include="Items\Weapons\WoodenRifle.cs" />
+    <Compile Include="Items\Weapons\WoodenShortsword.cs" />
+    <Compile Include="MyPlayer.cs" />
+    <Compile Include="MyWorld.cs" />
+    <Compile Include="NPCs\CosmosDrone.cs" />
+    <Compile Include="NPCs\EoC2\EyeOfCosmos.cs" />
+    <Compile Include="NPCs\EoC\TheEaterOfCosmos_Body.cs" />
+    <Compile Include="NPCs\EoC\TheEaterOfCosmos_Head.cs" />
+    <Compile Include="NPCs\EoC\TheEaterOfCosmos_Tail.cs" />
+    <Compile Include="NPCs\GoC\GuardianOfCosmos.cs" />
+    <Compile Include="NPCs\LT\LivingTree.cs" />
+    <Compile Include="NPCs\NpcDrops.cs" />
+    <Compile Include="NPCs\Worm.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Projectiles\BigWoodenBallBullet.cs" />
+    <Compile Include="Projectiles\BunnyBladeProjectile.cs" />
+    <Compile Include="Projectiles\CosmicLaser.cs" />
+    <Compile Include="Projectiles\CosmosBladeProjectile.cs" />
+    <Compile Include="Projectiles\ElementalSickle.cs" />
+    <Compile Include="Projectiles\HeroSwordProjectile.cs" />
+    <Compile Include="Projectiles\JestersBulletBullet.cs" />
+    <Compile Include="Projectiles\HolyBulletBullet.cs" />
+    <Compile Include="Projectiles\LeafBladeProjectile.cs" />
+    <Compile Include="Projectiles\LivingTreeProjectile.cs" />
+    <Compile Include="Projectiles\MagazineBullet.cs" />
+    <Compile Include="Projectiles\TheLostSwordProjectile.cs" />
+    <Compile Include="Projectiles\TrueTerraBladeSickle.cs" />
+    <Compile Include="Projectiles\WoodenBallBullet.cs" />
+    <Compile Include="Projectiles\WoodenMagazineBullet.cs" />
+    <Compile Include="Tiles\AnimatedLoom.cs" />
+    <Compile Include="Tiles\WoodriteOreBlock.cs" />
+    <Compile Include="Tiles\ZincOreBlock.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_32\Microsoft.Xna.Framework\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_32\Microsoft.Xna.Framework.Game\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Game.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_32\Microsoft.Xna.Framework.Graphics\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Graphics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Xact, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_32\Microsoft.Xna.Framework.Xact\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Xact.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="Terraria">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\terraria\Terraria.exe</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Buffs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sounds\Music\boss2.mp3" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>"C:\Program Files (x86)\Steam\steamapps\common\terraria\Terraria.exe" -build "$(ProjectDir)\" -eac "$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

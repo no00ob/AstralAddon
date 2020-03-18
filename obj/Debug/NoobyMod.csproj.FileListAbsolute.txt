@@ -1,0 +1,10 @@
+C:\Users\Aki\Documents\My Games\Terraria\ModLoader\Mod Sources\NoobyMod\obj\Debug\NoobyMod.csprojResolveAssemblyReference.cache
+C:\Users\Aki\Documents\My Games\Terraria\ModLoader\Mod Sources\NoobyMod\bin\Debug\NoobyMod2.dll
+C:\Users\Aki\Documents\My Games\Terraria\ModLoader\Mod Sources\NoobyMod\bin\Debug\NoobyMod2.pdb
+C:\Users\Aki\Documents\My Games\Terraria\ModLoader\Mod Sources\NoobyMod\bin\Debug\Microsoft.Xna.Framework.dll
+C:\Users\Aki\Documents\My Games\Terraria\ModLoader\Mod Sources\NoobyMod\bin\Debug\Microsoft.Xna.Framework.Game.dll
+C:\Users\Aki\Documents\My Games\Terraria\ModLoader\Mod Sources\NoobyMod\bin\Debug\Microsoft.Xna.Framework.Graphics.dll
+C:\Users\Aki\Documents\My Games\Terraria\ModLoader\Mod Sources\NoobyMod\bin\Debug\Microsoft.Xna.Framework.Xact.dll
+C:\Users\Aki\Documents\My Games\Terraria\ModLoader\Mod Sources\NoobyMod\bin\Debug\Terraria.exe
+C:\Users\Aki\Documents\My Games\Terraria\ModLoader\Mod Sources\NoobyMod\obj\Debug\NoobyMod2.dll
+C:\Users\Aki\Documents\My Games\Terraria\ModLoader\Mod Sources\NoobyMod\obj\Debug\NoobyMod2.pdb

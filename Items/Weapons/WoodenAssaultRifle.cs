@@ -1,0 +1,43 @@
+﻿using Terraria.ID;
+using Terraria.ModLoader;
+
+namespace AstralVoyage.Items.Weapons
+{
+    public class WoodenAssaultRifle : ModItem
+    {
+        public override void SetStaticDefaults()
+        {
+            Tooltip.SetDefault("'This is a Assault rifle made out of a wood'");  //The (English) text shown below your weapon's name
+        }
+
+        public override void SetDefaults()
+        {
+            item.damage = 6;
+            item.ranged = true;
+            item.width = 58;
+            item.height = 22;;
+            item.useTime = 24;
+            item.useAnimation = 24;
+            item.useStyle = 5;
+            item.noMelee = true; //so the item's animation doesn't do damage
+            item.knockBack = 4;
+            item.value = 1000;
+            item.rare = 1;
+            item.UseSound = SoundID.Item11;
+            item.autoReuse = true;
+            item.shoot = 10; //idk why but all the guns in the vanilla source have this
+            item.shootSpeed = 8f;
+            item.useAmmo = AmmoID.Bullet;
+        }
+
+        public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddRecipeGroup("Wood", 10);
+            recipe.AddIngredient(ItemID.Acorn, 8);
+            recipe.AddTile(TileID.WorkBenches);
+            recipe.SetResult(this);
+            recipe.AddRecipe();
+        }
+    }
+}
