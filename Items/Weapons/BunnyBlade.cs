@@ -7,7 +7,8 @@ namespace AstralVoyage.Items.Weapons
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'This is a ancient bunny sword'");  //The (English) text shown below your weapon's name
+            DisplayName.SetDefault("Rabbit's Rage");
+            Tooltip.SetDefault("'This is an ancient sword inbued with wraith of the rabbits'");  //The (English) text shown below your weapon's name
         }
 
         public override void SetDefaults()
@@ -31,7 +32,7 @@ namespace AstralVoyage.Items.Weapons
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.StoneBlock, 1);
+            recipe.AddIngredient(ItemID.SoulofMight, 1);
             recipe.AddTile(TileID.WorkBenches);
             recipe.SetResult(this);
             recipe.AddRecipe();
