@@ -110,6 +110,7 @@
     <Compile Include="Items\Weapons\BladeOfPlants.cs" />
     <Compile Include="Items\Weapons\BrassSickle.cs" />
     <Compile Include="Items\Weapons\BunnyBlade.cs" />
+    <Compile Include="Items\Weapons\CosmicPhotonBlade.cs" />
     <Compile Include="Items\Weapons\CrimstoneBow.cs" />
     <Compile Include="Items\Weapons\CrimstoneShortsword.cs" />
     <Compile Include="Items\Weapons\CrimstoneSword.cs" />
