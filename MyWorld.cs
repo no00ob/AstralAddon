@@ -16,6 +16,7 @@ namespace AstralVoyage
         public static bool downedLivingTree; // Bool if this boss has been taken down.
         public static bool downedEyeOfCosmos; // Bool if this boss has been taken down.
         public static bool downedGuardianOfCosmos; // Bool if this boss has been taken down.
+        public static bool downedVoyager;
 
 
         public static bool spawnOre = false;
@@ -26,6 +27,7 @@ namespace AstralVoyage
             downedLivingTree = false;
             downedEyeOfCosmos = false;
             downedGuardianOfCosmos = false;
+            downedVoyager = false;
         }
 
         public override TagCompound Save()
@@ -35,6 +37,7 @@ namespace AstralVoyage
             if (downedGuardianOfCosmos) downed.Add("goc");
             if (downedEyeOfCosmos) downed.Add("eoc2");
             if (downedLivingTree) downed.Add("livtree");
+            if (downedVoyager) downed.Add("voyager");
 
             return new TagCompound
             {
@@ -49,6 +52,7 @@ namespace AstralVoyage
             downedGuardianOfCosmos = downed.Contains("goc");
             downedEyeOfCosmos = downed.Contains("eoc2");
             downedLivingTree = downed.Contains("livtree");
+            downedVoyager = downed.Contains("voyager");
         }
 
         public override void LoadLegacy(BinaryReader reader)
@@ -61,6 +65,7 @@ namespace AstralVoyage
                 downedLivingTree = flags[1];
                 downedGuardianOfCosmos = flags[2];
                 downedEyeOfCosmos = flags[3];
+                downedVoyager = flags[4];
             }
         }
 
@@ -71,6 +76,7 @@ namespace AstralVoyage
             flags[1] = downedLivingTree;
             flags[2] = downedGuardianOfCosmos;
             flags[3] = downedEyeOfCosmos;
+            flags[4] = downedVoyager;
             writer.Write(flags);
         }
 
@@ -81,6 +87,7 @@ namespace AstralVoyage
             downedLivingTree = flags[1];
             downedGuardianOfCosmos = flags[2];
             downedEyeOfCosmos = flags[3];
+            downedVoyager = flags[4];
         }
 
     }
