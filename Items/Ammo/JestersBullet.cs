@@ -8,7 +8,7 @@ namespace AstralVoyage.Items.Ammo
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'Works same way as Jesters arrows'");  //The (English) text shown below your weapon's name
+            Tooltip.SetDefault("'Works same way as Jesters arrows'");  
         }
         public override void SetDefaults()
         {

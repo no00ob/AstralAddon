@@ -1,4 +1,5 @@
-﻿using Terraria.ID;
+﻿using AstralVoyage.Items.Ores;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace AstralVoyage.Items.Weapons
@@ -7,7 +8,7 @@ namespace AstralVoyage.Items.Weapons
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'This is the final upgrade'");  //The (English) text shown below your weapon's name
+            Tooltip.SetDefault("'This is the final upgrade'");  
         }
 
         public override void SetDefaults()
@@ -33,7 +34,7 @@ namespace AstralVoyage.Items.Weapons
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.TerraBlade, 1);
             recipe.AddIngredient(ItemID.BrokenHeroSword, 1);
-            recipe.AddIngredient(null, "UniversiteBar", 8);
+            recipe.AddIngredient(ModContent.ItemType<CosmiteBar>(), 8);
             recipe.AddIngredient(ItemID.FragmentSolar, 10);
             recipe.AddTile(TileID.WorkBenches);
             recipe.SetResult(this);

@@ -7,7 +7,7 @@ namespace AstralVoyage.Items.Ores
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'Stores little bit of dark energy'");  //The (English) text shown below your weapon's name
+            Tooltip.SetDefault("'Stores little bit of dark energy'");  
         }
         public override void SetDefaults()
         {

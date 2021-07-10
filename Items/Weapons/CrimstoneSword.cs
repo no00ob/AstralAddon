@@ -7,7 +7,7 @@ namespace AstralVoyage.Items.Weapons
 	{
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'Seems red'");  //The (English) text shown below your weapon's name
+            Tooltip.SetDefault("'Seems red'");  
         }
 
         public override void SetDefaults()

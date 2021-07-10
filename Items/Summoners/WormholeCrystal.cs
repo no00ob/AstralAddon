@@ -9,7 +9,7 @@ namespace AstralVoyage.Items.Summoners
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Wormhole Pendant");
-            Tooltip.SetDefault("Summons the Eater Of The Cosmos");  //The (English) text shown below your weapon's name
+            Tooltip.SetDefault("Summons Astrum Vermis");  
         }
         public override void SetDefaults()
         {

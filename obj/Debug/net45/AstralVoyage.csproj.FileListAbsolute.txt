@@ -1,0 +1,4 @@
+C:\Users\Aki\Documents\My Games\Terraria\ModLoader\Mod Sources\AstralVoyage\obj\Debug\net45\AstralVoyage.csprojAssemblyReference.cache
+C:\Users\Aki\Documents\My Games\Terraria\ModLoader\Mod Sources\AstralVoyage\obj\Debug\net45\AstralVoyage.csproj.CoreCompileInputs.cache
+C:\Users\Aki\Documents\My Games\Terraria\ModLoader\Mod Sources\AstralVoyage\obj\Debug\net45\AstralVoyage.AssemblyInfoInputs.cache
+C:\Users\Aki\Documents\My Games\Terraria\ModLoader\Mod Sources\AstralVoyage\obj\Debug\net45\AstralVoyage.AssemblyInfo.cs

@@ -8,7 +8,7 @@ namespace AstralVoyage.Items.Summoners
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Summons the Living Tree");  //The (English) text shown below your weapon's name
+            Tooltip.SetDefault("Summons the Living Tree");  
         }
         public override void SetDefaults()
         {

@@ -11,7 +11,7 @@ namespace AstralVoyage.Buffs
         public override void SetDefaults()
         {
             DisplayName.SetDefault("Corrupted");
-            Description.SetDefault("Losing life");
+            Description.SetDefault("Rapidly losing life");
             Main.debuff[Type] = true;
             Main.pvpBuff[Type] = true;
             Main.buffNoSave[Type] = true;

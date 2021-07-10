@@ -7,7 +7,7 @@ namespace AstralVoyage.Items.Tools
 	{
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'Yep, a old shovel'");  //The (English) text shown below your weapon's name
+            Tooltip.SetDefault("'Yep, a old shovel'");  
         }
 
         public override void SetDefaults()

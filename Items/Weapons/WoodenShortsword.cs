@@ -7,7 +7,7 @@ namespace AstralVoyage.Items.Weapons
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'This is terrible idea'");  //The (English) text shown below your weapon's name
+            Tooltip.SetDefault("'This is terrible idea'");  
         }
 
         public override void SetDefaults()

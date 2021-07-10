@@ -8,7 +8,7 @@ namespace AstralVoyage.Items.Weapons
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Rabbit's Rage");
-            Tooltip.SetDefault("'This is an ancient sword inbued with wraith of the rabbits'");  //The (English) text shown below your weapon's name
+            Tooltip.SetDefault("'This is an ancient sword inbued with wraith of the rabbits'");  
         }
 
         public override void SetDefaults()

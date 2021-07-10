@@ -13,7 +13,7 @@ namespace AstralVoyage.NPCs.EoC
         public bool expertAI;
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("The Eater Of Cosmos");
+            DisplayName.SetDefault("Astrum Vermis");
         }
         public override void SetDefaults()
         {

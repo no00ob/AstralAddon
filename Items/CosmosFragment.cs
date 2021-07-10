@@ -1,3 +1,4 @@
+using AstralVoyage.Items.Ores;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -18,7 +19,7 @@ namespace AstralVoyage.Items
 		{
 			ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.LunarBar, 1);
-            recipe.AddIngredient(null, "UniversiteBar");
+            recipe.AddIngredient(ModContent.ItemType<CosmiteBar>());
             recipe.AddTile(TileID.Furnaces);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

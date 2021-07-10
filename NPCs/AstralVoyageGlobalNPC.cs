@@ -12,10 +12,12 @@ namespace AstralVoyage.NPCs
         public override bool InstancePerEntity => true;
 
         public bool corrupted;
+        public bool woodSplinters;
 
         public override void ResetEffects(NPC npc)
         {
             corrupted = false;
+            woodSplinters = false;
         }
 
         public override void SetDefaults(NPC npc)
@@ -32,7 +34,19 @@ namespace AstralVoyage.NPCs
                 {
                     npc.lifeRegen = 0;
                 }
-                npc.lifeRegen -= 32;
+                npc.lifeRegen -= 64;
+                if (damage < 2)
+                {
+                    damage = 2;
+                }
+            }
+            if (woodSplinters)
+            {
+                if (npc.lifeRegen > 0)
+                {
+                    npc.lifeRegen = 0;
+                }
+                npc.lifeRegen -= 16;
                 if (damage < 2)
                 {
                     damage = 2;

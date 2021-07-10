@@ -7,7 +7,7 @@ namespace AstralVoyage.Items.Ores
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'Mix of two metals'");  //The (English) text shown below your weapon's name
+            Tooltip.SetDefault("'Mix of two metals'");  
         }
         public override void SetDefaults()
         {

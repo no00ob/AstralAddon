@@ -7,7 +7,7 @@ namespace AstralVoyage.Items.Weapons
 	{
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'Don't let it melt!'");  //The (English) text shown below your weapon's name
+            Tooltip.SetDefault("'Don't let it melt!'");  
         }
 
         public override void SetDefaults()

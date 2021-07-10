@@ -1,3 +1,4 @@
+using AstralVoyage.Tiles;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -7,22 +8,23 @@ namespace AstralVoyage.Items.Ores
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'Feels organic'");  //The (English) text shown below your weapon's name
+            DisplayName.SetDefault("Living Root");
+            Tooltip.SetDefault("'Feels organic'");
         }
         public override void SetDefaults()
         {
-            item.width = 16;
-            item.height = 16;
+            item.width = 24;
+            item.height = 24;
             item.value = 3;
-            item.rare = 0;
+            item.rare = ItemRarityID.Blue;
             item.maxStack = 999;
             item.useTurn = true;
             item.autoReuse = true;
             item.useAnimation = 15;
             item.useTime = 10;
-            item.useStyle = 1;
+            item.useStyle = ItemUseStyleID.SwingThrow;
             item.consumable = true;
-            item.createTile = mod.TileType("WoodriteOreBlock");
+            item.createTile = ModContent.TileType<WoodriteOreBlock>();
         }
 
         public override void AddRecipes()

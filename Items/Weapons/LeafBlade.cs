@@ -7,7 +7,7 @@ namespace AstralVoyage.Items.Weapons
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'Blade, forged with the fury of Leafeaus'");  //The (English) text shown below your weapon's name
+            Tooltip.SetDefault("'Blade, forged with the fury of Leafeaus'");  
         }
 
         public override void SetDefaults()

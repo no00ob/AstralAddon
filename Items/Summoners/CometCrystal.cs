@@ -9,7 +9,7 @@ namespace AstralVoyage.Items.Summoners
         public override void SetStaticDefaults()
         {
 			DisplayName.SetDefault("Comet Pendant");
-            Tooltip.SetDefault("Summons the Eye Of The Cosmos");  //The (English) text shown below your weapon's name
+            Tooltip.SetDefault("Summons the Eye Of The Cosmos");  
         }
         public override void SetDefaults()
         {

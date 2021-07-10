@@ -7,7 +7,7 @@ namespace AstralVoyage.Items.Tools
 	{
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'Really cold and soggy'");  //The (English) text shown below your weapon's name
+            Tooltip.SetDefault("'Really cold and soggy'");  
         }
         public override void SetDefaults()
 		{

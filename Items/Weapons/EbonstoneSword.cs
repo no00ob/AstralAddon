@@ -7,7 +7,7 @@ namespace AstralVoyage.Items.Weapons
 	{
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'Might be corrupted'");  //The (English) text shown below your weapon's name
+            Tooltip.SetDefault("'Might be corrupted'");  
         }
 
         public override void SetDefaults()

@@ -1,4 +1,5 @@
-﻿using Terraria.ID;
+﻿using AstralVoyage.Items.Ores;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace AstralVoyage.Items.Weapons
@@ -8,7 +9,7 @@ namespace AstralVoyage.Items.Weapons
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Photon Blade");
-            Tooltip.SetDefault("'The final form'");  //The (English) text shown below your weapon's name
+            Tooltip.SetDefault("'The final form'");  
         }
 
         public override void SetDefaults()
@@ -33,7 +34,7 @@ namespace AstralVoyage.Items.Weapons
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(null, "BladeOfCosmos", 1);
-            recipe.AddIngredient(null, "UniversiteBar", 20);
+            recipe.AddIngredient(ModContent.ItemType<CosmiteBar>(), 20);
             recipe.AddIngredient(ItemID.SoulofFright, 3);
             recipe.AddTile(TileID.WorkBenches);
             recipe.SetResult(this);

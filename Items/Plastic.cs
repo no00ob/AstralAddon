@@ -5,6 +5,10 @@ namespace AstralVoyage.Items
 {
     public class Plastic : ModItem
     {
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Plastic Sheet");
+        }
         public override void SetDefaults()
         {
             item.width = 32;

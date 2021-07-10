@@ -7,7 +7,7 @@ namespace AstralVoyage.Items.Weapons
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'Better Blade Of Grass, forged with the fury of jungle'");  //The (English) text shown below your weapon's name
+            Tooltip.SetDefault("'Better Blade Of Grass, forged with the fury of jungle'");  
         }
 
         public override void SetDefaults()

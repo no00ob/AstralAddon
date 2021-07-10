@@ -7,22 +7,23 @@ namespace AstralVoyage.Items.Ores
 	{
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'Feels organic'");  //The (English) text shown below your weapon's name
+            DisplayName.SetDefault("Living Root Bar");
+            Tooltip.SetDefault("'Feels organic'");  
         }
         public override void SetDefaults()
 		{
 			item.width = 30;
 			item.height = 24;
 			item.value = 10;
-			item.rare = 0;
+            item.rare = ItemRarityID.Blue;
             item.maxStack = 99;
         }
 
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(null, "WoodriteOre", 3);
-			recipe.AddTile(TileID.Furnaces);
+            recipe.AddIngredient(ModContent.ItemType<WoodriteOre>(), 3);
+            recipe.AddTile(TileID.Furnaces);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}

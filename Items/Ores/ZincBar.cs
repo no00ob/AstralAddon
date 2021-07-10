@@ -10,14 +10,14 @@ namespace AstralVoyage.Items.Ores
             item.width = 30;
             item.height = 24;
             item.value = 100;
-            item.rare = 0;
+            item.rare = ItemRarityID.White;
             item.maxStack = 99;
         }
 
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(null, "ZincOre", 3);
+            recipe.AddIngredient(ModContent.ItemType<ZincOre>(), 3);
             recipe.AddTile(TileID.Furnaces);
             recipe.SetResult(this);
             recipe.AddRecipe();

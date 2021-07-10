@@ -9,7 +9,7 @@ namespace AstralVoyage.Items.Weapons
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("fully auto, 18% Change not to consume ammo");  //The (English) text shown below your weapon's name
+            Tooltip.SetDefault("fully auto, 18% Change not to consume ammo");  
         }
 
         public override void SetDefaults()

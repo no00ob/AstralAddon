@@ -7,7 +7,7 @@ namespace AstralVoyage.Items.Weapons
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'You shall use the godly elemental powers'");  //The (English) text shown below your weapon's name
+            Tooltip.SetDefault("'You shall use the godly elemental powers'");  
         }
 
         public override void SetDefaults()

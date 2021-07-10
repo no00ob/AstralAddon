@@ -1,3 +1,4 @@
+using AstralVoyage.Items.Ores;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -8,7 +9,7 @@ namespace AstralVoyage.Items.Summoners
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Summons the Voyager");  //The (English) text shown below your weapon's name
+            Tooltip.SetDefault("Summons the Voyager");  
         }
         public override void SetDefaults()
         {
@@ -37,13 +38,13 @@ namespace AstralVoyage.Items.Summoners
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.GoldBar, 5);
-            recipe.AddIngredient(null, "UniversiteBar", 3);
+            recipe.AddIngredient(ModContent.ItemType<CosmiteBar>(), 3);
             recipe.AddTile(TileID.LunarCraftingStation);
             recipe.SetResult(this);
             recipe.AddRecipe();
             recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.PlatinumBar, 5);
-            recipe.AddIngredient(null, "UniversiteBar", 3);
+            recipe.AddIngredient(ModContent.ItemType<CosmiteBar>(), 3);
             recipe.AddTile(TileID.LunarCraftingStation);
             recipe.SetResult(this);
             recipe.AddRecipe();

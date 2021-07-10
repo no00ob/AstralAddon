@@ -52,8 +52,8 @@ namespace AstralVoyage
             if (bossChecklist != null)
             {
                 // To include a description:
-                bossChecklist.Call("AddBossWithInfo", "Eater Of The Cosmos", 15.999f, (Func<bool>)(() => AstralVoyageWorld.downedEaterOfCosmos), "Use a [i:" + ItemType("WormholeCrystal") + "] at any given time, any where.");
-                bossChecklist.Call("AddBossWithInfo", "Living Tree", 1.001f, (Func<bool>)(() => AstralVoyageWorld.downedLivingTree), "Use a [i:" + ItemType("SuspiciousLookingSprout") + "] at night.");
+                bossChecklist.Call("AddBossWithInfo", "Astrum Vermis", 15.999f, (Func<bool>)(() => AstralVoyageWorld.downedEaterOfCosmos), "Use a [i:" + ItemType("WormholeCrystal") + "] at any given time, any where.");
+                bossChecklist.Call("AddBossWithInfo", "Living Tree", 1.001f, (Func<bool>)(() => AstralVoyageWorld.downedLivingTree), "Use a [i:" + ItemType("SuspiciousLookingSprout") + "] at night in a forest biome.");
                 bossChecklist.Call("AddBossWithInfo", "Guardian Of The Cosmos", 15.998f, (Func<bool>)(() => AstralVoyageWorld.downedLivingTree), "Use a [i:" + ItemType("BlackholeCrystal") + "] at any given time, any where.");
                 bossChecklist.Call("AddBossWithInfo", "Eye Of The Cosmos", 15.997f, (Func<bool>)(() => AstralVoyageWorld.downedLivingTree), "Use a [i:" + ItemType("CometCrystal") + "] at any given time, any where.");
                 bossChecklist.Call("AddBossWithInfo", "Voyager", 17.998f, (Func<bool>)(() => AstralVoyageWorld.downedVoyager), "Use a [i:" + ItemType("AnomaliousMatter") + "] after beating the three cosmic guardians at any given time, any where.");

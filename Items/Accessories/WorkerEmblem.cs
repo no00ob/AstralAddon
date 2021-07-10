@@ -8,9 +8,10 @@ namespace AstralVoyage.Items.Accessories
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'This is what the workers used'"
+            Tooltip.SetDefault("'Has a terrible vibe to it.'"
                 + "\n10% increased meelee stats"
-                + "\n10% increased movement speed");
+                + "\n8% increased movement speed"
+                + "\n5% increased mining speed");
         }
 
         public override void SetDefaults()

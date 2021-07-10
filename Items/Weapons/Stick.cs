@@ -8,7 +8,7 @@ namespace AstralVoyage.Items.Weapons
 	{
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'This is a stick, still dangerous'");  //The (English) text shown below your weapon's name
+            Tooltip.SetDefault("'This is a stick, still dangerous'");  
         }
 
         public override void SetDefaults()

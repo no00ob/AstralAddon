@@ -7,7 +7,7 @@ namespace AstralVoyage.Items.Tools
 	{
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'Yep, a Axe made out of a dirt'");  //The (English) text shown below your weapon's name
+            Tooltip.SetDefault("'Yep, a Axe made out of a dirt'");  
         }
         public override void SetDefaults()
 		{

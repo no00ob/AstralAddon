@@ -7,7 +7,7 @@ namespace AstralVoyage.Items.Weapons
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'This is a rifle made out of a wood'");  //The (English) text shown below your weapon's name
+            Tooltip.SetDefault("'This is a rifle made out of a wood'");  
         }
 
         public override void SetDefaults()

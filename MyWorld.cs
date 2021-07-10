@@ -19,7 +19,7 @@ namespace AstralVoyage
         public static bool downedVoyager;
 
 
-        public static bool spawnOre = false;
+        public static bool spawnRootOre = false;
 
         public override void Initialize()
         {

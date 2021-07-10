@@ -8,7 +8,7 @@ namespace AstralVoyage.Items.Ammo
 	{
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'This is a Magazine, for your guns'");  //The (English) text shown below your weapon's name
+            Tooltip.SetDefault("'This is a Magazine, for your guns'");  
         }
         public override void SetDefaults()
 		{

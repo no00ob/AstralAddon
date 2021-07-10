@@ -7,7 +7,7 @@ namespace AstralVoyage.Items.Ores
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'Packed food for squirrels'");  //The (English) text shown below your weapon's name
+            Tooltip.SetDefault("'Packed food for squirrels'");  
         }
         public override void SetDefaults()
         {

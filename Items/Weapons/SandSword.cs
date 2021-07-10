@@ -7,7 +7,7 @@ namespace AstralVoyage.Items.Weapons
 	{
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'Sandy'");  //The (English) text shown below your weapon's name
+            Tooltip.SetDefault("'Sandy'");  
         }
 
         public override void SetDefaults()

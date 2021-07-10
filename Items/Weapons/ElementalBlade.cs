@@ -7,7 +7,7 @@ namespace AstralVoyage.Items.Weapons
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'You shall realise the elemental power'");  //The (English) text shown below your weapon's name
+            Tooltip.SetDefault("'You shall realise the elemental power'");  
         }
 
         public override void SetDefaults()

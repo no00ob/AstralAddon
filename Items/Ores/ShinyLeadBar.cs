@@ -7,7 +7,8 @@ namespace AstralVoyage.Items.Ores
 	{
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'Looks Clean'");  //The (English) text shown below your weapon's name
+            DisplayName.SetDefault("Polished Lead Bar");
+            Tooltip.SetDefault("'Looks Clean'");  
         }
         public override void SetDefaults()
 		{
@@ -22,8 +23,8 @@ namespace AstralVoyage.Items.Ores
 		{
 			ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.LeadBar, 10);
-            recipe.AddIngredient(null, "Rag", 1);
-            recipe.AddIngredient(null, "Polish", 1);
+            recipe.AddIngredient(ModContent.ItemType<Rag>(), 1);
+            recipe.AddIngredient(ModContent.ItemType<Polish>(), 1);
             recipe.AddTile(TileID.WorkBenches);
 			recipe.SetResult(this, 10);
 			recipe.AddRecipe();
