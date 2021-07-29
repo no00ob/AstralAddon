@@ -22,7 +22,7 @@ namespace AstralVoyage.Items.Ores
             item.height = 30;
             item.value = 14000;
             item.rare = ItemRarityID.Red;
-            CustomRarity = 13;
+            CustomRarity = 101;
             item.maxStack = 99;
         }
 
@@ -46,7 +46,9 @@ namespace AstralVoyage.Items.Ores
             {
                 if (line2.mod == "Terraria" && line2.Name == "ItemName")
                 {
-                    line2.overrideColor = BaseColor.PureGreen;
+                    float fade = Main.GameUpdateCount % 60 / 60f;
+                    int index = (int)(Main.GameUpdateCount / 60 % 4);
+                    line2.overrideColor = Color.Lerp(BaseColor.Cosmite[index], BaseColor.Cosmite[(index + 1) % 4], fade);
                 }
             }
         }

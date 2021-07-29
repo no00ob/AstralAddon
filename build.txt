@@ -1,3 +1,10 @@
 author = no00ob
-version = 0.1.4
-displayName = Astral Voyage
+version = 1.0.0
+displayName = [c/b48ce1:Astral Voyage]
+modReferences = SubworldLibrary
+homepage = https://discord.gg/K5KqGMD
+hideCode = true
+hideResources = true
+includeSource = false
+buildIgnore = .gitignore, *.sln, *.csproj, *.user, obj\*, bin\*, .vs\*, Properties\*, .git\*
+includePDB = true

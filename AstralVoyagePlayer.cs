@@ -1,5 +1,7 @@
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using Terraria;
 using Terraria.ID;
@@ -34,6 +36,8 @@ namespace AstralVoyage
         // Here we declare the variables for permanent health upgrades
         public const int maxHealthSoda = 1;
         public int healthSoda;
+
+        public bool ZoneAncient;
 
         // ResetEffects is used to reset effects back to their default value. Terraria resets all effects every frame back to defaults so we will follow this design. (You might think to set a variable when an item is equipped and unassign the value when the item in unequipped, but Terraria is not designed that way.)
         public override void ResetEffects()
@@ -80,6 +84,74 @@ namespace AstralVoyage
         public override void LoadLegacy(BinaryReader reader)
         {
             int loadVersion = reader.ReadInt32();
+        }
+
+        public override void SetupStartInventory(IList<Item> items, bool mediumcoreDeath)
+        {
+            items.RemoveAt(2);         // these lines remove all items from your inventory
+            items.RemoveAt(1);
+            items.RemoveAt(0);
+            // and then we add these ones in to the inventory
+            Item item = new Item();
+            item.SetDefaults(mod.ItemType("RustyShovel"));   // the custom item being added
+            item.stack = 1;         // stack size of the item
+            items.Add(item);
+        }
+
+        public override void UpdateBiomes()
+        {
+            if (SubworldLibrary.Subworld.IsActive<AncientParadiseSubworld>())
+                ZoneAncient = true;
+            else
+                ZoneAncient = AstralVoyageWorld.ancientParadiseTiles > 30;
+        }
+        public override bool CustomBiomesMatch(Player other)
+        {
+            AstralVoyagePlayer modOther = other.GetModPlayer<AstralVoyagePlayer>();
+            return ZoneAncient == modOther.ZoneAncient;
+            // If you have several Zones, you might find the &= operator or other logic operators useful:
+            // bool allMatch = true;
+            // allMatch &= ZoneExample == modOther.ZoneExample;
+            // allMatch &= ZoneModel == modOther.ZoneModel;
+            // return allMatch;
+            // Here is an example just using && chained together in one statemeny 
+            // return ZoneExample == modOther.ZoneExample && ZoneModel == modOther.ZoneModel;
+        }
+
+        public override void CopyCustomBiomesTo(Player other)
+        {
+            AstralVoyagePlayer modOther = other.GetModPlayer<AstralVoyagePlayer>();
+            modOther.ZoneAncient = ZoneAncient;
+        }
+
+        public override void SendCustomBiomes(BinaryWriter writer)
+        {
+            BitsByte flags = new BitsByte();
+            flags[0] = ZoneAncient;
+            writer.Write(flags);
+        }
+
+        public override void ReceiveCustomBiomes(BinaryReader reader)
+        {
+            BitsByte flags = reader.ReadByte();
+            ZoneAncient = flags[0];
+        }
+
+        public override void UpdateBiomeVisuals()
+        {
+            //bool usePurity = NPC.AnyNPCs(ModContent.NPCType<PuritySpirit>());
+            //player.ManageSpecialBiomeVisuals("ExampleMod:PuritySpirit", usePurity);
+            //bool useVoidMonolith = voidMonolith && !usePurity && !NPC.AnyNPCs(NPCID.MoonLordCore);
+            //player.ManageSpecialBiomeVisuals("ExampleMod:MonolithVoid", useVoidMonolith, player.Center);
+        }
+
+        public override Texture2D GetMapBackgroundImage()
+        {
+            if (ZoneAncient)
+            {
+                return mod.GetTexture("ExampleBiomeMapBackground");
+            }
+            return null;
         }
 
         public override void UpdateBadLifeRegen()

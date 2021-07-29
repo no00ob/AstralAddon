@@ -30,7 +30,7 @@ namespace AstralVoyage.NPCs.EoC
             npc.noTileCollide = true;        //this make the npc go thru walls
             npc.HitSound = SoundID.NPCHit4;
             npc.DeathSound = SoundID.NPCDeath14;
-            music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/bird_boss1");
+            music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/boss3");
             //music = MusicID.OverworldDay;
             npc.behindTiles = true;
             Main.npcFrameCount[npc.type] = 1;

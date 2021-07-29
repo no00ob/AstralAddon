@@ -9,7 +9,8 @@ namespace AstralVoyage
     {
         public int CustomRarity = 0;
         public float lerpValue = 0f;
-        public float maxLerpValue = 0.98f;
+        public float maxLerpValue = 1f;
+        public bool reached;
 
         //custom name color
         public Color? customNameColor = null;
@@ -62,7 +63,8 @@ namespace AstralVoyage
                     case -13: Rare = BaseColor.DarkOrange; break;
                     case -14: Rare = BaseColor.BrightOrange; break;
                     case -15: Rare = BaseColor.DarkRed; break;
-                    case 101: Rare = Color.Lerp(BaseColor.Cosmite1, BaseColor.Cosmite2, lerpValue); break;
+                    case 101: Rare = BaseColor.Cosmite[0]; break;
+					case 102: Rare = BaseColor.DiTF[0]; break;
                 }
                 foreach (TooltipLine line2 in list)
                 {
@@ -87,7 +89,17 @@ namespace AstralVoyage
         public static Color DarkOrange => new Color(187, 74, 39);
         public static Color BrightOrange => new Color(229, 141, 25);
         public static Color DarkRed => new Color(98, 7, 4);
-        public static Color Cosmite1 => new Color(64, 241, 255);
-        public static Color Cosmite2 => new Color(44, 147, 255);
+        public static Color[] Cosmite => new Color[] {
+            new Color(100, 241, 255),
+            new Color(216, 52, 131),
+            new Color(44, 100, 255),
+            new Color(204, 229, 150)
+        };
+		public static Color[] DiTF => new Color[] {
+            new Color(255, 25, 50),
+            new Color(25, 80, 255),
+            new Color(255, 25, 50),
+            new Color(25, 80, 255)
+        };
     }
 }

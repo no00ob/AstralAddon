@@ -7,7 +7,7 @@ namespace AstralVoyage.Items.Tools
 	{
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'Yep, a old shovel'");  
+            Tooltip.SetDefault("'Come 'ere cupcake'");  
         }
 
         public override void SetDefaults()
@@ -23,7 +23,7 @@ namespace AstralVoyage.Items.Tools
             item.knockBack = 1;
             item.value = 1;
             item.rare = -1;
-            item.UseSound = SoundID.Item1;
+            item.UseSound = SoundID.Item7;
             item.autoReuse = true;
             item.useTurn = true;
         }

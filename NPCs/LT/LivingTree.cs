@@ -32,7 +32,7 @@ namespace AstralVoyage.NPCs.LT
             npc.HitSound = SoundID.NPCHit1;
             npc.DeathSound = SoundID.NPCDeath1;
             music = MusicID.Boss2;
-            //music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/Boss2Chiptune");
+            music = mod.GetSoundSlot(SoundType.Music, "Sounds/Music/fight3");
             npc.netAlways = true;
             npc.buffImmune[BuffID.Poisoned] = true;
             npc.buffImmune[BuffID.Venom] = true;
@@ -42,6 +42,9 @@ namespace AstralVoyage.NPCs.LT
 
 
         }
+
+        public static bool bossOn = false;
+
         //        public override void AutoloadHead(ref string headTexture, ref string bossHeadTexture)
         //        {
         //            bossHeadTexture = "AstralVoyage/NPCs/Boss/LivingTree_Head_Boss"; //the boss head texture
