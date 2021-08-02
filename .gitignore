@@ -17,4 +17,5 @@ commit-message.txt
 # Folders used for my own utilities
 /_Old Sprites
 /Ref
-\Items\Ores\src
+/Items/Ores/src
+/Backgrounds/src

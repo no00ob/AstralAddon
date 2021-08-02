@@ -149,7 +149,7 @@ namespace AstralVoyage
         {
             if (ZoneAncient)
             {
-                return mod.GetTexture("ExampleBiomeMapBackground");
+                return mod.GetTexture("Backgrounds/AncientBiomeMapBackground");
             }
             return null;
         }

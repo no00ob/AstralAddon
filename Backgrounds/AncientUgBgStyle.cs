@@ -11,10 +11,10 @@ namespace AstralVoyage.Backgrounds
 		}
 
 		public override void FillTextureArray(int[] textureSlots) {
-			textureSlots[0] = mod.GetBackgroundSlot("Backgrounds/ExampleBiomeUG0");
-			textureSlots[1] = mod.GetBackgroundSlot("Backgrounds/ExampleBiomeUG1");
-			textureSlots[2] = mod.GetBackgroundSlot("Backgrounds/ExampleBiomeUG2");
-			textureSlots[3] = mod.GetBackgroundSlot("Backgrounds/ExampleBiomeUG3");
+			textureSlots[0] = mod.GetBackgroundSlot("Backgrounds/AncientBiomeUG0");
+			textureSlots[1] = mod.GetBackgroundSlot("Backgrounds/AncientBiomeUG1");
+			textureSlots[2] = mod.GetBackgroundSlot("Backgrounds/AncientBiomeUG2");
+			textureSlots[3] = mod.GetBackgroundSlot("Backgrounds/AncientBiomeUG3");
 		}
 	}
 }
