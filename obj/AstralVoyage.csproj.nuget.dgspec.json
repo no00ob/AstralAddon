@@ -29,6 +29,7 @@
         },
         "frameworks": {
           "net45": {
+            "targetAlias": "net45",
             "projectReferences": {}
           }
         },
@@ -40,12 +41,14 @@
       },
       "frameworks": {
         "net45": {
+          "targetAlias": "net45",
           "dependencies": {
             "tModLoader.CodeAssist": {
               "target": "Package",
               "version": "[0.1.*, )"
             }
-          }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
