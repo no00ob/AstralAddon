@@ -1,10 +1,10 @@
 author = no00ob
-version = 1.0.0
+version = 2.0.0
 displayName = [c/b48ce1:Astral Voyage]
 modReferences = SubworldLibrary
 homepage = https://discord.gg/K5KqGMD
 hideCode = true
 hideResources = true
 includeSource = false
-buildIgnore = .gitignore, *.sln, *.csproj, *.user, obj\*, bin\*, .vs\*, Properties\*, .git\*
+buildIgnore = .gitignore, *.sln, *.csproj, *.user, obj\*, bin\*, .vs\*, Properties\*, .git\*, Ref\*, _Old Sprites\*, Items\Ores\src\*, Items\Weapons\src\*, Backgrounds\src\*, Projectiles\src\*
 includePDB = true
