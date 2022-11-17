@@ -17,26 +17,25 @@ namespace AstralVoyage.Items.Armor
 
         public override void SetDefaults()
         {
-            item.width = 18;
-            item.height = 18;
-            item.value = 300;
-            item.rare = 1;
-            item.defense = 3;
+            Item.width = 18;
+            Item.height = 18;
+            Item.value = 300;
+            Item.rare = 1;
+            Item.defense = 3;
         }
 
         public override void UpdateEquip(Player player)
         {
-            player.minionDamage *= 1.1f;
+            player.GetDamage(DamageClass.Summon) *= 1.1f;
             player.maxMinions++;
         }
 
         public override void AddRecipes()
         {
-            ModRecipe recipe = new ModRecipe(mod);
+            Recipe recipe = CreateRecipe();
             recipe.AddIngredient(null, "WoodriteBar", 30);
             recipe.AddTile(TileID.WorkBenches);
-            recipe.SetResult(this);
-            recipe.AddRecipe();
+            recipe.Register();
         }
     }
 }

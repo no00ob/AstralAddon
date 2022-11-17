@@ -1,4 +1,5 @@
-﻿using Terraria.ID;
+﻿using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace AstralVoyage.Items.Weapons
@@ -13,29 +14,28 @@ namespace AstralVoyage.Items.Weapons
 
         public override void SetDefaults()
         {
-            item.damage = 202;
-            item.melee = true;
-            item.width = 60;
-            item.height = 60;
-            item.useTime = 15;
-            item.useAnimation = 15;
-            item.useStyle = 1;
-            item.knockBack = 6;
-            item.value = 10000;
-            item.rare = 10;
-            item.UseSound = SoundID.Item1;
-            item.autoReuse = true;
-            item.shoot = mod.ProjectileType("BunnyBladeProjectile");
-            item.shootSpeed = 6f;
+            Item.damage = 202;
+            Item.DamageType = DamageClass.Melee/* tModPorter Suggestion: Consider MeleeNoSpeed for no attack speed scaling */;
+            Item.width = 60;
+            Item.height = 60;
+            Item.useTime = 15;
+            Item.useAnimation = 15;
+            Item.useStyle = 1;
+            Item.knockBack = 6;
+            Item.value = 10000;
+            Item.rare = 10;
+            Item.UseSound = SoundID.Item1;
+            Item.autoReuse = true;
+            Item.shoot = Mod.Find<ModProjectile>("BunnyBladeProjectile").Type;
+            Item.shootSpeed = 6f;
         }
 
         public override void AddRecipes()
         {
-            ModRecipe recipe = new ModRecipe(mod);
+            Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.SoulofMight, 1);
             recipe.AddTile(TileID.WorkBenches);
-            recipe.SetResult(this);
-            recipe.AddRecipe();
+            recipe.Register();
         }
     }
 }

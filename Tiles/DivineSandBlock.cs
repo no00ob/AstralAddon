@@ -11,7 +11,7 @@ namespace AstralVoyage.Tiles
 {
     public class DivineSandBlock : ModTile
     {
-        public override void SetDefaults()
+        public override void SetStaticDefaults()
         {
             Main.tileSolid[Type] = true;
             Main.tileBrick[Type] = true;
@@ -22,9 +22,9 @@ namespace AstralVoyage.Tiles
             TileID.Sets.Conversion.Sand[Type] = true; // Allows Clentaminator solutions to convert this tile to their respective Sand tiles.
             TileID.Sets.ForAdvancedCollision.ForSandshark[Type] = true; // Allows Sandshark enemies to "swim" in this sand.
             TileID.Sets.Falling[Type] = true;
-            drop = ModContent.ItemType<DivineSand>();
+            ItemDrop = ModContent.ItemType<DivineSand>();
             AddMapEntry(new Color(239, 246, 228));
-            dustType = ModContent.DustType<DivineSandDust>();
+            DustType = ModContent.DustType<DivineSandDust>();
         }
 
         public override bool TileFrame(int i, int j, ref bool resetFrame, ref bool noBreak)
@@ -36,10 +36,10 @@ namespace AstralVoyage.Tiles
             Tile below = Main.tile[i, j + 1];
             bool canFall = true;
 
-            if (below == null || below.active())
+            if (below == null || below.HasTile)
                 canFall = false;
 
-            if (above.active() && (TileID.Sets.BasicChest[above.type] || TileID.Sets.BasicChestFake[above.type] || above.type == TileID.PalmTree || TileLoader.IsDresser(above.type)))
+            if (above.HasTile && (TileID.Sets.BasicChest[above.TileType] || TileID.Sets.BasicChestFake[above.TileType] || above.TileType == TileID.PalmTree || TileLoader.IsDresser(above.TileType)))
                 canFall = false;
 
             if (canFall)
@@ -58,7 +58,7 @@ namespace AstralVoyage.Tiles
                 }
                 else if (Main.netMode == NetmodeID.Server)
                 {
-                    Main.tile[i, j].active(false);
+                    Main.tile[i, j].HasTile = false;
                     bool spawnProj = true;
 
                     for (int k = 0; k < 1000; k++)

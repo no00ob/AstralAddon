@@ -1,3 +1,4 @@
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -13,19 +14,19 @@ namespace AstralVoyage.Items.Pets
 		}
 
 		public override void SetDefaults() {
-			item.CloneDefaults(ItemID.ZephyrFish);
-            item.width = 18;
-            item.height = 28;
-            item.rare = ItemRarityID.Red;
-            item.UseSound = SoundID.Item44;
-            item.useStyle = ItemUseStyleID.HoldingUp;
-            item.shoot = ModContent.ProjectileType<Projectiles.Pets.Ekubo>();
-			item.buffType = ModContent.BuffType<Buffs.Ekubo>();
+			Item.CloneDefaults(ItemID.ZephyrFish);
+            Item.width = 18;
+            Item.height = 28;
+            Item.rare = ItemRarityID.Red;
+            Item.UseSound = SoundID.Item44;
+            Item.useStyle = ItemUseStyleID.HoldUp;
+            Item.shoot = ModContent.ProjectileType<Projectiles.Pets.Ekubo>();
+			Item.buffType = ModContent.BuffType<Buffs.Ekubo>();
         }
 
-		public override void UseStyle(Player player) {
+		public override void UseStyle(Player player, Rectangle heldItemFrame) {
 			if (player.whoAmI == Main.myPlayer && player.itemTime == 0) {
-				player.AddBuff(item.buffType, 3600, true);
+				player.AddBuff(Item.buffType, 3600, true);
 			}
 		}
 	}

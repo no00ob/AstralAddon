@@ -17,20 +17,20 @@ namespace AstralVoyage.Items.Armor
 
         public override void SetDefaults()
         {
-            item.width = 30;
-            item.height = 24;
-            item.value = Item.sellPrice(0,0,20,0);
-            item.rare = ItemRarityID.Red;
+            Item.width = 30;
+            Item.height = 24;
+            Item.value = Item.sellPrice(0,0,20,0);
+            Item.rare = ItemRarityID.Red;
             CustomRarity = 102;
-            item.vanity = true;
+            Item.vanity = true;
         }
 
-        public override bool DrawBody()
+        public override bool DrawBody()/* tModPorter Note: Removed. In SetStaticDefaults, use ArmorIDs.Body.Sets.HidesTopSkin[Item.bodySlot] = true if you returned false */
         {
             return false; // Stop the body from being drawn underneath the clothes
         }
 
-        public override void DrawHands(ref bool drawHands, ref bool drawArms)
+        public override void DrawHands(ref bool drawHands, ref bool drawArms)/* tModPorter Note: Removed. In SetStaticDefaults, use ArmorIDs.Body.Sets.HidesHands[Item.bodySlot] = false if you had drawHands set to true. If you had drawArms set to true, you don't need to do anything */
         {
             drawArms = true; // Wether to show the hands and arms
             drawHands = true;
@@ -38,22 +38,21 @@ namespace AstralVoyage.Items.Armor
 
         public override void AddRecipes()
         {
-            ModRecipe recipe = new ModRecipe(mod);
+            Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.Silk, 10);
             recipe.AddTile(TileID.Loom);
-            recipe.SetResult(this);
-            recipe.AddRecipe();
+            recipe.Register();
         }
 		// Custom Rarity/Name Color
         public override void ModifyTooltips(System.Collections.Generic.List<TooltipLine> list)
         {
             foreach (TooltipLine line2 in list)
             {
-                if (line2.mod == "Terraria" && line2.Name == "ItemName")
+                if (line2.Mod == "Terraria" && line2.Name == "ItemName")
                 {
                     float fade = Main.GameUpdateCount % 60 / 60f;
                     int index = (int)(Main.GameUpdateCount / 60 % 4);
-                    line2.overrideColor = Color.Lerp(BaseColor.DiTF[index], BaseColor.DiTF[(index + 1) % 4], fade);
+                    line2.OverrideColor = Color.Lerp(BaseColor.DiTF[index], BaseColor.DiTF[(index + 1) % 4], fade);
                 }
             }
         }

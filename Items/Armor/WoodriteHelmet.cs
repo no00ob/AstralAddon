@@ -16,22 +16,22 @@ namespace AstralVoyage.Items.Armor
 
         public override void SetDefaults()
         {
-            item.width = 18;
-            item.height = 18;
-            item.value = 200;
-            item.rare = 1;
-            item.defense = 2;
+            Item.width = 18;
+            Item.height = 18;
+            Item.value = 200;
+            Item.rare = 1;
+            Item.defense = 2;
         }
 
         public override void UpdateEquip(Player player)
         {
-            player.rangedDamage *= 1.1f;
-            player.minionDamage *= 1.05f;
+            player.GetDamage(DamageClass.Ranged) *= 1.1f;
+            player.GetDamage(DamageClass.Summon) *= 1.05f;
         }
 
         public override bool IsArmorSet(Item head, Item body, Item legs)
         {
-            return body.type == mod.ItemType("WoodriteBreastplate") && legs.type == mod.ItemType("WoodriteLeggings");
+            return body.type == Mod.Find<ModItem>("WoodriteBreastplate").Type && legs.type == Mod.Find<ModItem>("WoodriteLeggings").Type;
         }
 
         public override void UpdateArmorSet(Player player)
@@ -42,11 +42,10 @@ namespace AstralVoyage.Items.Armor
 
         public override void AddRecipes()
         {
-            ModRecipe recipe = new ModRecipe(mod);
+            Recipe recipe = CreateRecipe();
             recipe.AddIngredient(null, "WoodriteBar", 20);
             recipe.AddTile(TileID.WorkBenches);   //at work bench
-            recipe.SetResult(this);
-            recipe.AddRecipe();
+            recipe.Register();
         }
     }
 }

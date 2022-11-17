@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -15,14 +16,14 @@ namespace AstralVoyage.Items
 
         public override void SetDefaults()
         {
-            item.CloneDefaults(ItemID.LifeFruit);
-            item.width = 38;
-            item.height = 38;
-            item.value = Item.sellPrice(0, 1, 0, 0);
-            item.rare = ItemRarityID.Red;
+            Item.CloneDefaults(ItemID.LifeFruit);
+            Item.width = 38;
+            Item.height = 38;
+            Item.value = Item.sellPrice(0, 1, 0, 0);
+            Item.rare = ItemRarityID.Red;
             CustomRarity = 13;
-            item.maxStack = 1;
-            item.useStyle = ItemUseStyleID.EatingUsing;
+            Item.maxStack = 1;
+            Item.useStyle = ItemUseStyleID.EatFood;
         }
 
         public override bool CanUseItem(Player player)
@@ -30,9 +31,9 @@ namespace AstralVoyage.Items
             return !SubworldLibrary.Subworld.IsActive<AncientParadiseSubworld>();
         }
 
-        public override bool UseItem(Player player)
+        public override bool? UseItem(Player player)/* tModPorter Suggestion: Return null instead of false */
         {
-            Main.PlaySound(SoundID.Item, -1, -1, mod.GetSoundSlot(SoundType.Item, "Sounds/Item/soda"));
+            SoundEngine.PlaySound(SoundID.Item, -1, -1, Mod.GetSoundSlot(SoundType.Item, "Sounds/Item/soda"));
 
             SubworldLibrary.Subworld.Enter<AncientParadiseSubworld>();
             
@@ -43,9 +44,9 @@ namespace AstralVoyage.Items
         {
             foreach (TooltipLine line2 in list)
             {
-                if (line2.mod == "Terraria" && line2.Name == "ItemName")
+                if (line2.Mod == "Terraria" && line2.Name == "ItemName")
                 {
-                    line2.overrideColor = BaseColor.PureGreen;
+                    line2.OverrideColor = BaseColor.PureGreen;
                 }
             }
         }

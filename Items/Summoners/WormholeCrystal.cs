@@ -1,4 +1,5 @@
 ﻿using Terraria;
+using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -13,41 +14,39 @@ namespace AstralVoyage.Items.Summoners
         }
         public override void SetDefaults()
         {
-            item.width = 34;
-            item.height = 34;
-            item.value = 10;
-            item.rare = 1;
-            item.maxStack = 10;
-            item.useAnimation = 30;
-            item.useTime = 30;
-            item.useStyle = 4;
-            item.consumable = true;
+            Item.width = 34;
+            Item.height = 34;
+            Item.value = 10;
+            Item.rare = 1;
+            Item.maxStack = 10;
+            Item.useAnimation = 30;
+            Item.useTime = 30;
+            Item.useStyle = 4;
+            Item.consumable = true;
         }
         public override bool CanUseItem(Player player)
         {
-            return !NPC.AnyNPCs(mod.NPCType("TheEaterOfCosmos_Head"));  //you can't spawn this boss multiple times
+            return !NPC.AnyNPCs(Mod.Find<ModNPC>("TheEaterOfCosmos_Head").Type);  //you can't spawn this boss multiple times
         }
-        public override bool UseItem(Player player)
+        public override bool? UseItem(Player player)/* tModPorter Suggestion: Return null instead of false */
         {
-            NPC.SpawnOnPlayer(player.whoAmI, mod.NPCType("TheEaterOfCosmos_Head"));   //boss spawn
-            Main.PlaySound(15, (int)player.position.X, (int)player.position.Y, 0);
+            NPC.SpawnOnPlayer(player.whoAmI, Mod.Find<ModNPC>("TheEaterOfCosmos_Head").Type);   //boss spawn
+            SoundEngine.PlaySound(SoundID.Roar, player.position);
 
             return true;
         }
         public override void AddRecipes()
         {
-            ModRecipe recipe = new ModRecipe(mod);
+            Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.GoldBar, 5);
             recipe.AddIngredient(ItemID.LunarBar, 3);
             recipe.AddTile(TileID.LunarCraftingStation);
-            recipe.SetResult(this);
-            recipe.AddRecipe();
-            recipe = new ModRecipe(mod);
+            recipe.Register();
+            recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.PlatinumBar, 5);
             recipe.AddIngredient(ItemID.LunarBar, 3);
             recipe.AddTile(TileID.LunarCraftingStation);
-            recipe.SetResult(this);
-            recipe.AddRecipe();
+            recipe.Register();
         }
     }
 }

@@ -13,22 +13,22 @@ namespace AstralVoyage.Items.Weapons
 
         public override void SetDefaults()
         {
-            item.damage = 350;
-            item.magic = true;
-            item.width = 46;
-            item.height = 30;
-            item.useTime = 12;
-            item.useAnimation = 12;
-            item.useStyle = ItemUseStyleID.HoldingOut;
-            item.noMelee = true; //so the item's animation doesn't do damage
-            item.knockBack = 2;
-            item.value = 42000;
-            item.rare = ItemRarityID.Red;
+            Item.damage = 350;
+            Item.DamageType = DamageClass.Magic;
+            Item.width = 46;
+            Item.height = 30;
+            Item.useTime = 12;
+            Item.useAnimation = 12;
+            Item.useStyle = ItemUseStyleID.Shoot;
+            Item.noMelee = true; //so the item's animation doesn't do damage
+            Item.knockBack = 2;
+            Item.value = 42000;
+            Item.rare = ItemRarityID.Red;
             CustomRarity = 14;
-            item.UseSound = SoundID.Item114;
-            item.autoReuse = true;
-            item.shoot = ProjectileID.HeatRay; //idk why but all the guns in the vanilla source have this
-            item.mana = 35;
+            Item.UseSound = SoundID.Item114;
+            Item.autoReuse = true;
+            Item.shoot = ProjectileID.HeatRay; //idk why but all the guns in the vanilla source have this
+            Item.mana = 35;
         }
 
         public override Vector2? HoldoutOffset()
@@ -40,9 +40,9 @@ namespace AstralVoyage.Items.Weapons
         {
             foreach (TooltipLine line2 in list)
             {
-                if (line2.mod == "Terraria" && line2.Name == "ItemName")
+                if (line2.Mod == "Terraria" && line2.Name == "ItemName")
                 {
-                    line2.overrideColor = BaseColor.DarkBlue;
+                    line2.OverrideColor = BaseColor.DarkBlue;
                 }
             }
         }

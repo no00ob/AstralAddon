@@ -2,16 +2,16 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Generation;
-using Terraria.World.Generation;
 using System.Collections.Generic;
 using System;
 using Terraria.ModLoader.IO;
 using System.IO;
 using AstralVoyage.Tiles;
+using Terraria.WorldBuilding;
 
 namespace AstralVoyage
 {
-    public class AstralVoyageWorld : ModWorld
+    public class AstralVoyageWorld : ModSystem
     {
         public static bool downedEaterOfCosmos; // Bool if this boss has been taken down.
         public static bool downedLivingTree; // Bool if this boss has been taken down.
@@ -26,7 +26,7 @@ namespace AstralVoyage
 
         public static int ancientParadiseTiles;
 
-        public override void Initialize()
+        public override void OnWorldLoad()/* tModPorter Suggestion: Also override OnWorldUnload, and mirror your worldgen-sensitive data initialization in PreWorldGen */
         {
             downedEaterOfCosmos = false;
             downedLivingTree = false;
@@ -39,7 +39,7 @@ namespace AstralVoyage
             }
         }
 
-        public override TagCompound Save()
+        public override void SaveWorldData(TagCompound tag)/* tModPorter Suggestion: Edit tag parameter instead of returning new TagCompound */
         {
             var downed = new List<string>();
             if (downedEaterOfCosmos) downed.Add("eoc");
@@ -61,7 +61,7 @@ namespace AstralVoyage
             };
         }
 
-        public override void Load(TagCompound tag)
+        public override void LoadWorldData(TagCompound tag)
         {
             var downed = tag.GetList<string>("downed");
             downedEaterOfCosmos = downed.Contains("eoc");
@@ -132,7 +132,7 @@ namespace AstralVoyage
             ancientParadiseTiles = 0;
         }
 
-        public override void TileCountsAvailable(int[] tileCounts)
+        public override void TileCountsAvailable(ReadOnlySpan<int> tileCounts)
         {
             ancientParadiseTiles = tileCounts[ModContent.TileType<CharredSoilBlock>()] + tileCounts[ModContent.TileType<CharredStoneBlock>()] + tileCounts[ModContent.TileType<DivineSandBlock>()];
         }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -15,14 +16,14 @@ namespace AstralVoyage.Items
 
         public override void SetDefaults()
         {
-            item.CloneDefaults(ItemID.LifeFruit);
-            item.width = 38;
-            item.height = 38;
-            item.value = 20000;
-            item.rare = ItemRarityID.Red;
+            Item.CloneDefaults(ItemID.LifeFruit);
+            Item.width = 38;
+            Item.height = 38;
+            Item.value = 20000;
+            Item.rare = ItemRarityID.Red;
             CustomRarity = 13;
-            item.maxStack = 1;
-            item.useStyle = ItemUseStyleID.EatingUsing;
+            Item.maxStack = 1;
+            Item.useStyle = ItemUseStyleID.EatFood;
         }
 
         public override bool CanUseItem(Player player)
@@ -32,7 +33,7 @@ namespace AstralVoyage.Items
             return player.statLifeMax == 500 && player.GetModPlayer<AstralVoyagePlayer>().healthSoda < AstralVoyagePlayer.maxHealthSoda;
         }
 
-        public override bool UseItem(Player player)
+        public override bool? UseItem(Player player)/* tModPorter Suggestion: Return null instead of false */
         {
             // Do not do this: player.statLifeMax += 2;
             player.statLifeMax2 += 100;
@@ -43,7 +44,7 @@ namespace AstralVoyage.Items
                 player.HealEffect(100, true);
             }
 
-            Main.PlaySound(SoundID.Item, -1, -1, mod.GetSoundSlot(SoundType.Item, "Sounds/Item/soda"));
+            SoundEngine.PlaySound(SoundID.Item, -1, -1, Mod.GetSoundSlot(SoundType.Item, "Sounds/Item/soda"));
 
             // This is very important. This is what makes it permanent.
             player.GetModPlayer<AstralVoyagePlayer>().healthSoda += 1;
@@ -57,9 +58,9 @@ namespace AstralVoyage.Items
         {
             foreach (TooltipLine line2 in list)
             {
-                if (line2.mod == "Terraria" && line2.Name == "ItemName")
+                if (line2.Mod == "Terraria" && line2.Name == "ItemName")
                 {
-                    line2.overrideColor = BaseColor.PureGreen;
+                    line2.OverrideColor = BaseColor.PureGreen;
                 }
             }
         }

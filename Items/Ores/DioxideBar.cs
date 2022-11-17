@@ -1,4 +1,5 @@
-﻿using Terraria.ID;
+﻿using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace AstralVoyage.Items.Ores
@@ -11,20 +12,19 @@ namespace AstralVoyage.Items.Ores
         }
         public override void SetDefaults()
         {
-            item.width = 30;
-            item.height = 24;
-            item.value = 500;
-            item.rare = 7;
-            item.maxStack = 99;
+            Item.width = 30;
+            Item.height = 24;
+            Item.value = 500;
+            Item.rare = 7;
+            Item.maxStack = 99;
         }
 
         public override void AddRecipes()
         {
-            ModRecipe recipe = new ModRecipe(mod);
+            Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.LihzahrdBrick, 3);
             recipe.AddTile(TileID.LihzahrdFurnace);
-            recipe.SetResult(this);
-            recipe.AddRecipe();
+            recipe.Register();
         }
     }
 }

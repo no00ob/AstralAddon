@@ -12,18 +12,18 @@ namespace AstralVoyage.Items.Ammo
         }
         public override void SetDefaults()
 		{
-			item.damage = 24;
-			item.ranged = true;
-			item.width = 12;
-			item.height = 12;
-			item.maxStack = 999;
-			item.consumable = true;
-			item.knockBack = 0.2f;
-            item.value = Item.sellPrice(0, 0, 40, 0);
-            item.rare = ItemRarityID.Green;
-			item.shoot = ModContent.ProjectileType<Projectiles.ElectricBolt>();
-            item.shootSpeed = 10f;
-            item.ammo = item.type; // The first item in an ammo class sets the AmmoID to it's type
+			Item.damage = 24;
+			Item.DamageType = DamageClass.Ranged;
+			Item.width = 12;
+			Item.height = 12;
+			Item.maxStack = 999;
+			Item.consumable = true;
+			Item.knockBack = 0.2f;
+            Item.value = Item.sellPrice(0, 0, 40, 0);
+            Item.rare = ItemRarityID.Green;
+			Item.shoot = ModContent.ProjectileType<Projectiles.ElectricBolt>();
+            Item.shootSpeed = 10f;
+            Item.ammo = Item.type; // The first item in an ammo class sets the AmmoID to it's type
         }
 	}
 }

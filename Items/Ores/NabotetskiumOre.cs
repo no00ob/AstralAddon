@@ -11,11 +11,11 @@ namespace AstralVoyage.Items.Ores
         }
         public override void SetDefaults()
         {
-            item.width = 18;
-            item.height = 18;
-            item.value = 1000;
-            item.rare = ItemRarityID.Lime;
-            item.maxStack = 999;
+            Item.width = 18;
+            Item.height = 18;
+            Item.value = 1000;
+            Item.rare = ItemRarityID.Lime;
+            Item.maxStack = 999;
         }
     }
 }

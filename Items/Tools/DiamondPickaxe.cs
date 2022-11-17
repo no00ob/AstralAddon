@@ -3,7 +3,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using ThumodRe.Items.Ores;
 
-namespace ThumodRe.Items.Tools
+namespace AstralVoyage.Items.Tools
 {
     public class DiamondPickaxe : ModItem
     {

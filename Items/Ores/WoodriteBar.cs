@@ -1,3 +1,4 @@
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -12,20 +13,19 @@ namespace AstralVoyage.Items.Ores
         }
         public override void SetDefaults()
 		{
-			item.width = 30;
-			item.height = 24;
-			item.value = 10;
-            item.rare = ItemRarityID.Blue;
-            item.maxStack = 99;
+			Item.width = 30;
+			Item.height = 24;
+			Item.value = 10;
+            Item.rare = ItemRarityID.Blue;
+            Item.maxStack = 99;
         }
 
 		public override void AddRecipes()
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ModContent.ItemType<WoodriteOre>(), 3);
             recipe.AddTile(TileID.Furnaces);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

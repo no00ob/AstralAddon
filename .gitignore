@@ -3,6 +3,21 @@
 /bin/
 /obj/
 /Properties/
+App.config
+.vs/
+bin/
+obj/
+Properties/
+/App.config*
+/.vs/*
+/bin/*
+/obj/*
+/Properties/*
+App.config*
+.vs/*
+bin/*
+obj/*
+Properties/*
 
 *.user
 *.sln
@@ -10,6 +25,10 @@
 *.zip
 *.rar
 *.ini
+thumb.db
+Thumb.db
+thumbs.db
+Thumbs.db
 
 commit-message.txt
 *.sfk

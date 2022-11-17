@@ -15,11 +15,11 @@ namespace AstralVoyage.Items
 
         public override void SetDefaults()
         {
-            item.width = 16;
-            item.height = 16;
-            item.value = 0;
-            item.rare = ItemRarityID.Expert;
-            item.maxStack = 1;
+            Item.width = 16;
+            Item.height = 16;
+            Item.value = 0;
+            Item.rare = ItemRarityID.Expert;
+            Item.maxStack = 1;
         }
 
         public override bool CanRightClick()

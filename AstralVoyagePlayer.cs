@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
@@ -46,13 +47,13 @@ namespace AstralVoyage
             woodSplinters = false;
 			ekubo = false;
 
-            player.statLifeMax2 += healthSoda * 100;
+            Player.statLifeMax2 += healthSoda * 100;
         }
         public override void SyncPlayer(int toWho, int fromWho, bool newPlayer)
         {
-            ModPacket packet = mod.GetPacket();
+            ModPacket packet = Mod.GetPacket();
             //packet.Write((byte)ExampleModMessageType.ExamplePlayerSyncPlayer);
-            packet.Write((byte)player.whoAmI);
+            packet.Write((byte)Player.whoAmI);
             packet.Write(healthSoda);
             packet.Send(toWho, fromWho);
         }
@@ -63,7 +64,7 @@ namespace AstralVoyage
             woodSplinters = false;
         }
 
-        public override TagCompound Save()
+        public override void SaveData(TagCompound tag)/* tModPorter Suggestion: Edit tag parameter instead of returning new TagCompound */
         {
             // Read https://github.com/tModLoader/tModLoader/wiki/Saving-and-loading-using-TagCompound to better understand Saving and Loading data.
             return new TagCompound {
@@ -76,7 +77,7 @@ namespace AstralVoyage
             //};
         }
 
-        public override void Load(TagCompound tag)
+        public override void LoadData(TagCompound tag)
         {
             healthSoda = tag.GetInt("healthSoda");
         }
@@ -86,14 +87,14 @@ namespace AstralVoyage
             int loadVersion = reader.ReadInt32();
         }
 
-        public override void SetupStartInventory(IList<Item> items, bool mediumcoreDeath)
+        public override IEnumerable<Item> AddStartingItems(bool mediumCoreDeath)/* tModPorter Suggestion: Return an Item array to add to the players starting items. Use ModifyStartingInventory for modifying them if needed */
         {
             items.RemoveAt(2);         // these lines remove all items from your inventory
             items.RemoveAt(1);
             items.RemoveAt(0);
             // and then we add these ones in to the inventory
             Item item = new Item();
-            item.SetDefaults(mod.ItemType("RustyShovel"));   // the custom item being added
+            item.SetDefaults(Mod.Find<ModItem>("RustyShovel").Type);   // the custom item being added
             item.stack = 1;         // stack size of the item
             items.Add(item);
         }
@@ -149,7 +150,7 @@ namespace AstralVoyage
         {
             if (ZoneAncient)
             {
-                return mod.GetTexture("Backgrounds/AncientBiomeMapBackground");
+                return Mod.GetTexture("Backgrounds/AncientBiomeMapBackground");
             }
             return null;
         }
@@ -159,28 +160,28 @@ namespace AstralVoyage
             if (corrupted)
             {
                 // These lines zero out any positive lifeRegen. This is expected for all bad life regeneration effects.
-                if (player.lifeRegen > 0)
+                if (Player.lifeRegen > 0)
                 {
-                    player.lifeRegen = 0;
+                    Player.lifeRegen = 0;
                 }
-                player.lifeRegenTime = 0;
+                Player.lifeRegenTime = 0;
                 // lifeRegen is measured in 1/2 life per second. Therefore, this effect causes 8 life lost per second.
-                player.lifeRegen -= 8;
+                Player.lifeRegen -= 8;
             }
             if (woodSplinters)
             {
                 // These lines zero out any positive lifeRegen. This is expected for all bad life regeneration effects.
-                if (player.lifeRegen > 0)
+                if (Player.lifeRegen > 0)
                 {
-                    player.lifeRegen = 0;
+                    Player.lifeRegen = 0;
                 }
-                player.lifeRegenTime = 0;
+                Player.lifeRegenTime = 0;
                 // lifeRegen is measured in 1/2 life per second. Therefore, this effect causes 8 life lost per second.
-                player.lifeRegen -= 2;
+                Player.lifeRegen -= 2;
             }
         }
 
-        public override void DrawEffects(PlayerDrawInfo drawInfo, ref float r, ref float g, ref float b, ref float a, ref bool fullBright)
+        public override void DrawEffects(PlayerDrawSet drawInfo, ref float r, ref float g, ref float b, ref float a, ref bool fullBright)
         {
             if (corrupted)
             {
@@ -188,7 +189,7 @@ namespace AstralVoyage
                 {
                     Random rand = new Random();
                     int dustType = rand.Next(1,80);
-                    int dust = Dust.NewDust(drawInfo.position - new Vector2(2f, 2f), player.width + 4, player.height + 4, dustType, player.velocity.X * 0.4f, player.velocity.Y * 0.4f, 100, default(Color), 3f);
+                    int dust = Dust.NewDust(drawInfo.Position - new Vector2(2f, 2f), Player.width + 4, Player.height + 4, dustType, Player.velocity.X * 0.4f, Player.velocity.Y * 0.4f, 100, default(Color), 3f);
                     Main.dust[dust].noGravity = true;
                     Main.dust[dust].velocity *= 1.8f;
                     Main.dust[dust].velocity.Y -= 0.5f;
@@ -204,7 +205,7 @@ namespace AstralVoyage
                 if (Main.rand.NextBool(4) && drawInfo.shadow == 0f)
                 {
                     int dustType = DustID.Blood;
-                    int dust = Dust.NewDust(drawInfo.position - new Vector2(2f, 2f), player.width + 4, player.height + 4, dustType, player.velocity.X * 0.4f, player.velocity.Y * 0.4f, 100, default(Color), 3f);
+                    int dust = Dust.NewDust(drawInfo.Position - new Vector2(2f, 2f), Player.width + 4, Player.height + 4, dustType, Player.velocity.X * 0.4f, Player.velocity.Y * 0.4f, 100, default(Color), 3f);
                     Main.dust[dust].noGravity = false;
                     Main.dust[dust].velocity *= 1.8f;
                     Main.dust[dust].velocity.Y -= 0.1f;

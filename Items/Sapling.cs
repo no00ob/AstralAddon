@@ -1,3 +1,4 @@
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -7,21 +8,20 @@ namespace AstralVoyage.Items
 	{
 		public override void SetDefaults()
 		{
-			item.width = 32;
-			item.height = 32;
-			item.value = 8;
-			item.rare = 1;
-            item.maxStack = 99;
+			Item.width = 32;
+			Item.height = 32;
+			Item.value = 8;
+			Item.rare = 1;
+            Item.maxStack = 99;
         }
 
 		public override void AddRecipes()
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.Acorn, 1);
             recipe.AddIngredient(null, "AcorniteBar");
             recipe.AddTile(TileID.Furnaces);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

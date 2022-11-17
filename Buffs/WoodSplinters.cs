@@ -8,14 +8,14 @@ namespace AstralVoyage.Buffs
     // See ExamplePlayer.UpdateBadLifeRegen and ExampleGlobalNPC.UpdateLifeRegen for more information.
     public class WoodSplinters : ModBuff
     {
-        public override void SetDefaults()
+        public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Wood Splinters");
             Description.SetDefault("Foreign object stuck under your skin");
             Main.debuff[Type] = true;
             Main.pvpBuff[Type] = true;
             Main.buffNoSave[Type] = true;
-            longerExpertDebuff = true;
+            longerExpertDebuff/* tModPorter Note: Removed. Use BuffID.Sets.LongerExpertDebuff instead */ = true;
         }
 
         public override void Update(Player player, ref int buffIndex)

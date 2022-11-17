@@ -16,24 +16,22 @@ namespace AstralVoyage.Items.Armor
 
         public override void SetDefaults()
         {
-            item.width = 30;
-            item.height = 20;
-            item.value = 1000;
-            item.rare = 13;
+            Item.width = 30;
+            Item.height = 20;
+            Item.value = 1000;
+            Item.rare = 13;
         }
 
         public override void AddRecipes()
         {
-            ModRecipe recipe = new ModRecipe(mod);
+            Recipe recipe = CreateRecipe();
             recipe.AddIngredient(null, "BetaToken", 1);
             recipe.AddTile(TileID.WorkBenches);
-            recipe.SetResult(this);
-            recipe.AddRecipe();
-            recipe = new ModRecipe(mod);
+            recipe.Register();
+            recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.Silk, 5);
             recipe.AddTile(TileID.Loom);
-            recipe.SetResult(this);
-            recipe.AddRecipe();
+            recipe.Register();
         }
     }
 }

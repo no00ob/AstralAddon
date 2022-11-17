@@ -1,4 +1,5 @@
-﻿using Terraria.ID;
+﻿using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace AstralVoyage.Items
@@ -11,21 +12,20 @@ namespace AstralVoyage.Items
         }
         public override void SetDefaults()
         {
-            item.width = 32;
-            item.height = 32;
-            item.value = 100;
-            item.rare = 1;
-            item.maxStack = 999;
+            Item.width = 32;
+            Item.height = 32;
+            Item.value = 100;
+            Item.rare = 1;
+            Item.maxStack = 999;
         }
 
         public override void AddRecipes()
         {
-            ModRecipe recipe = new ModRecipe(mod);
+            Recipe recipe = CreateRecipe(2);
             recipe.AddIngredient(ItemID.SiltBlock, 1);
             recipe.AddIngredient(ItemID.Gel, 1);
             recipe.AddTile(TileID.Furnaces);
-            recipe.SetResult(this, 2);
-            recipe.AddRecipe();
+            recipe.Register();
         }
     }
 }

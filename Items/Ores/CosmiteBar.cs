@@ -13,42 +13,41 @@ namespace AstralVoyage.Items.Ores
 			DisplayName.SetDefault("Cosmite Bar");
             Tooltip.SetDefault("'Cosmic steel imbued with celestial essence'");
             // ticksperframe, frameCount
-            Main.RegisterItemAnimation(item.type, new DrawAnimationVertical(15, 8));
-            ItemID.Sets.AnimatesAsSoul[item.type] = true;
+            Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(15, 8));
+            ItemID.Sets.AnimatesAsSoul[Item.type] = true;
         }
         public override void SetDefaults()
         {
-            item.width = 34;
-            item.height = 30;
-            item.value = 14000;
-            item.rare = ItemRarityID.Red;
+            Item.width = 34;
+            Item.height = 30;
+            Item.value = 14000;
+            Item.rare = ItemRarityID.Red;
             CustomRarity = 101;
-            item.maxStack = 99;
+            Item.maxStack = 99;
         }
 
         public override void AddRecipes()
         {
-            ModRecipe recipe = new ModRecipe(mod);
+            Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ModContent.ItemType<CosmiteOre>(), 4);
             recipe.AddTile(TileID.LunarCraftingStation);
-            recipe.SetResult(this);
-            recipe.AddRecipe();
+            recipe.Register();
         }
 
         public override void PostUpdate()
         {
-            Lighting.AddLight(item.Center, Color.PaleVioletRed.ToVector3() * 0.55f * Main.essScale);
+            Lighting.AddLight(Item.Center, Color.PaleVioletRed.ToVector3() * 0.55f * Main.essScale);
         }
 
         public override void ModifyTooltips(System.Collections.Generic.List<TooltipLine> list)
         {
             foreach (TooltipLine line2 in list)
             {
-                if (line2.mod == "Terraria" && line2.Name == "ItemName")
+                if (line2.Mod == "Terraria" && line2.Name == "ItemName")
                 {
                     float fade = Main.GameUpdateCount % 60 / 60f;
                     int index = (int)(Main.GameUpdateCount / 60 % 4);
-                    line2.overrideColor = Color.Lerp(BaseColor.Cosmite[index], BaseColor.Cosmite[(index + 1) % 4], fade);
+                    line2.OverrideColor = Color.Lerp(BaseColor.Cosmite[index], BaseColor.Cosmite[(index + 1) % 4], fade);
                 }
             }
         }

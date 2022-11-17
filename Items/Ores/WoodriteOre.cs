@@ -1,4 +1,5 @@
 using AstralVoyage.Tiles;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -13,27 +14,26 @@ namespace AstralVoyage.Items.Ores
         }
         public override void SetDefaults()
         {
-            item.width = 24;
-            item.height = 24;
-            item.value = 3;
-            item.rare = ItemRarityID.Blue;
-            item.maxStack = 999;
-            item.useTurn = true;
-            item.autoReuse = true;
-            item.useAnimation = 15;
-            item.useTime = 10;
-            item.useStyle = ItemUseStyleID.SwingThrow;
-            item.consumable = true;
-            item.createTile = ModContent.TileType<WoodriteOreBlock>();
+            Item.width = 24;
+            Item.height = 24;
+            Item.value = 3;
+            Item.rare = ItemRarityID.Blue;
+            Item.maxStack = 999;
+            Item.useTurn = true;
+            Item.autoReuse = true;
+            Item.useAnimation = 15;
+            Item.useTime = 10;
+            Item.useStyle = ItemUseStyleID.Swing;
+            Item.consumable = true;
+            Item.createTile = ModContent.TileType<WoodriteOreBlock>();
         }
 
         public override void AddRecipes()
         {
-            ModRecipe recipe = new ModRecipe(mod);
+            Recipe recipe = CreateRecipe();
             recipe.AddRecipeGroup("Wood", 1);
             recipe.AddTile(TileID.Furnaces);
-            recipe.SetResult(this);
-            recipe.AddRecipe();
+            recipe.Register();
         }
     }
 }

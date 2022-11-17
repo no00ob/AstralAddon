@@ -5,8 +5,8 @@ namespace AstralVoyage.Dusts
 {
 	public class AncientWaterSplash : ModDust
 	{
-		public override void SetDefaults() {
-			updateType = 33;
+		public override void SetStaticDefaults() {
+			UpdateType = 33;
 		}
 
 		public override void OnSpawn(Dust dust) {

@@ -1,4 +1,5 @@
-﻿using Terraria.ID;
+﻿using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace AstralVoyage.Items.Weapons
@@ -12,25 +13,25 @@ namespace AstralVoyage.Items.Weapons
 
         public override void SetDefaults()
         {
-            item.damage = 70;
-            item.melee = true;
-            item.width = 60;
-            item.height = 68;
-            item.useTime = 26;
-            item.useAnimation = 26;
-            item.useStyle = 1;
-            item.knockBack = 6;
-            item.value = 80000;
-            item.rare = 7;
-            item.UseSound = SoundID.Item1;
-            item.autoReuse = false;
-            item.shoot = mod.ProjectileType("TheLostSwordProjectile");
-            item.shootSpeed = 8f;
+            Item.damage = 70;
+            Item.DamageType = DamageClass.Melee/* tModPorter Suggestion: Consider MeleeNoSpeed for no attack speed scaling */;
+            Item.width = 60;
+            Item.height = 68;
+            Item.useTime = 26;
+            Item.useAnimation = 26;
+            Item.useStyle = 1;
+            Item.knockBack = 6;
+            Item.value = 80000;
+            Item.rare = 7;
+            Item.UseSound = SoundID.Item1;
+            Item.autoReuse = false;
+            Item.shoot = Mod.Find<ModProjectile>("TheLostSwordProjectile").Type;
+            Item.shootSpeed = 8f;
         }
 
         public override void AddRecipes()
         {
-            ModRecipe recipe = new ModRecipe(mod);
+            Recipe recipe = CreateRecipe();
             recipe.AddIngredient(null, "LeafBlade", 1);
             recipe.AddIngredient(ItemID.JungleRose, 2);
             recipe.AddIngredient(ItemID.Vine, 10);
@@ -39,8 +40,7 @@ namespace AstralVoyage.Items.Weapons
             recipe.AddIngredient(ItemID.SoulofNight, 8);
             recipe.AddIngredient(ItemID.SoulofFright, 4);
             recipe.AddTile(TileID.MythrilAnvil);
-            recipe.SetResult(this);
-            recipe.AddRecipe();
+            recipe.Register();
         }
     }
 }

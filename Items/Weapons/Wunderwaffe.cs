@@ -1,6 +1,7 @@
 ﻿using AstralVoyage.Items.Ammo;
 using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -15,25 +16,25 @@ namespace AstralVoyage.Items.Weapons
 
         public override void SetDefaults()
         {
-            item.damage = 12;
-            item.ranged = true;
-            item.width = 58;
-            item.height = 24;
-            item.useTime = 16;
-            item.useAnimation = 16;
-            item.useStyle = ItemUseStyleID.HoldingOut;
-            item.noMelee = true; //so the item's animation doesn't do damage
-            item.knockBack = 5;
-            item.value = Item.sellPrice(0, 3, 12, 40);
-            item.rare = ItemRarityID.Orange;
-            item.UseSound = SoundID.Item109;
-            item.autoReuse = true;
-            item.shoot = ModContent.ProjectileType<Projectiles.ElectricBolt>();
-            item.shootSpeed = 10f;
-            item.useAmmo = ModContent.ItemType<PowerCell>();
+            Item.damage = 12;
+            Item.DamageType = DamageClass.Ranged;
+            Item.width = 58;
+            Item.height = 24;
+            Item.useTime = 16;
+            Item.useAnimation = 16;
+            Item.useStyle = ItemUseStyleID.Shoot;
+            Item.noMelee = true; //so the item's animation doesn't do damage
+            Item.knockBack = 5;
+            Item.value = Item.sellPrice(0, 3, 12, 40);
+            Item.rare = ItemRarityID.Orange;
+            Item.UseSound = SoundID.Item109;
+            Item.autoReuse = true;
+            Item.shoot = ModContent.ProjectileType<Projectiles.ElectricBolt>();
+            Item.shootSpeed = 10f;
+            Item.useAmmo = ModContent.ItemType<PowerCell>();
         }
 
-        public override void ModifyWeaponDamage(Player player, ref float add, ref float mult, ref float flat)
+        public override void ModifyWeaponDamage(Player player, ref StatModifier damage)
         {
             // Here we use the multiplicative damage modifier because Terraria does this approach for Ammo damage bonuses. 
             mult *= player.bulletDamage;
@@ -44,7 +45,7 @@ namespace AstralVoyage.Items.Weapons
             return new Vector2(-6, 0);
         }
 
-        public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
+        public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
             Vector2 muzzleOffset = Vector2.Normalize(new Vector2(speedX, speedY)) * 25f;
             if (Collision.CanHit(position, 0, 0, position + muzzleOffset, 0, 0))

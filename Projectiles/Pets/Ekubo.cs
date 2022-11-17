@@ -10,16 +10,16 @@ namespace AstralVoyage.Projectiles.Pets
 	{
 		public override void SetStaticDefaults() {
 			DisplayName.SetDefault("Evil Spirit"); // Automatic from .lang files
-			Main.projFrames[projectile.type] = 4;
-			Main.projPet[projectile.type] = true;
+			Main.projFrames[Projectile.type] = 4;
+			Main.projPet[Projectile.type] = true;
 		}
 
 		public override void SetDefaults() {
-			projectile.CloneDefaults(ProjectileID.ZephyrFish);
-            projectile.width = 40;
-            projectile.height = 46;
+			Projectile.CloneDefaults(ProjectileID.ZephyrFish);
+            Projectile.width = 40;
+            Projectile.height = 46;
             //projectile.alpha = 20;
-			aiType = ProjectileID.ZephyrFish;
+			AIType = ProjectileID.ZephyrFish;
 		}
         //public override Color? GetAlpha(Color lightColor)
         //{
@@ -28,19 +28,19 @@ namespace AstralVoyage.Projectiles.Pets
         //}
 
         public override bool PreAI() {
-			Player player = Main.player[projectile.owner];
+			Player player = Main.player[Projectile.owner];
 			player.zephyrfish = false; // Relic from aiType
 			return true;
 		}
 
 		public override void AI() {
-			Player player = Main.player[projectile.owner];
+			Player player = Main.player[Projectile.owner];
 			AstralVoyagePlayer modPlayer = player.GetModPlayer<AstralVoyagePlayer>();
 			if (player.dead) {
 				modPlayer.ekubo = false;
 			}
 			if (modPlayer.ekubo) {
-				projectile.timeLeft = 2;
+				Projectile.timeLeft = 2;
 			}
 		}
 	}

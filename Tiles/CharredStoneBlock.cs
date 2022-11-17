@@ -9,16 +9,16 @@ namespace AstralVoyage.Tiles
 {
     public class CharredStoneBlock : ModTile
     {
-        public override void SetDefaults()
+        public override void SetStaticDefaults()
         {
             Main.tileSolid[Type] = true;
             Main.tileMergeDirt[Type] = true;
             Main.tileLighted[Type] = true;
-            dustType = ModContent.DustType<CharredStoneDust>();
-            drop = ModContent.ItemType<CharredStone>();
+            DustType = ModContent.DustType<CharredStoneDust>();
+            ItemDrop = ModContent.ItemType<CharredStone>();
             AddMapEntry(new Color(48, 38, 44));
             //SetModTree(new Trees.ExampleTree());
-            soundType = SoundID.Tink;
+            HitSound = SoundID.Tink;
         }
 
         public override bool CanExplode(int i, int j)

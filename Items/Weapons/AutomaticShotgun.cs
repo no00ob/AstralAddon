@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -14,42 +15,41 @@ namespace AstralVoyage.Items.Weapons
 
         public override void SetDefaults()
         {
-            item.damage = 24;
-            item.ranged = true;
-            item.width = 40;
-            item.height = 19;
-            item.useTime = 44;
-            item.useAnimation = 44;
-            item.useStyle = 5;
-            item.noMelee = true; //so the item's animation doesn't do damage
-            item.knockBack = 6;
-            item.value = 90000;
-            item.rare = 4;
-            item.UseSound = SoundID.Item11;
-            item.autoReuse = true;
-            item.shoot = 10; //idk why but all the guns in the vanilla source have this
-            item.shootSpeed = 7f;
-            item.useAmmo = AmmoID.Bullet;
+            Item.damage = 24;
+            Item.DamageType = DamageClass.Ranged;
+            Item.width = 40;
+            Item.height = 19;
+            Item.useTime = 44;
+            Item.useAnimation = 44;
+            Item.useStyle = 5;
+            Item.noMelee = true; //so the item's animation doesn't do damage
+            Item.knockBack = 6;
+            Item.value = 90000;
+            Item.rare = 4;
+            Item.UseSound = SoundID.Item11;
+            Item.autoReuse = true;
+            Item.shoot = 10; //idk why but all the guns in the vanilla source have this
+            Item.shootSpeed = 7f;
+            Item.useAmmo = AmmoID.Bullet;
         }
 
         public override void AddRecipes()
         {
-            ModRecipe recipe = new ModRecipe(mod);
+            Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.Shotgun, 1);
             recipe.AddIngredient(ItemID.IllegalGunParts, 1);
             recipe.AddIngredient(ItemID.SoulofMight, 20);
             recipe.AddTile(TileID.Anvils);
-            recipe.SetResult(this);
         }
         // What if I wanted this gun to have a 38% chance not to consume ammo?
-        public override bool ConsumeAmmo(Player player)
+        public override bool CanConsumeAmmo(Item ammo, Player player)
         {
             return Main.rand.NextFloat() > .18f;
         }
 
         // What if I wanted it to shoot like a shotgun?
         // Shotgun style: Multiple Projectiles, Random spread 
-        public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
+        public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
             int numberProjectiles = 4 + Main.rand.Next(2); // 4 or 5 shots
             for (int i = 0; i < numberProjectiles; i++)

@@ -16,29 +16,28 @@ namespace AstralVoyage.Items.Accessories
 
         public override void SetDefaults()
         {
-            item.width = 10;
-            item.height = 14;
-            item.value = 10;
-            item.rare = 3;
-            item.accessory = true;
+            Item.width = 10;
+            Item.height = 14;
+            Item.value = 10;
+            Item.rare = 3;
+            Item.accessory = true;
         }
         public override void AddRecipes()  //How to craft this item
         {
-            ModRecipe recipe = new ModRecipe(mod);
+            Recipe recipe = CreateRecipe();
             recipe.AddIngredient(null, "BrassSickle");
             recipe.AddIngredient(null, "BrassHammer");
             recipe.AddIngredient(ItemID.GoldCoin, 10);   //you need 10 Gold coins
             recipe.AddTile(TileID.WorkBenches);   //at work bench
-            recipe.SetResult(this);
-            recipe.AddRecipe();
+            recipe.Register();
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
 
-            player.meleeCrit += 10;
-            player.meleeDamage += 0.10f;
-            player.meleeSpeed += 0.10f;
+            player.GetCritChance(DamageClass.Generic) += 10;
+            player.GetDamage(DamageClass.Melee) += 0.10f;
+            player.GetAttackSpeed(DamageClass.Melee) += 0.10f;
             player.moveSpeed += 0.10f;
         }
     }

@@ -13,22 +13,21 @@ namespace AstralVoyage.Items.Ores
         }
         public override void SetDefaults()
 		{
-			item.width = 30;
-			item.height = 24;
-			item.value = 3500;
-			item.rare = 0;
-            item.maxStack = 99;
+			Item.width = 30;
+			Item.height = 24;
+			Item.value = 3500;
+			Item.rare = 0;
+            Item.maxStack = 99;
         }
 
 		public override void AddRecipes()
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe(10);
             recipe.AddIngredient(ItemID.IronBar, 10);
             recipe.AddIngredient(ModContent.ItemType<Rag>(), 1);
             recipe.AddIngredient(ModContent.ItemType<Polish>(), 1);
             recipe.AddTile(TileID.WorkBenches);
-			recipe.SetResult(this, 10);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

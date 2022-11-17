@@ -41,15 +41,15 @@ namespace AstralVoyage
             {
                 foreach (TooltipLine line2 in list)
                 {
-                    if (line2.mod == "Terraria" && line2.Name == "ItemName")
+                    if (line2.Mod == "Terraria" && line2.Name == "ItemName")
                     {
-                        line2.overrideColor = (Color)customNameColor;
+                        line2.OverrideColor = (Color)customNameColor;
                     }
                 }
                 return;
             }
 
-            if (item.modItem is CustomModItem MyModItem && MyModItem.CustomRarity != 0)
+            if (Item.ModItem is CustomModItem MyModItem && MyModItem.CustomRarity != 0)
             {
                 Color Rare;
                 switch (MyModItem.CustomRarity)
@@ -68,9 +68,9 @@ namespace AstralVoyage
                 }
                 foreach (TooltipLine line2 in list)
                 {
-                    if (line2.mod == "Terraria" && line2.Name == "ItemName")
+                    if (line2.Mod == "Terraria" && line2.Name == "ItemName")
                     {
-                        line2.overrideColor = Rare;
+                        line2.OverrideColor = Rare;
                     }
                 }
             }

@@ -13,27 +13,26 @@ namespace AstralVoyage.Items.Weapons
 
         public override void SetDefaults()
 		{
-			item.damage = 6;
-			item.melee = true;
-			item.width = 32;
-			item.height = 32;
-			item.useTime = 20;
-			item.useAnimation = 20;
-			item.useStyle = 1;
-			item.knockBack = 4;
-			item.value = 0;
-			item.rare = 0;
-			item.UseSound = SoundID.Item1;
-			item.autoReuse = true;
+			Item.damage = 6;
+			Item.DamageType = DamageClass.Melee/* tModPorter Suggestion: Consider MeleeNoSpeed for no attack speed scaling */;
+			Item.width = 32;
+			Item.height = 32;
+			Item.useTime = 20;
+			Item.useAnimation = 20;
+			Item.useStyle = 1;
+			Item.knockBack = 4;
+			Item.value = 0;
+			Item.rare = 0;
+			Item.UseSound = SoundID.Item1;
+			Item.autoReuse = true;
 		}
 
         public override void AddRecipes()
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
             recipe.AddRecipeGroup("Wood", 5);
             recipe.AddTile(TileID.WorkBenches);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			recipe.Register();
 		}
 	}
 }

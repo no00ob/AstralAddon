@@ -2,9 +2,9 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.World.Generation;
 using SubworldLibrary;
 using AstralVoyage.Tiles;
+using Terraria.WorldBuilding;
 
 namespace AstralVoyage
 {
@@ -13,7 +13,7 @@ namespace AstralVoyage
         public override int width => 500;
         public override int height => 300;
 
-        public override ModWorld modWorld => ModContent.GetInstance<AstralVoyageWorld>();
+        public override ModSystem modWorld => ModContent.GetInstance<AstralVoyageWorld>();
 
 	    public override bool saveSubworld => false;
         public override bool disablePlayerSaving => true;
@@ -31,8 +31,8 @@ namespace AstralVoyage
                     for (int j = 0; j < Main.maxTilesY; j++)
                     {
                         progress.Set((j + i * Main.maxTilesY) / (float)(Main.maxTilesX * Main.maxTilesY)); //Controls the progress bar, should only be set between 0f and 1f
-				        Main.tile[i, j].active(true);
-                        Main.tile[i, j].type = (ushort)ModContent.TileType<CharredStoneBlock>();
+				        Main.tile[i, j].HasTile = true;
+                        Main.tile[i, j].TileType = (ushort)ModContent.TileType<CharredStoneBlock>();
                     }
                 }
             })

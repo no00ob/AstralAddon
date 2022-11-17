@@ -17,38 +17,37 @@ namespace AstralVoyage.Items.Armor
 
         public override void SetDefaults()
         {
-            item.width = 24;
-            item.height = 16;
-            item.value = 2000;
-            item.value = Item.sellPrice(0,0,20,0);
-            item.rare = ItemRarityID.Red;
+            Item.width = 24;
+            Item.height = 16;
+            Item.value = 2000;
+            Item.value = Item.sellPrice(0,0,20,0);
+            Item.rare = ItemRarityID.Red;
             CustomRarity = 102;
-            item.vanity = true;
+            Item.vanity = true;
         }
 
-        public override void DrawHair(ref bool drawHair, ref bool drawAltHair)
+        public override void DrawHair(ref bool drawHair, ref bool drawAltHair)/* tModPorter Note: Removed. In SetStaticDefaults, use ArmorIDs.Head.Sets.DrawFullHair[Item.headSlot] = true if you had drawHair set to true, and ArmorIDs.Head.Sets.DrawHatHair[Item.headSlot] = true if you had drawAltHair set to true */
         {
             drawHair = true;  // wether or not to show the players hair or the short alternative hair used under hats or no hair?
         }
 
         public override void AddRecipes()
         {
-            ModRecipe recipe = new ModRecipe(mod);
+            Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.Silk, 10);
             recipe.AddTile(TileID.Loom);
-            recipe.SetResult(this);
-            recipe.AddRecipe();
+            recipe.Register();
         }
 		// Custom Rarity/Name Color
         public override void ModifyTooltips(System.Collections.Generic.List<TooltipLine> list)
         {
             foreach (TooltipLine line2 in list)
             {
-                if (line2.mod == "Terraria" && line2.Name == "ItemName")
+                if (line2.Mod == "Terraria" && line2.Name == "ItemName")
                 {
                     float fade = Main.GameUpdateCount % 60 / 60f;
                     int index = (int)(Main.GameUpdateCount / 60 % 4);
-                    line2.overrideColor = Color.Lerp(BaseColor.DiTF[index], BaseColor.DiTF[(index + 1) % 4], fade);
+                    line2.OverrideColor = Color.Lerp(BaseColor.DiTF[index], BaseColor.DiTF[(index + 1) % 4], fade);
                 }
             }
         }

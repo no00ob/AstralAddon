@@ -8,16 +8,16 @@ namespace AstralVoyage.Effects.Waters
 	public class AncientWaterStyle : ModWaterStyle
 	{
 		public override bool ChooseWaterStyle()
-			=> Main.bgStyle == mod.GetSurfaceBgStyleSlot("AncientSurfaceBgStyle");
+			=> Main.bgStyle == Mod.GetSurfaceBgStyleSlot("AncientSurfaceBgStyle");
 
 		public override int ChooseWaterfallStyle() 
-			=> mod.GetWaterfallStyleSlot("AncientWaterfallStyle");
+			=> Mod.GetWaterfallStyleSlot("AncientWaterfallStyle");
 
 		public override int GetSplashDust() 
 			=> ModContent.DustType<AncientWaterSplash>();
 
 		public override int GetDropletGore() 
-			=> mod.GetGoreSlot("Gores/AncientDroplet");
+			=> Mod.GetGoreSlot("Gores/AncientDroplet");
 
 		public override void LightColorMultiplier(ref float r, ref float g, ref float b) {
 			r = 1f;

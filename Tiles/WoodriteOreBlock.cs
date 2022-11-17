@@ -6,13 +6,13 @@ namespace AstralVoyage.Tiles
 {
 	public class WoodriteOreBlock : ModTile
 	{
-		public override void SetDefaults()
+		public override void SetStaticDefaults()
 		{
 			Main.tileSolid[Type] = true;
 			Main.tileMergeDirt[Type] = true;
 			Main.tileBlockLight[Type] = true;
 			Main.tileLighted[Type] = false;
-			drop = mod.ItemType("WoodriteOre");
+			ItemDrop = Mod.Find<ModItem>("WoodriteOre").Type;
 			AddMapEntry(new Color(90, 25, 5));
 		}
 	}

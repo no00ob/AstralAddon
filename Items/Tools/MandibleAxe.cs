@@ -1,7 +1,8 @@
-﻿using Terraria.ID;
+﻿using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Thumod.Items.Tools
+namespace AstralVoyage.Items.Tools
 {
     public class MandibleAxe : ModItem
     {
@@ -11,30 +12,28 @@ namespace Thumod.Items.Tools
         }
         public override void SetDefaults()
         {
-            item.damage = 10;
-            item.melee = true;
-            item.width = 46;
-            item.height = 44;
-            item.useTime = 10;
-            item.useAnimation = 10;
-            item.useStyle = 1;
-            item.knockBack = 4;
-            item.value = 10000;
-            item.rare = 5;
-            item.UseSound = SoundID.Item1;
-            item.autoReuse = true;
-            item.axe = 15;
+            Item.damage = 10;
+            Item.DamageType = DamageClass.Melee/* tModPorter Suggestion: Consider MeleeNoSpeed for no attack speed scaling */;
+            Item.width = 46;
+            Item.height = 44;
+            Item.useTime = 10;
+            Item.useAnimation = 10;
+            Item.useStyle = 1;
+            Item.knockBack = 4;
+            Item.value = 10000;
+            Item.rare = 5;
+            Item.UseSound = SoundID.Item1;
+            Item.autoReuse = true;
+            Item.axe = 15;
         }
 
         public override void AddRecipes()
         {
-            ModRecipe recipe = new ModRecipe(mod);
+            Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.AntlionMandible, 10);
-            recipe.AddIngredient(null, "SandPickaxe");
             recipe.AddIngredient(ItemID.HardenedSand, 6);
             recipe.AddTile(TileID.Anvils);
-            recipe.SetResult(this);
-            recipe.AddRecipe();
+            recipe.Register();
         }
     }
 }

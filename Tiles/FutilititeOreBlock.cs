@@ -1,9 +1,8 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
-using ThumodRe.Items;
 
-namespace ThumodRe.Tiles
+namespace AstralVoyage.Tiles
 {
 	public class FutilititeOreBlock : ModTile
 	{

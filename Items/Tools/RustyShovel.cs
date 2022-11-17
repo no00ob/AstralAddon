@@ -1,3 +1,4 @@
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -12,34 +13,32 @@ namespace AstralVoyage.Items.Tools
 
         public override void SetDefaults()
 		{
-            item.damage = 4;
-            item.melee = true;
-            item.width = 32;
-            item.height = 32;
-            item.useTime = 21;
-            item.useAnimation = 21;
-            item.pick = 3;    //pickaxe power
-            item.useStyle = 1;
-            item.knockBack = 1;
-            item.value = 1;
-            item.rare = -1;
-            item.UseSound = SoundID.Item7;
-            item.autoReuse = true;
-            item.useTurn = true;
+            Item.damage = 4;
+            Item.DamageType = DamageClass.Melee/* tModPorter Suggestion: Consider MeleeNoSpeed for no attack speed scaling */;
+            Item.width = 32;
+            Item.height = 32;
+            Item.useTime = 21;
+            Item.useAnimation = 21;
+            Item.pick = 3;    //pickaxe power
+            Item.useStyle = 1;
+            Item.knockBack = 1;
+            Item.value = 1;
+            Item.rare = -1;
+            Item.UseSound = SoundID.Item7;
+            Item.autoReuse = true;
+            Item.useTurn = true;
         }
 
 		public override void AddRecipes()
 		{
-			ModRecipe recipe = new ModRecipe(mod);
+			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.IronBar, 5);
             recipe.AddRecipeGroup("Wood", 3);
-            recipe.SetResult(this);
-			recipe.AddRecipe();
-            recipe = new ModRecipe(mod);
+			recipe.Register();
+            recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.LeadBar, 5);
             recipe.AddRecipeGroup("Wood", 3);
-            recipe.SetResult(this);
-            recipe.AddRecipe();
+            recipe.Register();
         }
 	}
 }

@@ -5,7 +5,7 @@ namespace AstralVoyage.Buffs
 {
 	public class Ekubo : ModBuff
 	{
-		public override void SetDefaults() {
+		public override void SetStaticDefaults() {
 			// DisplayName and Description are automatically set from the .lang files, but below is how it is done normally.
 			DisplayName.SetDefault("Evil Spirit");
 			Description.SetDefault("Self-proclaimed upper-class evil spirit");

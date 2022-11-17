@@ -1,4 +1,5 @@
-﻿using Terraria.ID;
+﻿using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace AstralVoyage.Items.Potions
@@ -11,20 +12,19 @@ namespace AstralVoyage.Items.Potions
         }
         public override void SetDefaults()
         {
-            item.width = 20;
-            item.height = 30;
-            item.value = 50;
-            item.rare = ItemRarityID.White;
-            item.maxStack = 99;
+            Item.width = 20;
+            Item.height = 30;
+            Item.value = 50;
+            Item.rare = ItemRarityID.White;
+            Item.maxStack = 99;
         }
 
         public override void AddRecipes()
         {
-            ModRecipe recipe = new ModRecipe(mod);
+            Recipe recipe = CreateRecipe(2);
             recipe.AddIngredient(ItemID.ManaPotion);
             recipe.AddTile(TileID.AlchemyTable);
-            recipe.SetResult(this, 2);
-            recipe.AddRecipe();
+            recipe.Register();
         }
     }
 }

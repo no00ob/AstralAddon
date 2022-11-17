@@ -4,7 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using ThumodRe.NPCs.Boss;
 
-namespace ThumodRe.Items.Summoners
+namespace AstralVoyage.Items.Summoners
 {
     public class CorruptedAirPump : ModItem
     {

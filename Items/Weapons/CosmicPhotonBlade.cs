@@ -1,4 +1,5 @@
 ﻿using AstralVoyage.Items.Ores;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -14,31 +15,30 @@ namespace AstralVoyage.Items.Weapons
 
         public override void SetDefaults()
         {
-            item.damage = 842;
-            item.melee = true;
-            item.width = 60;
-            item.height = 60;
-            item.useTime = 20;
-            item.useAnimation = 20;
-            item.useStyle = 1;
-            item.knockBack = 8;
-            item.value = 80000;
-            item.rare = 10;
-            item.UseSound = SoundID.Item1;
-            item.autoReuse = true;
-            item.shoot = mod.ProjectileType("CosmosBladeProjectile");
-            item.shootSpeed = 10f;
+            Item.damage = 842;
+            Item.DamageType = DamageClass.Melee/* tModPorter Suggestion: Consider MeleeNoSpeed for no attack speed scaling */;
+            Item.width = 60;
+            Item.height = 60;
+            Item.useTime = 20;
+            Item.useAnimation = 20;
+            Item.useStyle = 1;
+            Item.knockBack = 8;
+            Item.value = 80000;
+            Item.rare = 10;
+            Item.UseSound = SoundID.Item1;
+            Item.autoReuse = true;
+            Item.shoot = Mod.Find<ModProjectile>("CosmosBladeProjectile").Type;
+            Item.shootSpeed = 10f;
         }
 
         public override void AddRecipes()
         {
-            ModRecipe recipe = new ModRecipe(mod);
+            Recipe recipe = CreateRecipe();
             recipe.AddIngredient(null, "BladeOfCosmos", 1);
             recipe.AddIngredient(ModContent.ItemType<CosmiteBar>(), 20);
             recipe.AddIngredient(ItemID.SoulofFright, 3);
             recipe.AddTile(TileID.WorkBenches);
-            recipe.SetResult(this);
-            recipe.AddRecipe();
+            recipe.Register();
         }
     }
 }
