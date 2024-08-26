@@ -1,15 +1,15 @@
-﻿using AstralVoyage.Items.Ores;
+﻿using AstralAddon.Items.Ores;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items.Weapons
+namespace AstralAddon.Items.Weapons
 {
     public class TrueTerraBlade : ModItem
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'This is the final upgrade'");  
+            //Tooltip.SetDefault("'This is the final upgrade'");  
         }
 
         public override void SetDefaults()
@@ -35,7 +35,7 @@ namespace AstralVoyage.Items.Weapons
             Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.TerraBlade, 1);
             recipe.AddIngredient(ItemID.BrokenHeroSword, 1);
-            recipe.AddIngredient(ModContent.ItemType<CosmiteBar>(), 8);
+            //recipe.AddIngredient(ModContent.ItemType<CosmiteBar>(), 8);
             recipe.AddIngredient(ItemID.FragmentSolar, 10);
             recipe.AddTile(TileID.WorkBenches);
             recipe.Register();

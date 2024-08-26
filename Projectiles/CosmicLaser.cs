@@ -5,7 +5,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Projectiles
+namespace AstralAddon.Projectiles
 {
     public class CosmicLaser : ModProjectile
     {

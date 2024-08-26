@@ -1,22 +1,22 @@
 ﻿using Terraria.ModLoader;
 using Terraria.ID;
-using AstralVoyage.Tiles;
+using AstralAddon.Tiles;
 using Terraria;
 
-namespace AstralVoyage.Items.Tiles
+namespace AstralAddon.Items.Tiles
 {
     public class DivineSand : ModItem
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'White as snow'");
+            //Tooltip.SetDefault("'White as snow'");
         }
 
         public override void SetDefaults()
         {
             Item.width = 12;
             Item.height = 12;
-            Item.maxStack = 999;
+            Item.maxStack = 9999;
             Item.useTurn = true;
             Item.autoReuse = true;
             Item.useAnimation = 15;

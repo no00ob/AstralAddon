@@ -1,16 +1,16 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
-using ThumodRe.Items.Ores;
+using AstralAddon.Items.Ores;
 
-namespace ThumodRe.Items.Armor
+namespace AstralAddon.Items.Armor
 {
     [AutoloadEquip(EquipType.Head)]
     public class ToyHelmet : ModItem
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'A kids size.'");
+            //Tooltip.SetDefault("'A kids size.'");
         }
 
         public override void SetDefaults()

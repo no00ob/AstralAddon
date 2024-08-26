@@ -2,13 +2,13 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items.Weapons
+namespace AstralAddon.Items.Weapons
 {
     public class BladeOfCosmos : ModItem
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'You shall use the godly elemental powers'");  
+            //Tooltip.SetDefault("'You shall use the godly elemental powers'");  
         }
 
         public override void SetDefaults()

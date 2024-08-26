@@ -1,16 +1,16 @@
-using AstralVoyage.Tiles;
+using AstralAddon.Tiles;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items.Ores
+namespace AstralAddon.Items.Ores
 {
     public class WoodriteOre : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Living Root");
-            Tooltip.SetDefault("'Feels organic'");
+            //DisplayName.SetDefault("Living Root");
+            //Tooltip.SetDefault("'Feels organic'");
         }
         public override void SetDefaults()
         {

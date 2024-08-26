@@ -6,7 +6,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.NPCs.Boss.AstrumVermis
+namespace AstralAddon.NPCs.Boss.AstrumVermis
 {
     public class AstrumVermis_Body : ModNPC
     {

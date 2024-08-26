@@ -2,14 +2,14 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items.Ores
+namespace AstralAddon.Items.Ores
 {
 	public class ShinyLeadBar : ModItem
 	{
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Polished Lead Bar");
-            Tooltip.SetDefault("'Looks Clean'");  
+            //DisplayName.SetDefault("Polished Lead Bar");
+            //Tooltip.SetDefault("'Looks Clean'");  
         }
         public override void SetDefaults()
 		{

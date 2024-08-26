@@ -4,14 +4,14 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items
+namespace AstralAddon.Items
 {
     public class SoulOfHop : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Soul of Delight");
-            Tooltip.SetDefault("'The essence of happy creatures'");
+            //DisplayName.SetDefault("Soul of Delight");
+            //Tooltip.SetDefault("'The essence of happy creatures'");
             // ticksperframe, frameCount
             Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(5, 4));
             ItemID.Sets.AnimatesAsSoul[Item.type] = true;

@@ -6,10 +6,10 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using AstralVoyage;
-using AstralVoyage.Buffs;
+using AstralAddon;
+using AstralAddon.Buffs;
 
-namespace AstralVoyage.NPCs.Boss.Imposter
+namespace AstralAddon.NPCs.Boss.Imposter
 {
     [AutoloadBossHead]
     public class Imposter : ModNPC
@@ -63,7 +63,7 @@ namespace AstralVoyage.NPCs.Boss.Imposter
         {
             potionType = ItemID.SuperHealingPotion;   //boss drops
             Item.NewItem((int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("UniversiteOre").Type, 87);
-            AstralVoyageWorld.downedVoyager = true;
+            AstralAddonWorld.downedVoyager = true;
         }
         public override void ScaleExpertStats(int numPlayers, float bossLifeScale)
         {

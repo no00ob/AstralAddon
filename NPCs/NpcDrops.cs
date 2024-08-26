@@ -1,19 +1,20 @@
-﻿using Terraria;
-using Terraria.ID;
-using Terraria.ModLoader;
+﻿using AstralAddon.World;
+using Terraria;
+using Terraria.ID;
+using Terraria.ModLoader;
 
 
-namespace AstralVoyage.NPCs
+namespace AstralAddon.NPCs
 {
     public class NpcDrops : GlobalNPC
     {
         public override void OnKill(NPC npc)
 
         {
-            if (npc.type == Mod.Find<ModNPC>("LivingTree").Type) //this is where you choose what vanilla npc you want  , for a modded npc add this instead  if (npc.type == mod.NPCType("ModdedNpcName"))
+            /*if (npc.type == Mod.Find<ModNPC>("LivingTree").Type) //this is where you choose what vanilla npc you want  , for a modded npc add this instead  if (npc.type == mod.NPCType("ModdedNpcName"))
 
             {
-                if (!AstralVoyageWorld.spawnRootOre)
+                if (!AstralAddonWorld.spawnRootOre)
                 {                                                          //Red  Green Blue
                     Main.NewText("Roots of the trees grow thicker underground.", 78, 206, 129);  //this is the message that will appear when the npc is killed  , 200, 200, 55 is the text color
 
@@ -29,9 +30,9 @@ namespace AstralVoyage.NPCs
                     }
                 }
 
-                AstralVoyageWorld.spawnRootOre = true;   //so the message and the ore spawn does not proc(show) when you kill EoC/npc again
+                AstralAddonWorld.spawnRootOre = true;   //so the message and the ore spawn does not proc(show) when you kill EoC/npc again
 
-            }
+            }*/
         }
     }
 }

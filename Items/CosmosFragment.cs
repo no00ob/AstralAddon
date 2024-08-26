@@ -1,9 +1,9 @@
-using AstralVoyage.Items.Ores;
+using AstralAddon.Items.Ores;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items
+namespace AstralAddon.Items
 {
 	public class CosmosFragment : ModItem
 	{
@@ -20,7 +20,7 @@ namespace AstralVoyage.Items
 		{
 			Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.LunarBar, 1);
-            recipe.AddIngredient(ModContent.ItemType<CosmiteBar>());
+            //recipe.AddIngredient(ModContent.ItemType<CosmiteBar>());
             recipe.AddTile(TileID.Furnaces);
 			recipe.Register();
 		}

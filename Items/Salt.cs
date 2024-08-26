@@ -2,13 +2,13 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items
+namespace AstralAddon.Items
 {
 	public class Salt : ModItem
 	{
 		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Salt");
-			Tooltip.SetDefault("'Sea salt always had the best vision.'");
+			//DisplayName.SetDefault("Salt");
+			//Tooltip.SetDefault("'Sea salt always had the best vision.'");
 		}
 
 		public override void SetDefaults() {

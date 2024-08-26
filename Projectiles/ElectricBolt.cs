@@ -2,7 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Projectiles
+namespace AstralAddon.Projectiles
 {
     public class ElectricBolt : ModProjectile
     {
@@ -26,10 +26,10 @@ namespace AstralVoyage.Projectiles
             AIType = ProjectileID.ElectrosphereMissile;
         }
 
-        public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
+        /*public override void OnHitNPC(NPC target, int damage, float knockback, bool crit)
         {
             target.AddBuff(BuffID.Electrified, 600);
             base.OnHitNPC(target, damage, knockback, crit);
-        }
+        }*/
     }
 }

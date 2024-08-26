@@ -1,16 +1,16 @@
-﻿using AstralVoyage.Items.Ores;
+﻿using AstralAddon.Items.Ores;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items.Weapons
+namespace AstralAddon.Items.Weapons
 {
     public class CosmicPhotonBlade : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Photon Blade");
-            Tooltip.SetDefault("'The final form'");  
+            //DisplayName.SetDefault("Photon Blade");
+            //Tooltip.SetDefault("'The final form'");  
         }
 
         public override void SetDefaults()
@@ -34,8 +34,8 @@ namespace AstralVoyage.Items.Weapons
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(null, "BladeOfCosmos", 1);
-            recipe.AddIngredient(ModContent.ItemType<CosmiteBar>(), 20);
+            //recipe.AddIngredient(null, "BladeOfCosmos", 1);
+            //recipe.AddIngredient(ModContent.ItemType<CosmiteBar>(), 20);
             recipe.AddIngredient(ItemID.SoulofFright, 3);
             recipe.AddTile(TileID.WorkBenches);
             recipe.Register();

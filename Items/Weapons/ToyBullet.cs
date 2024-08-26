@@ -1,14 +1,14 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using ThumodRe.Items;
+using AstralAddon.Items;
 
-namespace ThumodRe.Items.Weapons
+namespace AstralAddon.Items.Weapons
 {
 	public class ToyBullet : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("'It may be a toy, but it still hurts.'");
+			//Tooltip.SetDefault("'It may be a toy, but it still hurts.'");
 		}
 
 		public override void SetDefaults() {
@@ -37,7 +37,7 @@ namespace ThumodRe.Items.Weapons
 			Recipe recipe = CreateRecipe(50);
 			recipe.AddIngredient(ItemID.MusketBall, 50);
 			recipe.AddIngredient(ItemID.Gel, 2);
-			recipe.AddIngredient(ModContent.ItemType<Plastic>(), 1);
+			//recipe.AddIngredient(ModContent.ItemType<Plastic>(), 1);
 			recipe.AddTile(TileID.Anvils);
 			recipe.Register();
 		}

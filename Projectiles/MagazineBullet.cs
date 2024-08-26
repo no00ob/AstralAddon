@@ -1,7 +1,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Projectiles
+namespace AstralAddon.Projectiles
 {
     public class MagazineBullet : ModProjectile
 	{

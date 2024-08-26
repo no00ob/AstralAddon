@@ -2,13 +2,13 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items.Tools
+namespace AstralAddon.Items.Tools
 {
     public class ToyPickaxe : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Toy Pickaxe");
+            //DisplayName.SetDefault("Toy Pickaxe");
         }
         public override void SetDefaults()
         {

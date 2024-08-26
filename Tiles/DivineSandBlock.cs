@@ -1,13 +1,13 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
-using AstralVoyage.Items.Tiles;
+using AstralAddon.Items.Tiles;
 using Terraria.ID;
-using AstralVoyage.Projectiles;
+using AstralAddon.Projectiles;
 using System;
-using AstralVoyage.Dusts;
+using AstralAddon.Dusts;
 
-namespace AstralVoyage.Tiles
+namespace AstralAddon.Tiles
 {
     public class DivineSandBlock : ModTile
     {
@@ -18,16 +18,16 @@ namespace AstralVoyage.Tiles
             Main.tileMergeDirt[Type] = true;
             Main.tileLighted[Type] = true;
             Main.tileSand[Type] = true;
-            TileID.Sets.TouchDamageSands[Type] = 15;
+            //TileID.Sets.TouchDamageSands[Type] = 15;
             TileID.Sets.Conversion.Sand[Type] = true; // Allows Clentaminator solutions to convert this tile to their respective Sand tiles.
             TileID.Sets.ForAdvancedCollision.ForSandshark[Type] = true; // Allows Sandshark enemies to "swim" in this sand.
             TileID.Sets.Falling[Type] = true;
-            ItemDrop = ModContent.ItemType<DivineSand>();
+            //ItemDrop = ModContent.ItemType<DivineSand>();
             AddMapEntry(new Color(239, 246, 228));
             DustType = ModContent.DustType<DivineSandDust>();
         }
 
-        public override bool TileFrame(int i, int j, ref bool resetFrame, ref bool noBreak)
+        /*public override bool TileFrame(int i, int j, ref bool resetFrame, ref bool noBreak)
         {
             if (WorldGen.noTileActions)
                 return true;
@@ -86,6 +86,6 @@ namespace AstralVoyage.Tiles
                 return false;
             }
             return true;
-        }
+        }*/
     }
 }

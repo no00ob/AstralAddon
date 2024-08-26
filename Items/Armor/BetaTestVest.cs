@@ -2,16 +2,16 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items.Armor
+namespace AstralAddon.Items.Armor
 {
     [AutoloadEquip(EquipType.Body)]
     public class BetaTestVest : ModItem
     {
         public override void SetStaticDefaults()
         {
-            base.SetStaticDefaults();
-            Tooltip.SetDefault("Vanity Item"
-                + "\n'You practisipated in the beta'");
+            //base.SetStaticDefaults();
+            //Tooltip.SetDefault("Vanity Item"
+            //    + "\n'You practisipated in the beta'");
         }
 
         public override void SetDefaults()

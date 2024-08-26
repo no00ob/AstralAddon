@@ -7,7 +7,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.NPCs.Boss.AncientDigger
+namespace AstralAddon.NPCs.Boss.AncientDigger
 {
     [AutoloadBossHead]
     public class TheScoundrelOfEarth_Head : ModNPC

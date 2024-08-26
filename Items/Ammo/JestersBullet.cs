@@ -2,13 +2,13 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items.Ammo
+namespace AstralAddon.Items.Ammo
 {
     class JestersBullet : ModItem
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'Works same way as Jesters arrows'");  
+            //Tooltip.SetDefault("'Works same way as Jesters arrows'");  
         }
         public override void SetDefaults()
         {

@@ -1,16 +1,16 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using ThumodRe.Items.Ores;
+using AstralAddon.Items.Ores;
 
-namespace ThumodRe.Items.Ores
+namespace AstralAddon.Items.Ores
 {
 	public class FutilititeBar : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Futilitite Bar"); // By default, capitalization in classnames will add spaces to the display name. You can customize the display name here by uncommenting this line.
-			Tooltip.SetDefault("'I guess it wasn't futile afterall!'");  //The (English) text shown below your weapon's name
+			//DisplayName.SetDefault("Futilitite Bar"); // By default, capitalization in classnames will add spaces to the display name. You can customize the display name here by uncommenting this line.
+			//Tooltip.SetDefault("'I guess it wasn't futile afterall!'");  //The (English) text shown below your weapon's name
 		}
 		public override void SetDefaults()
 		{

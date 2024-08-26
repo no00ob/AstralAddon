@@ -2,13 +2,13 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items.Weapons
+namespace AstralAddon.Items.Weapons
 {
     public class HeroSword : ModItem
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'The Hero Sword'");  
+            //Tooltip.SetDefault("'The Hero Sword'");  
         }
 
         public override void SetDefaults()

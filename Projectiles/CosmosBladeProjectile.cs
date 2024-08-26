@@ -5,7 +5,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Projectiles
+namespace AstralAddon.Projectiles
 {
     public class CosmosBladeProjectile : ModProjectile
     {
@@ -16,7 +16,8 @@ namespace AstralVoyage.Projectiles
             Projectile.height = 28;              //The height of projectile hitbox
             Projectile.friendly = true;         //Can the projectile deal damage to enemies?
             Projectile.hostile = false;         //Can the projectile deal damage to the player?
-            Projectile.ranged = false/* tModPorter Suggestion: Remove. See Item.DamageType */;           //Is the projectile shoot by a ranged weapon?
+            //Projectile.ranged = false/* tModPorter Suggestion: Remove. See Item.DamageType */;           //Is the projectile shoot by a ranged weapon?
+            Projectile.DamageType = DamageClass.Melee;
             Projectile.penetrate = 4;           //How many monsters the projectile can pentrate. (OnTileCollide below also decrements penetrate for bounces as well)
             Projectile.timeLeft = 600;          //The live time for the projectile (60 = 1 second, so 600 is 10 seconds)
             Projectile.alpha = 0;             //The transparency of the projectile, 255 for completely transparent. (aiStyle 1 quickly fades the projectile in)

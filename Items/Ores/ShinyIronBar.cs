@@ -2,14 +2,14 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items.Ores
+namespace AstralAddon.Items.Ores
 {
 	public class ShinyIronBar : ModItem
 	{
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Polished Iron Bar");
-            Tooltip.SetDefault("'Looks Clean'");  
+            //DisplayName.SetDefault("Polished Iron Bar");
+            //Tooltip.SetDefault("'Looks Clean'");  
         }
         public override void SetDefaults()
 		{

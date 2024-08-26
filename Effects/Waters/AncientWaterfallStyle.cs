@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Effects.Waters
+namespace AstralAddon.Effects.Waters
 {
 	public class AncientWaterfallStyle : ModWaterfallStyle
 	{

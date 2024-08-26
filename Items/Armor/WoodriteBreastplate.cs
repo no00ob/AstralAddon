@@ -2,17 +2,17 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items.Armor
+namespace AstralAddon.Items.Armor
 {
     [AutoloadEquip(EquipType.Body)]
     public class WoodriteBreastplate : ModItem
     {
         public override void SetStaticDefaults()
         {
-            base.SetStaticDefaults();
-            Tooltip.SetDefault("This is a Woodrite Breastplate."
-                + "\n10% increased minion damage"
-                + "\n+1 max minions");
+            //base.SetStaticDefaults();
+            //Tooltip.SetDefault("This is a Woodrite Breastplate."
+            //    + "\n10% increased minion damage"
+            //    + "\n+1 max minions");
         }
 
         public override void SetDefaults()

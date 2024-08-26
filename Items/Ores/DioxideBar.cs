@@ -2,13 +2,13 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items.Ores
+namespace AstralAddon.Items.Ores
 {
     public class DioxideBar : ModItem
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'Stores dark energy with it'");  
+            //Tooltip.SetDefault("'Stores dark energy with it'");  
         }
         public override void SetDefaults()
         {

@@ -1,16 +1,16 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using ThumodRe.Items.Ores;
+using AstralAddon.Items.Ores;
 
-namespace ThumodRe.Items.Armor
+namespace AstralAddon.Items.Armor
 {
     [AutoloadEquip(EquipType.Legs)]
     public class ToyGreaves : ModItem
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'A kids size.'");
+            //Tooltip.SetDefault("'A kids size.'");
         }
 
         public override void SetDefaults()

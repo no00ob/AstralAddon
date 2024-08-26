@@ -2,13 +2,13 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items.Weapons
+namespace AstralAddon.Items.Weapons
 {
 	public class Stick : ModItem
 	{
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'This is a stick, still dangerous'");  
+            //Tooltip.SetDefault("'This is a stick, still dangerous'");  
         }
 
         public override void SetDefaults()

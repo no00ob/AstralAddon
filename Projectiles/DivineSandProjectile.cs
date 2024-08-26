@@ -1,10 +1,10 @@
-﻿using AstralVoyage.Tiles;
+﻿using AstralAddon.Tiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Projectiles
+namespace AstralAddon.Projectiles
 {
     public class DivineSandProjectile : ModProjectile
     {
@@ -14,7 +14,7 @@ namespace AstralVoyage.Projectiles
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Divine Sand Ball");
+            //DisplayName.SetDefault("Divine Sand Ball");
             ProjectileID.Sets.ForcePlateDetection[Projectile.type] = true;
         }
 

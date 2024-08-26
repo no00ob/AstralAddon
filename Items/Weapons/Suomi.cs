@@ -4,14 +4,14 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items.Weapons
+namespace AstralAddon.Items.Weapons
 {
-    class Suomi : CustomModItem
+    public class Suomi : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("KP31");
-            Tooltip.SetDefault("70% Chance not to consume ammo\n'Embodiment of Sisu'");  
+            //DisplayName.SetDefault("KP31");
+            //Tooltip.SetDefault("70% Chance not to consume ammo\n'Embodiment of Sisu'");  
         }
 
         public override void SetDefaults()
@@ -28,7 +28,6 @@ namespace AstralVoyage.Items.Weapons
             Item.knockBack = 8;
             Item.value = 42000;
             Item.rare = ItemRarityID.Red;
-            CustomRarity = 14;
             Item.UseSound = SoundID.Item11;
             Item.autoReuse = true;
             Item.shoot = ProjectileID.PurificationPowder; //idk why but all the guns in the vanilla source have this
@@ -44,7 +43,7 @@ namespace AstralVoyage.Items.Weapons
 
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
-            Vector2 muzzleOffset = Vector2.Normalize(new Vector2(speedX, speedY)) * 25f;
+            Vector2 muzzleOffset = Vector2.Normalize(velocity) * 25f;
             if (Collision.CanHit(position, 0, 0, position + muzzleOffset, 0, 0))
             {
                 position += muzzleOffset;
@@ -55,17 +54,6 @@ namespace AstralVoyage.Items.Weapons
         public override bool CanConsumeAmmo(Item ammo, Player player)
         {
             return Main.rand.NextFloat() >= .70f;
-        }
-
-        public override void ModifyTooltips(System.Collections.Generic.List<TooltipLine> list)
-        {
-            foreach (TooltipLine line2 in list)
-            {
-                if (line2.Mod == "Terraria" && line2.Name == "ItemName")
-                {
-                    line2.OverrideColor = BaseColor.DarkBlue;
-                }
-            }
         }
     }
 }

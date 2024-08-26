@@ -5,9 +5,9 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using System;
 
-namespace AstralVoyage.NPCs
+namespace AstralAddon.NPCs
 {
-    public class CosmosDrone : ModNPC
+    /*public class CosmosDrone : ModNPC
     {
         public override void SetDefaults()
         {
@@ -30,7 +30,7 @@ namespace AstralVoyage.NPCs
         {
             return spawnInfo.spawnTileY < Main.rockLayer && !Main.dayTime ? 0.5f : 0.5f; //spown at day
         } */
-        public override void FindFrame(int frameHeight)
+        /*public override void FindFrame(int frameHeight)
         {
             NPC.frameCounter -= 0.5F; // Determines the animation speed. Higher value = faster animation.
             NPC.frameCounter %= Main.npcFrameCount[NPC.type];
@@ -69,5 +69,5 @@ namespace AstralVoyage.NPCs
                 NPC.ai[1] = 0;
             }
         }
-    }
+    }*/
 }

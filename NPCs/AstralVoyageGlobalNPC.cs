@@ -5,7 +5,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace AstralVoyage.NPCs
+namespace AstralAddon.NPCs
 {
     public class AstralVoyageGlobalNPC : GlobalNPC
     {
@@ -22,8 +22,7 @@ namespace AstralVoyage.NPCs
 
         public override void SetDefaults(NPC npc)
         {
-            // We want our ExampleJavelin buff to follow the same immunities as BoneJavelin
-            npc.buffImmune[BuffType<Buffs.Corrupted>()] = npc.buffImmune[BuffID.BoneJavelin];
+            npc.buffImmune[BuffType<Buffs.Corrupted>()] = npc.buffImmune[BuffID.CursedInferno];
         }
 
         public override void UpdateLifeRegen(NPC npc, ref int damage)

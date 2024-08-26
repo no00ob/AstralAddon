@@ -2,13 +2,13 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items.Tools
+namespace AstralAddon.Items.Tools
 {
     public class MandibleAxe : ModItem
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("An axe made out of antlion mandibles.");
+            //Tooltip.SetDefault("An axe made out of antlion mandibles.");
         }
         public override void SetDefaults()
         {

@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using AstralAddon.World;
+using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.Audio;
@@ -6,10 +7,12 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items.Weapons
+namespace AstralAddon.Items.Weapons
 {
-    public class MalorianArms : CustomModItem
+    public class MalorianArms : ModItem
     {
+        SoundStyle upgradeSound = new SoundStyle("Sounds/Item/upgrade");
+
         public override void SetDefaults()
         {
             CalculateStats();
@@ -51,11 +54,11 @@ namespace AstralVoyage.Items.Weapons
                 Item.shootSpeed = 5.75f;
                 Item.UseSound = SoundID.Item38;
 
-                if (AstralVoyageWorld.MalorianArmsUpgrades[4] == false)
+                if (AstralAddonWorld.MalorianArmsUpgrades[4] == false)
                 {
-                    SoundEngine.PlaySound(SoundID.Item, -1, -1, Mod.GetSoundSlot(SoundType.Item, "Sounds/Item/upgrade"));
+                    //SoundEngine.PlaySound(SoundID.Item, -1, -1, Mod.GetSoundSlot(SoundType.Item, "Sounds/Item/upgrade"));
                     Main.NewText("Weapon has reached level 6!", 205, 130, 65);
-                    AstralVoyageWorld.MalorianArmsUpgrades[4] = true;
+                    AstralAddonWorld.MalorianArmsUpgrades[4] = true;
                 }
             }
             else if (NPC.downedAncientCultist)
@@ -71,11 +74,11 @@ namespace AstralVoyage.Items.Weapons
                 Item.shootSpeed = 6f;
                 Item.UseSound = SoundID.Item38;
 
-                if (AstralVoyageWorld.MalorianArmsUpgrades[3] == false)
+                if (AstralAddonWorld.MalorianArmsUpgrades[3] == false)
                 {
-                    SoundEngine.PlaySound(SoundID.Item, -1, -1, Mod.GetSoundSlot(SoundType.Item, "Sounds/Item/upgrade"));
+                    //SoundEngine.PlaySound(SoundID.Item, -1, -1, Mod.GetSoundSlot(SoundType.Item, "Sounds/Item/upgrade"));
                     Main.NewText("Weapon has reached level 5!", 205, 130, 65);
-                    AstralVoyageWorld.MalorianArmsUpgrades[3] = true;
+                    AstralAddonWorld.MalorianArmsUpgrades[3] = true;
                 }
             }
             else if (NPC.downedPlantBoss)
@@ -91,11 +94,11 @@ namespace AstralVoyage.Items.Weapons
                 Item.shootSpeed = 6.5f;
                 Item.UseSound = SoundID.Item40;
 
-                if (AstralVoyageWorld.MalorianArmsUpgrades[2] == false)
+                if (AstralAddonWorld.MalorianArmsUpgrades[2] == false)
                 {
-                    SoundEngine.PlaySound(SoundID.Item, -1, -1, Mod.GetSoundSlot(SoundType.Item, "Sounds/Item/upgrade"));
+                    //SoundEngine.PlaySound(SoundID.Item, -1, -1, Mod.GetSoundSlot(SoundType.Item, "Sounds/Item/upgrade"));
                     Main.NewText("Weapon has reached level 4!", 205, 130, 65);
-                    AstralVoyageWorld.MalorianArmsUpgrades[2] = true;
+                    AstralAddonWorld.MalorianArmsUpgrades[2] = true;
                 }
             }
             else if (Main.hardMode)
@@ -111,11 +114,11 @@ namespace AstralVoyage.Items.Weapons
                 Item.shootSpeed = 6.5f;
                 Item.UseSound = SoundID.Item40;
 
-                if (AstralVoyageWorld.MalorianArmsUpgrades[1] == false)
+                if (AstralAddonWorld.MalorianArmsUpgrades[1] == false)
                 {
-                    SoundEngine.PlaySound(SoundID.Item, -1, -1, Mod.GetSoundSlot(SoundType.Item, "Sounds/Item/upgrade"));
+                    //SoundEngine.PlaySound(SoundID.Item, -1, -1, Mod.GetSoundSlot(SoundType.Item, "Sounds/Item/upgrade"));
                     Main.NewText("Weapon has reached level 3!", 205, 130, 65);
-                    AstralVoyageWorld.MalorianArmsUpgrades[1] = true;
+                    AstralAddonWorld.MalorianArmsUpgrades[1] = true;
                 }
             }
             else if (NPC.downedQueenBee)
@@ -131,11 +134,11 @@ namespace AstralVoyage.Items.Weapons
                 Item.shootSpeed = 8f;
                 Item.UseSound = SoundID.Item41;
 
-                if (AstralVoyageWorld.MalorianArmsUpgrades[0] == false)
+                if (AstralAddonWorld.MalorianArmsUpgrades[0] == false)
                 {
-                    SoundEngine.PlaySound(SoundID.Item, -1, -1, Mod.GetSoundSlot(SoundType.Item, "Sounds/Item/upgrade"));
+                    //SoundEngine.PlaySound(SoundID.Item, -1, -1, Mod.GetSoundSlot(SoundType.Item, "Sounds/Item/upgrade"));
                     Main.NewText("Weapon has reached level 2!", 205, 130, 65);
-                    AstralVoyageWorld.MalorianArmsUpgrades[0] = true;
+                    AstralAddonWorld.MalorianArmsUpgrades[0] = true;
                 }
             }
             else
@@ -231,7 +234,7 @@ namespace AstralVoyage.Items.Weapons
 
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
-            Vector2 muzzleOffset = Vector2.Normalize(new Vector2(speedX, speedY)) * 25f;
+            Vector2 muzzleOffset = Vector2.Normalize(velocity) * 25f;
             if (Collision.CanHit(position, 0, 0, position + muzzleOffset, 0, 0))
             {
                 position += muzzleOffset;

@@ -10,45 +10,66 @@ using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using static Terraria.ModLoader.ModContent;
 
-namespace AstralVoyage
+namespace AstralAddon.AstralPlayer
 {
-    // This file shows the very basics of using ModPlayer classes since ExamplePlayer can be a bit overwhelming.
-    // ModPlayer classes provide a way to attach data to Players and act on that data. 
-    // This example will hopefully provide you with an understanding of the basic building blocks of how ModPlayer works. 
-    // This example will teach the most commonly sought after effect: "How to do X if the player has Y?"
-    // X in this example will be "Apply a debuff to enemies."
-    // Y in this example will be "Wearing an accessory."
-    // After studying this example, you can change X to other effects by changing the "hook" you use or the code within the hook you use. For example, you could use OnHitByNPC and call Projectile.NewProjectile within that hook to change X to "When the player is hit by NPC, spawn Projectiles".
-    // We can change Y to other conditions as well. For example, you could give the player the effect by having a "potion" ModItem give a ModBuff that sets the ModPlayer variable in ModBuff.Update
-    // Another example would be an armor set effect. Simply use the ModItem.UpdateArmorSet hook 
-
-    // Below you will see the ModPlayer class, and below that will be another class called SimpleAccessory for the accessory both in the same file for your reading convenience. This accessory will give our effect to our ModPlayer. 
-
-    // This is the ModPlayer class. Make note of the classname, which is SimpleModPlayer, since we will be using this in the accessory item below.
-    public class AstralVoyagePlayer : ModPlayer
+    public partial class AstralAddonPlayer : ModPlayer
     {
-        // Here we declare the effect variables which will represent whether this player has the effects or not.
+        // Buffs
         public bool corrupted;
         public bool woodSplinters;
-		
-		// Bools for custom pets
-		public bool ekubo;
 
-        // Here we declare the variables for permanent health upgrades
-        public const int maxHealthSoda = 1;
-        public int healthSoda;
+        // Pets
+        public bool ekubo;
 
+        // Consumables
+        public bool healthSoda = false;
+        public bool extraSlot = false;
+
+        // Biomes
         public bool ZoneAncient;
 
-        // ResetEffects is used to reset effects back to their default value. Terraria resets all effects every frame back to defaults so we will follow this design. (You might think to set a variable when an item is equipped and unassign the value when the item in unequipped, but Terraria is not designed that way.)
+        // Accessories
+        public bool modMinions0 = false;
+        public bool modMinions1 = false;
+        public bool modMinions2 = false;
+        public bool damageReduction0 = false;
+        public bool damageReduction1 = false;
+        public bool damageReduction2 = false;
+        public bool modSummonDamage0 = false;
+        public bool modSummonDamage1 = false;
+
+        public override void SaveData(TagCompound tag)
+        {
+            tag["urmomExtraSlot"] = extraSlot;
+        }
+
+        public override void LoadData(TagCompound tag)
+        {
+            extraSlot = tag.GetBool("urmomExtraSlot");
+
+            if (extraSlot)
+            {
+                Player.extraAccessorySlots += 1;
+            }
+        }
+
         public override void ResetEffects()
         {
+            modMinions0 = false;
+            modMinions1 = false;
+            modMinions2 = false;
+            damageReduction0 = false;
+            damageReduction1 = false;
+            damageReduction2 = false;
+            modSummonDamage0 = false;
+            modSummonDamage1 = false;
+
+            // OLD
             corrupted = false;
             woodSplinters = false;
-			ekubo = false;
-
-            Player.statLifeMax2 += healthSoda * 100;
+            ekubo = false;
         }
+
         public override void SyncPlayer(int toWho, int fromWho, bool newPlayer)
         {
             ModPacket packet = Mod.GetPacket();
@@ -64,51 +85,16 @@ namespace AstralVoyage
             woodSplinters = false;
         }
 
-        public override void SaveData(TagCompound tag)/* tModPorter Suggestion: Edit tag parameter instead of returning new TagCompound */
-        {
-            // Read https://github.com/tModLoader/tModLoader/wiki/Saving-and-loading-using-TagCompound to better understand Saving and Loading data.
-            return new TagCompound {
-				// {"somethingelse", somethingelse}, // To save more data, add additional lines
-                {"healthSoda", healthSoda},
-            };
-            //note that C# 6.0 supports indexer initializers
-            //return new TagCompound {
-            //	["score"] = score
-            //};
-        }
-
-        public override void LoadData(TagCompound tag)
-        {
-            healthSoda = tag.GetInt("healthSoda");
-        }
-
-        public override void LoadLegacy(BinaryReader reader)
-        {
-            int loadVersion = reader.ReadInt32();
-        }
-
-        public override IEnumerable<Item> AddStartingItems(bool mediumCoreDeath)/* tModPorter Suggestion: Return an Item array to add to the players starting items. Use ModifyStartingInventory for modifying them if needed */
-        {
-            items.RemoveAt(2);         // these lines remove all items from your inventory
-            items.RemoveAt(1);
-            items.RemoveAt(0);
-            // and then we add these ones in to the inventory
-            Item item = new Item();
-            item.SetDefaults(Mod.Find<ModItem>("RustyShovel").Type);   // the custom item being added
-            item.stack = 1;         // stack size of the item
-            items.Add(item);
-        }
-
-        public override void UpdateBiomes()
+        /*public override void UpdateBiomes()
         {
             if (SubworldLibrary.Subworld.IsActive<AncientParadiseSubworld>())
                 ZoneAncient = true;
             else
-                ZoneAncient = AstralVoyageWorld.ancientParadiseTiles > 30;
+                ZoneAncient = AstralAddonWorld.ancientParadiseTiles > 30;
         }
         public override bool CustomBiomesMatch(Player other)
         {
-            AstralVoyagePlayer modOther = other.GetModPlayer<AstralVoyagePlayer>();
+            AstralAddonPlayer modOther = other.GetModPlayer<AstralAddonPlayer>();
             return ZoneAncient == modOther.ZoneAncient;
             // If you have several Zones, you might find the &= operator or other logic operators useful:
             // bool allMatch = true;
@@ -121,7 +107,7 @@ namespace AstralVoyage
 
         public override void CopyCustomBiomesTo(Player other)
         {
-            AstralVoyagePlayer modOther = other.GetModPlayer<AstralVoyagePlayer>();
+            AstralAddonPlayer modOther = other.GetModPlayer<AstralAddonPlayer>();
             modOther.ZoneAncient = ZoneAncient;
         }
 
@@ -153,7 +139,7 @@ namespace AstralVoyage
                 return Mod.GetTexture("Backgrounds/AncientBiomeMapBackground");
             }
             return null;
-        }
+        } */
 
         public override void UpdateBadLifeRegen()
         {
@@ -188,12 +174,12 @@ namespace AstralVoyage
                 if (Main.rand.NextBool(4) && drawInfo.shadow == 0f)
                 {
                     Random rand = new Random();
-                    int dustType = rand.Next(1,80);
-                    int dust = Dust.NewDust(drawInfo.Position - new Vector2(2f, 2f), Player.width + 4, Player.height + 4, dustType, Player.velocity.X * 0.4f, Player.velocity.Y * 0.4f, 100, default(Color), 3f);
+                    int dustType = rand.Next(1, 80);
+                    int dust = Dust.NewDust(drawInfo.Position - new Vector2(2f, 2f), Player.width + 4, Player.height + 4, dustType, Player.velocity.X * 0.4f, Player.velocity.Y * 0.4f, 100, default, 3f);
                     Main.dust[dust].noGravity = true;
                     Main.dust[dust].velocity *= 1.8f;
                     Main.dust[dust].velocity.Y -= 0.5f;
-                    Main.playerDrawDust.Add(dust);
+                    //Main.playerDrawDust.Add(dust);
                 }
                 r *= 0.3f;
                 g *= 0.3f;
@@ -205,11 +191,11 @@ namespace AstralVoyage
                 if (Main.rand.NextBool(4) && drawInfo.shadow == 0f)
                 {
                     int dustType = DustID.Blood;
-                    int dust = Dust.NewDust(drawInfo.Position - new Vector2(2f, 2f), Player.width + 4, Player.height + 4, dustType, Player.velocity.X * 0.4f, Player.velocity.Y * 0.4f, 100, default(Color), 3f);
+                    int dust = Dust.NewDust(drawInfo.Position - new Vector2(2f, 2f), Player.width + 4, Player.height + 4, dustType, Player.velocity.X * 0.4f, Player.velocity.Y * 0.4f, 100, default, 3f);
                     Main.dust[dust].noGravity = false;
                     Main.dust[dust].velocity *= 1.8f;
                     Main.dust[dust].velocity.Y -= 0.1f;
-                    Main.playerDrawDust.Add(dust);
+                    //Main.playerDrawDust.Add(dust);
                 }
                 r *= 0.8f;
                 g *= 0.1f;

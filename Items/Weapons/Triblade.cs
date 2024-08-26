@@ -2,14 +2,14 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ThumodRe.Items.Weapons
+namespace AstralAddon.Items.Weapons
 {
 	public class Triblade : ModItem
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Triblade"); // By default, capitalization in classnames will add spaces to the display name. You can customize the display name here by uncommenting this line.
-			Tooltip.SetDefault("'It's not a damn trident!!'");
+			//DisplayName.SetDefault("Triblade"); // By default, capitalization in classnames will add spaces to the display name. You can customize the display name here by uncommenting this line.
+			//Tooltip.SetDefault("'It's not a damn trident!!'");
 		}
 
 		public override void SetDefaults() 

@@ -2,14 +2,14 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ThumodRe.Items.Weapons
+namespace AstralAddon.Items.Weapons
 {
 	public class MandibleSword : ModItem
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Mandible Sword"); // By default, capitalization in classnames will add spaces to the display name. You can customize the display name here by uncommenting this line.
-			Tooltip.SetDefault("'Whew! That is Sharp!'");
+			//DisplayName.SetDefault("Mandible Sword"); // By default, capitalization in classnames will add spaces to the display name. You can customize the display name here by uncommenting this line.
+			//Tooltip.SetDefault("'Whew! That is Sharp!'");
 		}
 
 		public override void SetDefaults() 

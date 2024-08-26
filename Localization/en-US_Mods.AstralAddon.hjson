@@ -1,0 +1,45 @@
+# This file will automatically update with entries for new content after a build and reload.
+
+Items: {
+	summonneck0: {
+		DisplayName: Minion Master's Necklace
+		Tooltip:
+			'''
+			Increases your max number of minions by 1
+			Reduces damage taken by 10%
+			'''
+	}
+
+	summonneck1: {
+		DisplayName: Minion Master's Necklace+1
+		Tooltip:
+			'''
+			Increases your max number of minions by 2
+			Increased minion knockback
+			8% increased summon damage
+			Reduces damage taken by 15%
+			This item does not stack with downgrades
+			'''
+	}
+
+	summonneck2: {
+		DisplayName: Minion Master's Necklace+2
+		Tooltip:
+			'''
+			Increases your max number of minions by 3
+			Vastly increased minion knockback
+			12% increased summon damage
+			Reduces damage taken by 20%
+			This item does not stack with downgrades
+			'''
+	}
+
+	extraslot: {
+		DisplayName: Divine Fanny Pack
+		Tooltip:
+			'''
+			Permanently increases your max number of accessory slots by 1
+			'It's oh so convenient!'
+			'''
+	}
+}

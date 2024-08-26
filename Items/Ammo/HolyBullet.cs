@@ -2,13 +2,13 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items.Ammo
+namespace AstralAddon.Items.Ammo
 {
     class HolyBullet : ModItem
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'Works same way as Holy arrows'");  
+            //Tooltip.SetDefault("'Works same way as Holy arrows'");  
         }
         public override void SetDefaults()
         {

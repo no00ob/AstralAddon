@@ -8,7 +8,7 @@ namespace Thumod.Items.Weapons
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("A book made out of sponge... Weird.");
+            //Tooltip.SetDefault("A book made out of sponge... Weird.");
         }
         public override void SetDefaults()
         {

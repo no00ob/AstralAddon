@@ -2,13 +2,13 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items.Weapons
+namespace AstralAddon.Items.Weapons
 {
     public class TheLostSword : ModItem
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'Brother of the Hero Sword'");  
+            //Tooltip.SetDefault("'Brother of the Hero Sword'");  
         }
 
         public override void SetDefaults()

@@ -1,15 +1,15 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using ThumodRe.Items.Ores;
+using AstralAddon.Items.Ores;
 
-namespace AstralVoyage.Items.Tools
+namespace AstralAddon.Items.Tools
 {
     public class DiamondPickaxe : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Diamond Pickaxe");
+            //DisplayName.SetDefault("Diamond Pickaxe");
         }
         public override void SetDefaults()
         {

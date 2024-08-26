@@ -7,7 +7,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.NPCs.Boss.CorruptedBalloon
+namespace AstralAddon.NPCs.Boss.CorruptedBalloon
 {
     public class CorruptedBalloon : ModNPC
     {

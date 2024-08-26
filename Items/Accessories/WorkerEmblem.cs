@@ -2,16 +2,16 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items.Accessories
+namespace AstralAddon.Items.Accessories
 {
     public class WorkerEmblem : ModItem
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'Has a terrible vibe to it.'"
-                + "\n10% increased meelee stats"
-                + "\n8% increased movement speed"
-                + "\n5% increased mining speed");
+            //Tooltip.SetDefault("'Has a terrible vibe to it.'"
+            //   + "\n10% increased meelee stats"
+            //    + "\n8% increased movement speed"
+            //    + "\n5% increased mining speed");
         }
 
         public override void SetDefaults()

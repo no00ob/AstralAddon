@@ -2,13 +2,13 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items.Weapons
+namespace AstralAddon.Items.Weapons
 {
     public class WoodenShortsword : ModItem
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'This is terrible idea'");  
+            //Tooltip.SetDefault("'This is terrible idea'");  
         }
 
         public override void SetDefaults()

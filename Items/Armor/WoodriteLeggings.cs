@@ -2,16 +2,16 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items.Armor
+namespace AstralAddon.Items.Armor
 {
     [AutoloadEquip(EquipType.Legs)]
     public class WoodriteLeggings : ModItem
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("This is a Woodrite Helmet."
-                + "\n5% increased ranged damage"
-                + "\n5% increased movement speed");
+            //Tooltip.SetDefault("This is a Woodrite Helmet."
+            //    + "\n5% increased ranged damage"
+            //    + "\n5% increased movement speed");
         }
 
         public override void SetDefaults()

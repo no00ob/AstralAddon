@@ -6,7 +6,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace AstralVoyage.Projectiles
+namespace AstralAddon.Projectiles
 {
     public class AnomaliousLaser : ModProjectile
     {
@@ -51,9 +51,9 @@ namespace AstralVoyage.Projectiles
             target.AddBuff(BuffType<Buffs.Corrupted>(), 170, false);
         }*/
 
-        public override void OnHitPlayer(Player target, int damage, bool crit)
+        /*public override void OnHitPlayer(Player target, int damage, bool crit)
         {
             target.AddBuff(BuffType<Buffs.Corrupted>(), 170, false);
-        }
+        }*/
     }
 }

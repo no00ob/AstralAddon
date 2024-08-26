@@ -2,15 +2,15 @@
 using Terraria.ModLoader;
 using Terraria.ID;
 
-namespace AstralVoyage.Items.Armor
+namespace AstralAddon.Items.Armor
 {
     [AutoloadEquip(EquipType.Head)]
     public class TrueCrown : ModItem
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Vanity Item"
-                + "\n'This is the true crown of roalty'");
+            //Tooltip.SetDefault("Vanity Item"
+            //    + "\n'This is the true crown of roalty'");
         }
 
         public override void SetDefaults()

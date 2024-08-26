@@ -1,15 +1,16 @@
+using AstralAddon.AstralPlayer;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Projectiles.Pets
+namespace AstralAddon.Projectiles.Pets
 {
-	public class Ekubo : ModProjectile
+    public class Ekubo : ModProjectile
 	{
 		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Evil Spirit"); // Automatic from .lang files
+			//DisplayName.SetDefault("Evil Spirit"); // Automatic from .lang files
 			Main.projFrames[Projectile.type] = 4;
 			Main.projPet[Projectile.type] = true;
 		}
@@ -35,7 +36,7 @@ namespace AstralVoyage.Projectiles.Pets
 
 		public override void AI() {
 			Player player = Main.player[Projectile.owner];
-			AstralVoyagePlayer modPlayer = player.GetModPlayer<AstralVoyagePlayer>();
+			AstralAddonPlayer modPlayer = player.GetModPlayer<AstralAddonPlayer>();
 			if (player.dead) {
 				modPlayer.ekubo = false;
 			}

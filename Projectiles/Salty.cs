@@ -5,7 +5,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ThumodRe.Projectiles
+namespace AstralAddon.Projectiles
 {
 	public class Salty : ModProjectile
 	{
@@ -52,7 +52,7 @@ namespace ThumodRe.Projectiles
 			//Main.dust[num667].scale = 2.4f;
 
 			if (!Main.dust[num667].active && !Main.dust[num668].active)
-				base.Kill(timeLeft);
+				//base.Kill(timeLeft);
         }
     }
 }

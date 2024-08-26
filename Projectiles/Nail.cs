@@ -4,7 +4,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ThumodRe.Projectiles
+namespace AstralAddon.Projectiles
 {
     public class Nail : ModProjectile
     {
@@ -35,7 +35,7 @@ namespace ThumodRe.Projectiles
                 Projectile.localAI[0] = 1f;
             }
             int num666 = 8;
-            int num667 = Dust.NewDust(new Vector2(Projectile.position.X + (float)num666 + 6, Projectile.position.Y + (float)num666), Projectile.width - num666 * 2, Projectile.height - num666 * 2, DustID.Rainbow, 0f, 0f, 0, new Color(255, 0, 0), 1.5f);  //projectile dust color
+            int num667 = Dust.NewDust(new Vector2(Projectile.position.X + (float)num666 + 6, Projectile.position.Y + (float)num666), Projectile.width - num666 * 2, Projectile.height - num666 * 2, DustID.RainbowRod, 0f, 0f, 0, new Color(255, 0, 0), 1.5f);  //projectile dust color
             Main.dust[num667].velocity *= 0.5f;
             Main.dust[num667].velocity += Projectile.velocity * 0.5f;
             Main.dust[num667].noGravity = true;

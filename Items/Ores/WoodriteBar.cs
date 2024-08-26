@@ -2,14 +2,14 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items.Ores
+namespace AstralAddon.Items.Ores
 {
 	public class WoodriteBar : ModItem
 	{
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Living Root Bar");
-            Tooltip.SetDefault("'Feels organic'");  
+            //DisplayName.SetDefault("Living Root Bar");
+            //Tooltip.SetDefault("'Feels organic'");  
         }
         public override void SetDefaults()
 		{

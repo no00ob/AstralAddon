@@ -2,14 +2,14 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ThumodRe.Items.Weapons
+namespace AstralAddon.Items.Weapons
 {
 	public class Thumder : ModItem
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Thumder"); // By default, capitalization in classnames will add spaces to the display name. You can customize the display name here by uncommenting this line.
-			Tooltip.SetDefault("'The swordiest sword'");
+			//DisplayName.SetDefault("Thumder"); // By default, capitalization in classnames will add spaces to the display name. You can customize the display name here by uncommenting this line.
+			//Tooltip.SetDefault("'The swordiest sword'");
 		}
 
 		public override void SetDefaults() 

@@ -1,11 +1,11 @@
-using AstralVoyage.Dusts;
+using AstralAddon.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Effects.Waters
+namespace AstralAddon.Effects.Waters
 {
-	public class AncientWaterStyle : ModWaterStyle
+	/*public class AncientWaterStyle : ModWaterStyle
 	{
 		public override bool ChooseWaterStyle()
 			=> Main.bgStyle == Mod.GetSurfaceBgStyleSlot("AncientSurfaceBgStyle");
@@ -27,5 +27,5 @@ namespace AstralVoyage.Effects.Waters
 
 		public override Color BiomeHairColor() 
 			=> Color.Orange;
-	}
+	}*/
 }

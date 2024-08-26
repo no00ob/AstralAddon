@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Tiles
+namespace AstralAddon.Tiles
 {
 	public class WoodriteOreBlock : ModTile
 	{
@@ -12,7 +12,7 @@ namespace AstralVoyage.Tiles
 			Main.tileMergeDirt[Type] = true;
 			Main.tileBlockLight[Type] = true;
 			Main.tileLighted[Type] = false;
-			ItemDrop = Mod.Find<ModItem>("WoodriteOre").Type;
+			//ItemDrop = Mod.Find<ModItem>("WoodriteOre").Type;
 			AddMapEntry(new Color(90, 25, 5));
 		}
 	}

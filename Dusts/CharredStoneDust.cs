@@ -1,7 +1,7 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Dusts
+namespace AstralAddon.Dusts
 {
     public class CharredStoneDust : ModDust
     {

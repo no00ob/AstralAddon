@@ -1,17 +1,17 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using ThumodRe.Items.Ores;
+using AstralAddon.Items.Ores;
 
-namespace ThumodRe.Items.Armor
+namespace AstralAddon.Items.Armor
 {
     [AutoloadEquip(EquipType.Body)]
     public class ToyChainmail : ModItem
     {
         public override void SetStaticDefaults()
         {
-            base.SetStaticDefaults();
-            Tooltip.SetDefault("'A kids size.'");
+            //base.SetStaticDefaults();
+            //Tooltip.SetDefault("'A kids size.'");
         }
 
         public override void SetDefaults()

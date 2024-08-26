@@ -2,13 +2,13 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items.Ammo
+namespace AstralAddon.Items.Ammo
 {
 	public class Cartridge : ModItem
 	{
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'Finely engineered'");  
+            //Tooltip.SetDefault("'Finely engineered'");  
         }
         public override void SetDefaults()
 		{

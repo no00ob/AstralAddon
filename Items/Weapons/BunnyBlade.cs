@@ -2,14 +2,14 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items.Weapons
+namespace AstralAddon.Items.Weapons
 {
     public class BunnyBlade : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Rabbit's Rage");
-            Tooltip.SetDefault("'This is an ancient sword inbued with wraith of the rabbits'");  
+            //DisplayName.SetDefault("Rabbit's Rage");
+            //Tooltip.SetDefault("'This is an ancient sword inbued with wraith of the rabbits'");  
         }
 
         public override void SetDefaults()

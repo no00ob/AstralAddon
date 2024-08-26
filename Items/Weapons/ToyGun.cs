@@ -1,15 +1,15 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using ThumodRe.Items;
-using ThumodRe.Projectiles;
+using AstralAddon.Items;
+using AstralAddon.Projectiles;
 
-namespace ThumodRe.Items.Weapons
+namespace AstralAddon.Items.Weapons
 {
 	public class ToyGun : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("'A gun for kids!'");
+			//Tooltip.SetDefault("'A gun for kids!'");
 		}
 
 		public override void SetDefaults() {
@@ -33,7 +33,7 @@ namespace ThumodRe.Items.Weapons
 
 		public override void AddRecipes() {
 			Recipe recipe = CreateRecipe(ItemID.LavaBucket);
-			recipe.AddIngredient(ModContent.ItemType<Plastic>(), 10);
+			//recipe.AddIngredient(ModContent.ItemType<Plastic>(), 10);
 			recipe.AddIngredient(ItemID.LavaBucket);
 			recipe.AddTile(TileID.Anvils);
 			recipe.Register();

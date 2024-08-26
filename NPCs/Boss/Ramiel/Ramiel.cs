@@ -6,9 +6,9 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using AstralVoyage;
+using AstralAddon;
 
-namespace AstralVoyage.NPCs.Boss.Ramiel
+namespace AstralAddon.NPCs.Boss.Ramiel
 {
     [AutoloadBossHead]
     public class Ramiel : ModNPC
@@ -54,7 +54,7 @@ namespace AstralVoyage.NPCs.Boss.Ramiel
         {
             potionType = ItemID.LesserHealingPotion;   //boss drops
             Item.NewItem((int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("WoodriteOre").Type, 47);
-            AstralVoyageWorld.downedLivingTree = true;
+            AstralAddonWorld.downedLivingTree = true;
         }
         public override void ScaleExpertStats(int numPlayers, float bossLifeScale)
         {

@@ -1,16 +1,17 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using ThumodRe.Items.Ores;
+using AstralAddon.Items.Ores;
+using AstralAddon.Tiles;
 
-namespace ThumodRe.Items.Ores
+namespace AstralAddon.Items.Ores
 {
     public class FutilititeOre : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Futilitite Ore");
-            Tooltip.SetDefault("'Whew, nice save!'");
+            //DisplayName.SetDefault("Futilitite Ore");
+            //Tooltip.SetDefault("'Whew, nice save!'");
         }
         public override void SetDefaults()
         {
@@ -25,7 +26,7 @@ namespace ThumodRe.Items.Ores
             Item.useTime = 10;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
-            Item.createTile = Mod.Find<ModTile>("FutilititeOreBlock").Type;
+            Item.createTile = ModContent.TileType<FutilititeOreBlock>();
         }
 
         public override void AddRecipes()

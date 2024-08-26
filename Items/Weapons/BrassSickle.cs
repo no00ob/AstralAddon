@@ -2,13 +2,13 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items.Weapons
+namespace AstralAddon.Items.Weapons
 {
     public class BrassSickle : ModItem
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'Seems familar some how...'");  
+            //Tooltip.SetDefault("'Seems familar some how...'");  
         }
 
         public override void SetDefaults()

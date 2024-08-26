@@ -2,13 +2,13 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items.Potions
+namespace AstralAddon.Items.Potions
 {
-    class StjarnPotion : ModItem
+    class VigorPotion : ModItem
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("Increses max mana by 50");
+            //Tooltip.SetDefault("Increses max health by 30 for 2 minutes");
         }
         public override void SetDefaults()
         {
@@ -22,7 +22,7 @@ namespace AstralVoyage.Items.Potions
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe(2);
-            recipe.AddIngredient(ItemID.ManaPotion);
+            recipe.AddIngredient(ItemID.HealthPotion);
             recipe.AddTile(TileID.AlchemyTable);
             recipe.Register();
         }

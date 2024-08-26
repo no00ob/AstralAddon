@@ -2,13 +2,13 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items.Ammo
+namespace AstralAddon.Items.Ammo
 {
 	public class PowerCell : ModItem
 	{
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("High voltage electric charge\nUsed as ammo in some wonder weapons");
+            //Tooltip.SetDefault("High voltage electric charge\nUsed as ammo in some wonder weapons");
         }
         public override void SetDefaults()
 		{

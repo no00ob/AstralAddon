@@ -1,19 +1,18 @@
 using Terraria.DataStructures;
-using ThumodRe.Projectiles;
-using ThumodRe.Tiles;
+using AstralAddon.Projectiles;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using ThumodRe.Items;
+using AstralAddon.Items;
 using Microsoft.Xna.Framework;
-using ThumodRe.Items.Ores;
+using AstralAddon.Items.Ores;
 
-namespace ThumodRe.Items.Weapons
+namespace AstralAddon.Items.Weapons
 {
 	public class SaltShaker : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("'Recommended for ghost hunting'");
+			//Tooltip.SetDefault("'Recommended for ghost hunting'");
 		}
 
 		public override void SetDefaults() {
@@ -39,11 +38,11 @@ namespace ThumodRe.Items.Weapons
 			int numberProjectiles = 4 + Main.rand.Next(2); // 4 or 5 shots
 			for (int i = 0; i < numberProjectiles; i++)
 			{
-				Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(30)); // 30 degree spread.
+				Vector2 perturbedSpeed = velocity.RotatedByRandom(MathHelper.ToRadians(30)); // 30 degree spread.
 																												// If you want to randomize the speed to stagger the projectiles
 																												// float scale = 1f - (Main.rand.NextFloat() * .3f);
 																												// perturbedSpeed = perturbedSpeed * scale; 
-				Projectile.NewProjectile(position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockBack, player.whoAmI);
+				//Projectile.NewProjectile(position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockback, player.whoAmI);
 			}
 			return false; // return false because we don't want tmodloader to shoot projectile
 		}

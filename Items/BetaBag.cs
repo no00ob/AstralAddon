@@ -1,16 +1,16 @@
 ﻿using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria;
-using AstralVoyage.Items.Armor;
+using AstralAddon.Items.Armor;
 
-namespace AstralVoyage.Items
+namespace AstralAddon.Items
 {
     public class BetaToken : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Beta Bag");
-            Tooltip.SetDefault("<right> to open\nContains beta exclusive items");
+            //DisplayName.SetDefault("Beta Bag");
+            //Tooltip.SetDefault("<right> to open\nContains beta exclusive items");
         }
 
         public override void SetDefaults()
@@ -29,7 +29,7 @@ namespace AstralVoyage.Items
 
         public override void RightClick(Player player)
         {
-            player.QuickSpawnItem(ModContent.ItemType<BetaTestVest>());
+            //player.QuickSpawnItem(ModContent.ItemType<BetaTestVest>());
         }
     }
 }

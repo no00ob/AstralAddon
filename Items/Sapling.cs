@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items
+namespace AstralAddon.Items
 {
 	public class Sapling : ModItem
 	{

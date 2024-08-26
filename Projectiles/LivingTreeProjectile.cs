@@ -6,7 +6,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace AstralVoyage.Projectiles
+namespace AstralAddon.Projectiles
 {
     public class LivingTreeProjectile : ModProjectile
     {
@@ -49,9 +49,9 @@ namespace AstralVoyage.Projectiles
             Main.dust[num667].scale = 1.4f;
         }
 
-        public override void OnHitPlayer(Player target, int damage, bool crit)
+        /*public override void OnHitPlayer(Player target, int damage, bool crit)
         {
             target.AddBuff(BuffType<Buffs.WoodSplinters>(), 12, false);
-        }
+        }*/
     }
 }

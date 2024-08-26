@@ -1,10 +1,10 @@
-author = no00ob
+author = susy_baka, Thumpi
 version = 2.0.0
-displayName = [c/b48ce1:Astral Voyage]
+displayName = Astral Addon
 modReferences = SubworldLibrary
 homepage = https://discord.gg/K5KqGMD
 hideCode = true
 hideResources = true
 includeSource = false
-buildIgnore = .gitignore, *.sln, *.csproj, *.user, obj\*, bin\*, .vs\*, Properties\*, .git\*, Ref\*, _Old Sprites\*, Items\Ores\src\*, Items\Weapons\src\*, Backgrounds\src\*, Projectiles\src\*
+buildIgnore = .gitignore, *.sln, *.csproj, *.user, obj\*, bin\*, .vs\*, Properties\*, .git\*, Ref\*, _Old Sprites\*, Items\Ores\src\*, Items\Weapons\src\*, Backgrounds\src\*, Projectiles\src\*, Buffs\src\*, NPCs\Boss\*, Source\*, Tiles\src\*
 includePDB = true

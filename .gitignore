@@ -33,7 +33,7 @@ Thumbs.db
 commit-message.txt
 *.sfk
 
-# Folders used for my own utilities
+# Custom
 /_Old Sprites
 /Ref
 /Items/Ores/src
@@ -43,4 +43,11 @@ commit-message.txt
 /Items/Summoners/src
 /Projectiles/src
 /Projectiles/Pets/src
-
+/Tiles/src
+/NPCs/Boss/*
+/Buffs/src
+/Source/*
+*.pdn
+*.psd
+*.rar
+*.zip

@@ -7,7 +7,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.NPCs.Boss.AstrumVermis
+namespace AstralAddon.NPCs.Boss.AstrumVermis
 {
     [AutoloadBossHead]
     public class AstrumVermis_Head : ModNPC
@@ -62,7 +62,7 @@ namespace AstralVoyage.NPCs.Boss.AstrumVermis
         {
             potionType = ItemID.SuperHealingPotion;   //boss drops
             Item.NewItem((int)NPC.position.X, (int)NPC.position.Y, NPC.width, NPC.height, Mod.Find<ModItem>("UniversiteOre").Type, 56);
-            AstralVoyageWorld.downedEaterOfCosmos = true;
+            AstralAddonWorld.downedEaterOfCosmos = true;
         }
         public override void ScaleExpertStats(int numPlayers, float bossLifeScale)
         {

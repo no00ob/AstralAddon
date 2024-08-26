@@ -2,16 +2,16 @@
 using Terraria.ModLoader;
 using Terraria.ID;
 
-namespace AstralVoyage.Items.Armor
+namespace AstralAddon.Items.Armor
 {
     [AutoloadEquip(EquipType.Head)]
     public class WoodriteHelmet : ModItem
     {
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("This is a Woodrite Helmet."
-                + "\n10% increased ranged damage"
-                + "\n5% increased minion damage");
+            //Tooltip.SetDefault("This is a Woodrite Helmet."
+            //    + "\n10% increased ranged damage"
+            //    + "\n5% increased minion damage");
         }
 
         public override void SetDefaults()

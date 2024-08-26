@@ -1,1 +1,10 @@
-Astral Voyage adds more bosses, npcs, blocks and overal over 200+ items, including: weapons, crafting materials, armor sets, ores & bars and vanity clothes and sets, some are available only during certain time!
+Astral Addon is a smallish misc addon and tweak for especially Calamity and other popular content mods that adds some of the following:
+- new npcs
+- new blocks and walls
+- new items
+- new weapons
+- new crafting materials and recipes
+- armor sets
+- ores and bars 
+- vanity items
+- Changes to Calamity progression (Configurable)

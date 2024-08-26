@@ -3,14 +3,14 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items.Summoners
+namespace AstralAddon.Items.Summoners
 {
     public class WormholeCrystal : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Wormhole Pendant");
-            Tooltip.SetDefault("Summons Astrum Vermis");  
+            //DisplayName.SetDefault("Wormhole Pendant");
+            //Tooltip.SetDefault("Summons Astrum Vermis");  
         }
         public override void SetDefaults()
         {
@@ -24,17 +24,17 @@ namespace AstralVoyage.Items.Summoners
             Item.useStyle = 4;
             Item.consumable = true;
         }
-        public override bool CanUseItem(Player player)
+        /*public override bool CanUseItem(Player player)
         {
             return !NPC.AnyNPCs(Mod.Find<ModNPC>("TheEaterOfCosmos_Head").Type);  //you can't spawn this boss multiple times
         }
         public override bool? UseItem(Player player)/* tModPorter Suggestion: Return null instead of false */
-        {
+        /*{
             NPC.SpawnOnPlayer(player.whoAmI, Mod.Find<ModNPC>("TheEaterOfCosmos_Head").Type);   //boss spawn
             SoundEngine.PlaySound(SoundID.Roar, player.position);
 
             return true;
-        }
+        }*/
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();

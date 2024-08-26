@@ -2,14 +2,14 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ThumodRe.Items.Weapons
+namespace AstralAddon.Items.Weapons
 {
 	public class ToySword : ModItem
 	{
 		public override void SetStaticDefaults() 
 		{
-			DisplayName.SetDefault("Toy Sword"); // By default, capitalization in classnames will add spaces to the display name. You can customize the display name here by uncommenting this line.
-			Tooltip.SetDefault("'A blade filled with dreams'");
+			//DisplayName.SetDefault("Toy Sword"); // By default, capitalization in classnames will add spaces to the display name. You can customize the display name here by uncommenting this line.
+			//Tooltip.SetDefault("'A blade filled with dreams'");
 		}
 
 		public override void SetDefaults() 
@@ -32,7 +32,7 @@ namespace ThumodRe.Items.Weapons
 		{
 			Recipe recipe = CreateRecipe(ItemID.LavaBucket);
 			recipe.AddIngredient(ItemID.LavaBucket);
-			recipe.AddIngredient(ModContent.ItemType<Plastic>(), 15);
+			//recipe.AddIngredient(ModContent.ItemType<Plastic>(), 15);
 			recipe.AddTile(TileID.Anvils);
 			recipe.Register();
 		}

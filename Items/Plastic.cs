@@ -2,13 +2,13 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items
+namespace AstralAddon.Items
 {
     public class Plastic : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Plastic Sheet");
+            //DisplayName.SetDefault("Plastic Sheet");
         }
         public override void SetDefaults()
         {

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\tModLoader.targets" />
+  <PropertyGroup>
+    <AssemblyName>AstralAddon</AssemblyName>
+    <TargetFramework>net8.0</TargetFramework>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AdditionalFiles Remove="Buffs\src\**" />
+    <AdditionalFiles Remove="Items\Ores\src\**" />
+    <AdditionalFiles Remove="NPCs\Boss\**" />
+    <AdditionalFiles Remove="Projectiles\src\**" />
+    <AdditionalFiles Remove="Tiles\src\**" />
+    <Compile Remove="Buffs\src\**" />
+    <Compile Remove="Items\Ores\src\**" />
+    <Compile Remove="NPCs\Boss\**" />
+    <Compile Remove="Projectiles\src\**" />
+    <Compile Remove="Tiles\src\**" />
+    <EmbeddedResource Remove="Buffs\src\**" />
+    <EmbeddedResource Remove="Items\Ores\src\**" />
+    <EmbeddedResource Remove="NPCs\Boss\**" />
+    <EmbeddedResource Remove="Projectiles\src\**" />
+    <EmbeddedResource Remove="Tiles\src\**" />
+    <None Remove="Buffs\src\**" />
+    <None Remove="Items\Ores\src\**" />
+    <None Remove="NPCs\Boss\**" />
+    <None Remove="Projectiles\src\**" />
+    <None Remove="Tiles\src\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Items\Tools\Thumbs.db" />
+    <None Remove="Items\Weapons\Thumbs.db" />
+    <None Remove="NPCs\AncientSlime.pdn" />
+    <None Remove="NPCs\Thumbs.db" />
+    <None Remove="Projectiles\Thumbs.db" />
+    <None Remove="Resources\README.md" />
+    <None Remove="Tiles\Thumbs.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="SubworldLibrary">
+      <HintPath>Resources\SubworldLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

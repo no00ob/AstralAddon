@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Tiles
+namespace AstralAddon.Tiles
 {
 	public class FutilititeOreBlock : ModTile
 	{
@@ -12,7 +12,7 @@ namespace AstralVoyage.Tiles
 			Main.tileMergeDirt[Type] = true;
 			Main.tileBlockLight[Type] = true;
 			Main.tileLighted[Type] = true;
-			ItemDrop = ModContent.ItemType<FutilititeDust>();
+			//ItemDrop = ModContent.ItemType<FutilititeDust>();
 			AddMapEntry(new Color(51, 30, 96));
 		}
 	}

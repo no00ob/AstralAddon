@@ -1,13 +1,13 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items
+namespace AstralAddon.Items
 {
 	public class FutilititeDust : ModItem
 	{
 		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Futilitite Dust");
-			Tooltip.SetDefault("'Oh no, you broke it!'");
+			//DisplayName.SetDefault("Futilitite Dust");
+			//Tooltip.SetDefault("'Oh no, you broke it!'");
 		}
 
 		public override void SetDefaults() {

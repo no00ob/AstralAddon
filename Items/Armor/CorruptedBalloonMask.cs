@@ -2,15 +2,15 @@
 using Terraria.ModLoader;
 using Terraria.ID;
 
-namespace ThumodRe.Items.Armor
+namespace AstralAddon.Items.Armor
 {
     [AutoloadEquip(EquipType.Head)]
     public class CorruptedBalloonMask : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Corrupted Balloon Mask");
-            Tooltip.SetDefault("'I wonder how it got corrupted.'");
+            //DisplayName.SetDefault("Corrupted Balloon Mask");
+            //Tooltip.SetDefault("'I wonder how it got corrupted.'");
         }
 
         public override void SetDefaults()

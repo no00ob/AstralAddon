@@ -2,13 +2,13 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralVoyage.Items.Tools
+namespace AstralAddon.Items.Tools
 {
 	public class RustyShovel : ModItem
 	{
         public override void SetStaticDefaults()
         {
-            Tooltip.SetDefault("'Come 'ere cupcake'");  
+            //Tooltip.SetDefault("'Come 'ere cupcake'");  
         }
 
         public override void SetDefaults()
