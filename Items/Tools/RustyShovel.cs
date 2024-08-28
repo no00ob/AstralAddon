@@ -33,11 +33,11 @@ namespace AstralAddon.Items.Tools
 		{
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.IronBar, 5);
-            recipe.AddRecipeGroup("Wood", 3);
+            recipe.AddRecipeGroup(RecipeGroupID.Wood, 3);
 			recipe.Register();
             recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.LeadBar, 5);
-            recipe.AddRecipeGroup("Wood", 3);
+            recipe.AddRecipeGroup(RecipeGroupID.Wood, 3);
             recipe.Register();
         }
 	}

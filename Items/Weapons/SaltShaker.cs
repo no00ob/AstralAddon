@@ -49,7 +49,7 @@ namespace AstralAddon.Items.Weapons
 
 		public override void AddRecipes() {
 			Recipe recipe = CreateRecipe();
-			recipe.AddRecipeGroup("IronBar", 2);
+			recipe.AddRecipeGroup(RecipeGroupID.IronBar, 2);
 			recipe.AddIngredient(ItemID.Bottle, 1);
 			recipe.AddIngredient(ModContent.ItemType<Salt>(), 3);
 			recipe.AddTile(TileID.WorkBenches);

@@ -34,12 +34,500 @@ Items: {
 			'''
 	}
 
-	extraslot: {
-		DisplayName: Divine Fanny Pack
+	AngelFruit: {
+		DisplayName: Angel Fruit
 		Tooltip:
 			'''
-			Permanently increases your max number of accessory slots by 1
-			'It's oh so convenient!'
+			Permanently increases the number of accessory slots
+			This item does nothing in Master Mode or if you have consumed a Celestial Onion
+			Can we get much higher?
 			'''
 	}
+
+	WorkerEmblem: {
+		DisplayName: Worker Emblem
+		Tooltip:
+			'''
+			10% increased melee stats
+			8% increased movement speed
+			5% increased mining speed
+			Has a terrible vibe to it...
+			'''
+	}
+
+	Cartridge: {
+		DisplayName: Cartridge
+		Tooltip: ""
+	}
+
+	HolyBullet: {
+		DisplayName: Holy Bullet
+		Tooltip: "Summons falling stars on impact"
+	}
+
+	JestersBullet: {
+		DisplayName: Jesters Bullet
+		Tooltip: ""
+	}
+
+	PowerCell: {
+		DisplayName: Power Cell
+		Tooltip: ""
+	}
+
+	AncientRune: {
+		DisplayName: Ancient Rune
+		Tooltip: "Allows travel between worlds"
+	}
+
+	BetaTestVest: {
+		DisplayName: Beta Test Vest
+		Tooltip: ""
+	}
+
+	CorruptedBalloonMask: {
+		DisplayName: Corrupted Balloon Mask
+		Tooltip: ""
+	}
+
+	KlaxHorns: {
+		DisplayName: Klax Horns
+		Tooltip: ""
+	}
+
+	ParasiteJacket: {
+		DisplayName: Parasite Jacket
+		Tooltip: ""
+	}
+
+	ParasiteLeggings: {
+		DisplayName: Parasite Leggings
+		Tooltip: ""
+	}
+
+	ToyChainmail: {
+		DisplayName: Toy Chainmail
+		Tooltip: ""
+	}
+
+	ToyGreaves: {
+		DisplayName: Toy Greaves
+		Tooltip: ""
+	}
+
+	ToyHelmet: {
+		DisplayName: Toy Helmet
+		Tooltip: ""
+	}
+
+	TrueCrown: {
+		DisplayName: True Crown
+		Tooltip: ""
+	}
+
+	WoodriteBreastplate: {
+		DisplayName: Woodrite Breastplate
+		Tooltip: ""
+	}
+
+	WoodriteHelmet: {
+		DisplayName: Woodrite Helmet
+		Tooltip: ""
+	}
+
+	WoodriteLeggings: {
+		DisplayName: Woodrite Leggings
+		Tooltip: ""
+	}
+
+	BetaToken: {
+		DisplayName: Beta Token
+		Tooltip: ""
+	}
+
+	CosmosFragment: {
+		DisplayName: Cosmos Fragment
+		Tooltip: ""
+	}
+
+	FutilititeDust: {
+		DisplayName: Futilitite Dust
+		Tooltip: ""
+	}
+
+	ElectropeBar: {
+		DisplayName: Electrope Bar
+		Tooltip: Eminates otherwordly particles
+	}
+
+	ElectropeOre: {
+		DisplayName: Electrope Ore
+		Tooltip: Eminates otherwordly particles
+	}
+
+	DioxideBar: {
+		DisplayName: Dioxide Bar
+		Tooltip: ""
+	}
+
+	DioxideOre: {
+		DisplayName: Dioxide Ore
+		Tooltip: ""
+	}
+
+	FutilititeBar: {
+		DisplayName: Futilitite Bar
+		Tooltip: ""
+	}
+
+	FutilititeOre: {
+		DisplayName: Futilitite Ore
+		Tooltip: ""
+	}
+
+	NabotetskiumBar: {
+		DisplayName: Nabotetskium Bar
+		Tooltip: ""
+	}
+
+	NabotetskiumOre: {
+		DisplayName: Nabotetskium Ore
+		Tooltip: ""
+	}
+
+	ShinyIronBar: {
+		DisplayName: Shiny Iron Bar
+		Tooltip: ""
+	}
+
+	ShinyLeadBar: {
+		DisplayName: Shiny Lead Bar
+		Tooltip: ""
+	}
+
+	SteelBar: {
+		DisplayName: Steel Bar
+		Tooltip: ""
+	}
+
+	WoodriteBar: {
+		DisplayName: Woodrite Bar
+		Tooltip: ""
+	}
+
+	WoodriteOre: {
+		DisplayName: Woodrite Ore
+		Tooltip: ""
+	}
+
+	Ekubo: {
+		DisplayName: Ekubo
+		Tooltip: ""
+	}
+
+	Plastic: {
+		DisplayName: Plastic
+		Tooltip: ""
+	}
+
+	Polish: {
+		DisplayName: Polish
+		Tooltip: ""
+	}
+
+	EarthToken: {
+		DisplayName: Earth Token
+		Tooltip: ""
+	}
+
+	HealthSoda: {
+		DisplayName: Health Soda
+		Tooltip: ""
+	}
+
+	LclToken: {
+		DisplayName: Lcl Token
+		Tooltip: ""
+	}
+
+	ManaSoda: {
+		DisplayName: Mana Soda
+		Tooltip: ""
+	}
+
+	MindPotion: {
+		DisplayName: Mind Potion
+		Tooltip: ""
+	}
+
+	VigorPotion: {
+		DisplayName: Vigor Potion
+		Tooltip: ""
+	}
+
+	Rag: {
+		DisplayName: Rag
+		Tooltip: ""
+	}
+
+	Salt: {
+		DisplayName: Salt
+		Tooltip: ""
+	}
+
+	Sapling: {
+		DisplayName: Sapling
+		Tooltip: ""
+	}
+
+	SoulOfHop: {
+		DisplayName: Soul Of Hop
+		Tooltip: ""
+	}
+
+	AnomaliousMatter: {
+		DisplayName: Anomalious Matter
+		Tooltip: ""
+	}
+
+	BlackholeCrystal: {
+		DisplayName: Blackhole Crystal
+		Tooltip: ""
+	}
+
+	CometCrystal: {
+		DisplayName: Comet Crystal
+		Tooltip: ""
+	}
+
+	CorruptedAirPump: {
+		DisplayName: Corrupted Air Pump
+		Tooltip: ""
+	}
+
+	SuspiciousLookingSprout: {
+		DisplayName: Suspicious Looking Sprout
+		Tooltip: ""
+	}
+
+	WormholeCrystal: {
+		DisplayName: Wormhole Crystal
+		Tooltip: ""
+	}
+
+	CharredSoil: {
+		DisplayName: Charred Soil
+		Tooltip: ""
+	}
+
+	CharredStone: {
+		DisplayName: Charred Stone
+		Tooltip: ""
+	}
+
+	DivineSand: {
+		DisplayName: Divine Sand
+		Tooltip: ""
+	}
+
+	DiamondPickaxe: {
+		DisplayName: Diamond Pickaxe
+		Tooltip: ""
+	}
+
+	MandibleAxe: {
+		DisplayName: Mandible Axe
+		Tooltip: ""
+	}
+
+	RustyShovel: {
+		DisplayName: Rusty Shovel
+		Tooltip: ""
+	}
+
+	ToyPickaxe: {
+		DisplayName: Toy Pickaxe
+		Tooltip: ""
+	}
+
+	AssaultRifle: {
+		DisplayName: Assault Rifle
+		Tooltip: ""
+	}
+
+	AutomaticShotgun: {
+		DisplayName: Automatic Shotgun
+		Tooltip: ""
+	}
+
+	BladeOfCosmos: {
+		DisplayName: Blade Of Cosmos
+		Tooltip: ""
+	}
+
+	BlessedSaltShaker: {
+		DisplayName: Blessed Salt Shaker
+		Tooltip: ""
+	}
+
+	BrassSickle: {
+		DisplayName: Brass Sickle
+		Tooltip: ""
+	}
+
+	BunnyBlade: {
+		DisplayName: Bunny Blade
+		Tooltip: ""
+	}
+
+	CosmicPhotonBlade: {
+		DisplayName: Cosmic Photon Blade
+		Tooltip: ""
+	}
+
+	HeroSword: {
+		DisplayName: Hero Sword
+		Tooltip: ""
+	}
+
+	MalorianArms: {
+		DisplayName: Malorian Arms
+		Tooltip: ""
+	}
+
+	MandibleSword: {
+		DisplayName: Mandible Sword
+		Tooltip: ""
+	}
+
+	Raygun: {
+		DisplayName: Raygun
+		Tooltip: ""
+	}
+
+	SaltShaker: {
+		DisplayName: Salt Shaker
+		Tooltip: ""
+	}
+
+	SpongeBook: {
+		DisplayName: Sponge Book
+		Tooltip: ""
+	}
+
+	Stick: {
+		DisplayName: Stick
+		Tooltip: ""
+	}
+
+	Suomi: {
+		DisplayName: KP31
+		Tooltip: ""
+	}
+
+	TacticalAssaultRifle: {
+		DisplayName: Tactical Assault Rifle
+		Tooltip: ""
+	}
+
+	TheLostSword: {
+		DisplayName: The Lost Sword
+		Tooltip: ""
+	}
+
+	Thumder: {
+		DisplayName: Thumder
+		Tooltip: ""
+	}
+
+	ToyBullet: {
+		DisplayName: Toy Bullet
+		Tooltip: ""
+	}
+
+	ToyGun: {
+		DisplayName: Toy Gun
+		Tooltip: ""
+	}
+
+	ToySword: {
+		DisplayName: Toy Sword
+		Tooltip: ""
+	}
+
+	Triblade: {
+		DisplayName: Triblade
+		Tooltip: ""
+	}
+
+	TrueEnchantedSword: {
+		DisplayName: True Enchanted Sword
+		Tooltip: ""
+	}
+
+	TrueTerraBlade: {
+		DisplayName: True Terra Blade
+		Tooltip: ""
+	}
+
+	WoodenShortsword: {
+		DisplayName: Wooden Shortsword
+		Tooltip: ""
+	}
+
+	Wunderwaffe: {
+		DisplayName: Wunderwaffe
+		Tooltip: ""
+	}
+}
+
+Biomes: {
+	AncientSurfaceBiome: {
+		DisplayName: Ancient Surface Biome
+		TownNPCDialogueName: the Ancient Surface Biome
+	}
+
+	AncientUndergroundBiome: {
+		DisplayName: Ancient Underground Biome
+		TownNPCDialogueName: the Ancient Underground Biome
+	}
+}
+
+Buffs: {
+	Corrupted: {
+		DisplayName: Corrupted
+		Description: Mods.AstralAddon.Buffs.Corrupted.Description
+	}
+
+	Ekubo: {
+		DisplayName: Ekubo
+		Description: Mods.AstralAddon.Buffs.Ekubo.Description
+	}
+
+	WoodSplinters: {
+		DisplayName: Wood Splinters
+		Description: Mods.AstralAddon.Buffs.WoodSplinters.Description
+	}
+}
+
+Projectiles: {
+	AnomaliousLaser.DisplayName: Anomalious Laser
+	BunnyBladeProjectile.DisplayName: Bunny Blade Projectile
+	CosmicLaser.DisplayName: Cosmic Laser
+	CosmosBladeProjectile.DisplayName: Cosmos Blade Projectile
+	DivineSandProjectile.DisplayName: Divine Sand Projectile
+	ElectricBolt.DisplayName: Electric Bolt
+	ElementalSickle.DisplayName: Elemental Sickle
+	EnchProjectile.DisplayName: Ench Projectile
+	HeroSwordProjectile.DisplayName: Hero Sword Projectile
+	HolyBulletBullet.DisplayName: Holy Bullet Bullet
+	JestersBulletBullet.DisplayName: Jesters Bullet Bullet
+	LivingTreeProjectile.DisplayName: Living Tree Projectile
+	MagazineBullet.DisplayName: Magazine Bullet
+	Nail.DisplayName: Nail
+	Ekubo.DisplayName: Ekubo
+	Salty.DisplayName: Salty
+	TheLostSwordProjectile.DisplayName: The Lost Sword Projectile
+	ToyBullet.DisplayName: Toy Bullet
+	TrueTerraBladeSickle.DisplayName: True Terra Blade Sickle
 }

@@ -38,7 +38,7 @@ namespace AstralAddon.Gores
 					gore.frameCounter = 0;
 					gore.frame += 1;
 					if (gore.frame == 5) {
-						int droplet = Gore.NewGore(gore.position, gore.velocity, gore.type, 1f);
+						int droplet = 0;//Gore.NewGore(gore.position, gore.velocity, gore.type, 1f);
 						Main.gore[droplet].frame = 9;
 						Main.gore[droplet].velocity *= 0f;
 					}

@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace AstralAddon.Items.Ores
 {
-    public class CosmiteOre : ModItem
+    public class ElectropeOre : ModItem
     {
         public override void SetStaticDefaults()
         {

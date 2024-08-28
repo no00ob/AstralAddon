@@ -1,9 +1,9 @@
 using Terraria;
 using Terraria.ModLoader;
 
-namespace SpiritMod.Biomes
+namespace AstralAddon.Biomes
 {
-	public class SpiritUgBgStyle : ModUndergroundBackgroundStyle
+	public class AncientUgBgStyle : ModUndergroundBackgroundStyle
 	{
 		public override void FillTextureArray(int[] textureSlots)
 		{

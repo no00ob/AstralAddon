@@ -5,7 +5,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralAddon.Items
+namespace AstralAddon.Items.Potions
 {
     internal class LclToken : ModItem
     {

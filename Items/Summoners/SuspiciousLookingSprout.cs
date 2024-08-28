@@ -39,7 +39,7 @@ namespace AstralAddon.Items.Summoners
         {
             Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.Acorn, 1);
-            recipe.AddIngredient(null, "Sapling");
+            recipe.AddIngredient<Sapling>(1);
             recipe.Register();
         }
     }

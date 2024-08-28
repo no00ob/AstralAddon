@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Thumod.Projectiles
+namespace AstralAddon.Projectiles
 {
     public class EnchProjectile : ModProjectile
     {

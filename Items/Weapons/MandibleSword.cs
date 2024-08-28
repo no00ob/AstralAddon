@@ -33,9 +33,16 @@ namespace AstralAddon.Items.Weapons
 			Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.AntlionClaw, 1);
 			recipe.AddIngredient(ItemID.AntlionMandible, 10);
-			recipe.AddRecipeGroup("EvilBar", 8);
+			recipe.AddIngredient(ItemID.DemoniteBar, 8);
 			recipe.AddTile(TileID.Anvils);
 			recipe.Register();
-		}
+
+            Recipe recipe2 = CreateRecipe();
+            recipe2.AddIngredient(ItemID.AntlionClaw, 1);
+            recipe2.AddIngredient(ItemID.AntlionMandible, 10);
+            recipe2.AddIngredient(ItemID.CrimtaneBar, 8);
+            recipe2.AddTile(TileID.Anvils);
+            recipe2.Register();
+        }
 	}
 }

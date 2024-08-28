@@ -51,7 +51,7 @@ namespace AstralAddon.Projectiles
 			Main.dust[num668].noLight = true;
 			//Main.dust[num667].scale = 2.4f;
 
-			if (!Main.dust[num667].active && !Main.dust[num668].active)
+			//if (!Main.dust[num667].active && !Main.dust[num668].active)
 				//base.Kill(timeLeft);
         }
     }

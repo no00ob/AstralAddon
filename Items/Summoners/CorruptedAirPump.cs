@@ -2,7 +2,6 @@
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using AstralAddon.NPCs.Boss;
 
 namespace AstralAddon.Items.Summoners
 {

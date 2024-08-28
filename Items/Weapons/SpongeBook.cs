@@ -1,10 +1,11 @@
-﻿using Terraria;
+﻿using AstralAddon.Items;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Thumod.Items.Weapons
+namespace AstralAddon.Items.Weapons
 {
-    public class BookOfKäsna: ModItem
+    public class SpongeBook: ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -24,14 +25,15 @@ namespace Thumod.Items.Weapons
             Item.rare = 5;
             Item.UseSound = SoundID.Item8;
             Item.autoReuse = false;
-            Item.shoot = Mod.Find<ModProjectile>("BallOfKäsna").Type;
+            Item.shoot = ProjectileID.AmberBolt; //Mod.Find<ModProjectile>("SpongeBall").Type
             Item.shootSpeed = 5f;
         }
 
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(null, "KäsnatiteBar", 14);
+            //recipe.AddIngredient(null, "KäsnatiteBar", 14);
+            recipe.AddIngredient<Plastic>(5);
             recipe.AddIngredient(ItemID.SpellTome, 1);
             recipe.AddTile(TileID.Anvils);
             recipe.Register();

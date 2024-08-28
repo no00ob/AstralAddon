@@ -8,22 +8,18 @@ namespace AstralAddon
 	{
         internal static AstralAddonMod Instance;
 
-        internal Mod calamity = null;
         internal Mod bossChecklist = null;
 
         public override void Load()
         {
             Instance = this;
 
-            calamity = null;
             bossChecklist = null;
-            ModLoader.TryGetMod("CalamityMod", out calamity);
             ModLoader.TryGetMod("BossChecklist", out bossChecklist);
         }
 
         public override void Unload()
         {
-            calamity = null;
             bossChecklist = null;
         }
 

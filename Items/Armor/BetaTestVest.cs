@@ -25,7 +25,7 @@ namespace AstralAddon.Items.Armor
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(null, "BetaToken", 1);
+            recipe.AddIngredient<BetaToken>(1);
             recipe.AddTile(TileID.WorkBenches);
             recipe.Register();
             recipe = CreateRecipe();

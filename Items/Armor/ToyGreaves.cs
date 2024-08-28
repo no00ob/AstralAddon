@@ -20,6 +20,7 @@ namespace AstralAddon.Items.Armor
             Item.value = 9000;
             Item.rare = ItemRarityID.Green;
             Item.defense = 5;
+            Item.maxStack = 1;
         }
 
         public override void UpdateEquip(Player player)

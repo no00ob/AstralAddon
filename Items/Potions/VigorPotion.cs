@@ -22,7 +22,7 @@ namespace AstralAddon.Items.Potions
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe(2);
-            recipe.AddIngredient(ItemID.HealthPotion);
+            recipe.AddIngredient(ItemID.HealingPotion);
             recipe.AddTile(TileID.AlchemyTable);
             recipe.Register();
         }

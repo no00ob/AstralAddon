@@ -1,6 +1,7 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using AstralAddon.Items.Ores;
 
 namespace AstralAddon.Items.Armor
 {
@@ -19,8 +20,9 @@ namespace AstralAddon.Items.Armor
             Item.width = 18;
             Item.height = 18;
             Item.value = 200;
-            Item.rare = 1;
+            Item.rare = ItemRarityID.Blue;
             Item.defense = 2;
+            Item.maxStack = 1;
         }
 
         public override void UpdateEquip(Player player)
@@ -31,7 +33,7 @@ namespace AstralAddon.Items.Armor
 
         public override bool IsArmorSet(Item head, Item body, Item legs)
         {
-            return body.type == Mod.Find<ModItem>("WoodriteBreastplate").Type && legs.type == Mod.Find<ModItem>("WoodriteLeggings").Type;
+            return body.type == ModContent.ItemType<WoodriteBreastplate>() && legs.type == ModContent.ItemType<WoodriteLeggings>();
         }
 
         public override void UpdateArmorSet(Player player)
@@ -43,7 +45,7 @@ namespace AstralAddon.Items.Armor
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(null, "WoodriteBar", 20);
+            recipe.AddIngredient<WoodriteBar>(20);
             recipe.AddTile(TileID.WorkBenches);   //at work bench
             recipe.Register();
         }

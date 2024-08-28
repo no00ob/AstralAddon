@@ -31,7 +31,6 @@ namespace AstralAddon.Items.Weapons
         {
             Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.Sickle, 1);
-            recipe.AddIngredient(null, "BrassBar", 6);
             recipe.AddTile(TileID.WorkBenches);
             recipe.Register();
         }

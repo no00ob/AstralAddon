@@ -1,24 +1,23 @@
-﻿using AstralAddon.Utilities;
-using AstralAddon.World.AncientParadise;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
+using SubworldLibrary;
+using AstralAddon.Sounds;
+using AstralAddon.Utilities;
+using AstralAddon.World.AncientParadise;
+using CalamityMod.CalPlayer;
+using CalamityMod;
 
 namespace AstralAddon.Items
 {
-    internal class AncientRune : ModItem
+    public class AncientRune : ModItem
     {
-        public override void SetStaticDefaults()
-        {
-            //DisplayName.SetDefault("Ancient Rune"); //[c/27CE21:Juggernaut Soda]
-            //Tooltip.SetDefault("Allows travel between worlds");
-        }
-
         public override void SetDefaults()
         {
-            Item.CloneDefaults(ItemID.LifeFruit);
+            Item.useAnimation = 30;
+            Item.useTime = 30;
             Item.width = 38;
             Item.height = 38;
             Item.value = Item.sellPrice(0);
@@ -26,26 +25,31 @@ namespace AstralAddon.Items
             Item.maxStack = 1;
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.consumable = false;
+            Item.UseSound = AstralAddonSounds.AncientRune;
         }
 
         public override bool CanUseItem(Player player)
         {
-            return true;
+            return AstralUtils.IsAncientSubworldActive() || !SubworldSystem.AnyActive();
         }
 
         public override bool? UseItem(Player player)/* tModPorter Suggestion: Return null instead of false */
         {
-            //SoundEngine.PlaySound(SoundID.Item, -1, -1, Mod.GetSoundSlot(SoundType.Item, "Sounds/Item/soda"));
+            //SoundEngine.PlaySound(AstralAddonSounds.AncientRune, player.position);
 
-            if (!AstralUtils.IsAncientSubworldActive())
+            if (player.itemAnimation > 0 && (AstralUtils.IsAncientSubworldActive() || !SubworldSystem.AnyActive()) && player.itemTime == 0)
             {
-                SubworldLibrary.SubworldSystem.Enter<AncientParadiseSubworld>();
-            }
-            else
-            {
-                SubworldLibrary.SubworldSystem.Exit();
-            }
-            
+                player.itemTime = Item.useTime;
+
+                if (!AstralUtils.IsAncientSubworldActive())
+                {
+                    SubworldSystem.Enter<AncientParadiseSubworld>();
+                }
+                else
+                {
+                    SubworldSystem.Exit();
+                }
+            }  
             return true;
         }
     }

@@ -21,6 +21,7 @@ namespace AstralAddon.Items.Armor
             Item.value = 12000;
             Item.rare = ItemRarityID.Green;
             Item.defense = 6;
+            Item.maxStack = 1;
         }
         public override void AddRecipes()
         {

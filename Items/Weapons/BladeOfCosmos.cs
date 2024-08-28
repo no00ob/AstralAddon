@@ -25,14 +25,13 @@ namespace AstralAddon.Items.Weapons
             Item.rare = 10;
             Item.UseSound = SoundID.Item1;
             Item.autoReuse = true;
-            Item.shoot = Mod.Find<ModProjectile>("CosmosBladeProjectile").Type;
+            Item.shoot = ProjectileID.TerraBlade2;
             Item.shootSpeed = 7f;
         }
 
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(null, "ElementalBlade", 1);
             recipe.AddIngredient(ItemID.FragmentSolar, 10);
             recipe.AddIngredient(ItemID.SoulofFright, 3);
             recipe.AddTile(TileID.WorkBenches);

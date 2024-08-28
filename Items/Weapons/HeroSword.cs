@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using AstralAddon.Projectiles;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -25,7 +26,7 @@ namespace AstralAddon.Items.Weapons
             Item.rare = 7;
             Item.UseSound = SoundID.Item1;
             Item.autoReuse = true;
-            Item.shoot = Mod.Find<ModProjectile>("HeroSwordProjectile").Type;
+            Item.shoot = ModContent.ProjectileType<HeroSwordProjectile>();//Mod.Find<ModProjectile>("HeroSwordProjectile").Type;
             Item.shootSpeed = 10f;
         }
 

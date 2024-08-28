@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using AstralAddon.Items.Ores;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -19,8 +20,9 @@ namespace AstralAddon.Items.Armor
             Item.width = 18;
             Item.height = 18;
             Item.value = 250;
-            Item.rare = 1;
+            Item.rare = ItemRarityID.Blue;
             Item.defense = 2;
+            Item.maxStack = 1;
         }
 
         public override void UpdateEquip(Player player)
@@ -32,7 +34,7 @@ namespace AstralAddon.Items.Armor
         public override void AddRecipes()  //How to craft this item
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(null, "WoodriteBar", 25);
+            recipe.AddIngredient<WoodriteBar>(25);
             recipe.AddTile(TileID.WorkBenches);   //at work bench
             recipe.Register();
         }

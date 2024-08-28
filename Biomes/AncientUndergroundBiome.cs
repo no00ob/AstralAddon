@@ -6,9 +6,9 @@ using System;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace SpiritMod.Biomes
+namespace AstralAddon.Biomes
 {
-	internal class SpiritUndergroundBiome : ModBiome
+	internal class AncientUndergroundBiome : ModBiome
 	{
 		public override ModUndergroundBackgroundStyle UndergroundBackgroundStyle => ModContent.Find<ModUndergroundBackgroundStyle>("AstralAddon/AncientUgBgStyle");
 		//public override void SetStaticDefaults() => DisplayName.SetDefault("Underground Spirit");

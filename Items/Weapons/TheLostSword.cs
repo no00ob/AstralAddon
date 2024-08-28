@@ -25,14 +25,13 @@ namespace AstralAddon.Items.Weapons
             Item.rare = 7;
             Item.UseSound = SoundID.Item1;
             Item.autoReuse = false;
-            Item.shoot = Mod.Find<ModProjectile>("TheLostSwordProjectile").Type;
+            Item.shoot = ProjectileID.SeedlerNut;//Mod.Find<ModProjectile>("TheLostSwordProjectile").Type;
             Item.shootSpeed = 8f;
         }
 
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(null, "LeafBlade", 1);
             recipe.AddIngredient(ItemID.JungleRose, 2);
             recipe.AddIngredient(ItemID.Vine, 10);
             recipe.AddIngredient(ItemID.JungleGrassSeeds, 8);

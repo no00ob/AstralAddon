@@ -8,7 +8,6 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
-using static Terraria.ModLoader.ModContent;
 
 namespace AstralAddon.AstralPlayer
 {
@@ -23,7 +22,6 @@ namespace AstralAddon.AstralPlayer
 
         // Consumables
         public bool healthSoda = false;
-        public bool extraSlot = false;
 
         // Biomes
         public bool ZoneAncient;
@@ -38,20 +36,15 @@ namespace AstralAddon.AstralPlayer
         public bool modSummonDamage0 = false;
         public bool modSummonDamage1 = false;
 
-        public override void SaveData(TagCompound tag)
+        /*public override void SaveData(TagCompound tag)
         {
-            tag["urmomExtraSlot"] = extraSlot;
+            
         }
 
         public override void LoadData(TagCompound tag)
         {
-            extraSlot = tag.GetBool("urmomExtraSlot");
-
-            if (extraSlot)
-            {
-                Player.extraAccessorySlots += 1;
-            }
-        }
+            
+        }*/
 
         public override void ResetEffects()
         {

@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using AstralAddon.Items.Ores;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
@@ -51,26 +52,26 @@ namespace AstralAddon.Items.Weapons
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddRecipeGroup("Wood", 18);
-            recipe.AddIngredient(null, "ShinyIronBar", 4);
+            recipe.AddRecipeGroup(RecipeGroupID.Wood, 18);
+            recipe.AddIngredient<ShinyIronBar>(4);
             recipe.AddIngredient(ItemID.Musket, 1);
             recipe.AddTile(TileID.Anvils);
             recipe.Register();
             recipe = CreateRecipe();
-            recipe.AddRecipeGroup("Wood", 18);
-            recipe.AddIngredient(null, "ShinyIronBar", 4);
+            recipe.AddRecipeGroup(RecipeGroupID.Wood, 18);
+            recipe.AddIngredient<ShinyIronBar>(4);
             recipe.AddIngredient(ItemID.TheUndertaker, 1);
             recipe.AddTile(TileID.Anvils);
             recipe.Register();
             recipe = CreateRecipe();
-            recipe.AddRecipeGroup("Wood", 18);
-            recipe.AddIngredient(null, "ShinyLeadBar", 4);
+            recipe.AddRecipeGroup(RecipeGroupID.Wood, 18);
+            recipe.AddIngredient<ShinyLeadBar>(4);
             recipe.AddIngredient(ItemID.Musket, 1);
             recipe.AddTile(TileID.Anvils);
             recipe.Register();
             recipe = CreateRecipe();
-            recipe.AddRecipeGroup("Wood", 18);
-            recipe.AddIngredient(null, "ShinyLeadBar", 4);
+            recipe.AddRecipeGroup(RecipeGroupID.Wood, 18);
+            recipe.AddIngredient<ShinyLeadBar>(4);
             recipe.AddIngredient(ItemID.TheUndertaker, 1);
             recipe.AddTile(TileID.Anvils);
             recipe.Register();

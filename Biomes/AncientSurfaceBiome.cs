@@ -9,8 +9,8 @@ namespace AstralAddon.Biomes
 	internal class AncientSurfaceBiome : ModBiome
 	{
 		//public override void SetStaticDefaults() => DisplayName.SetDefault("Ancient Paradise");
-		public override ModWaterStyle WaterStyle => ModContent.Find<ModWaterStyle>("AstralVoyage/AncientParadiseWaterStyle");
-		public override ModSurfaceBackgroundStyle SurfaceBackgroundStyle => ModContent.Find<ModSurfaceBackgroundStyle>("AstralVoyage/AncientParadiseSurfaceBgStyle");
+		public override ModWaterStyle WaterStyle => ModContent.Find<ModWaterStyle>("AstralAddon/AncientParadiseWaterStyle");
+		public override ModSurfaceBackgroundStyle SurfaceBackgroundStyle => ModContent.Find<ModSurfaceBackgroundStyle>("AstralAddon/AncientParadiseSurfaceBgStyle");
 		public override CaptureBiome.TileColorStyle TileColorStyle => CaptureBiome.TileColorStyle.Crimson;
 
 		public override int Music => MusicLoader.GetMusicSlot(Mod, "Sounds/Music/ancient_biome");
@@ -18,7 +18,7 @@ namespace AstralAddon.Biomes
 		public override string BestiaryIcon => base.BestiaryIcon;
 		public override string BackgroundPath => MapBackground;
 		public override Color? BackgroundColor => base.BackgroundColor;
-		public override string MapBackground => "SpiritMod/Backgrounds/AncientBiomeMapBackground";
+		public override string MapBackground => "AstralAddon/Backgrounds/AncientBiomeMapBackground";
 
 		public override bool IsBiomeActive(Player player)
 		{

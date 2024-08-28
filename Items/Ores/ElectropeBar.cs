@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace AstralAddon.Items.Ores
 {
-    public class CosmiteBar : ModItem
+    public class ElectropeBar : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -28,7 +28,7 @@ namespace AstralAddon.Items.Ores
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(ModContent.ItemType<CosmiteOre>(), 4);
+            recipe.AddIngredient(ModContent.ItemType<ElectropeOre>(), 4);
             recipe.AddTile(TileID.LunarCraftingStation);
             recipe.Register();
         }

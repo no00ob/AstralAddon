@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using AstralAddon.Projectiles;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -6,10 +7,6 @@ namespace AstralAddon.Items.Ammo
 {
     class HolyBullet : ModItem
     {
-        public override void SetStaticDefaults()
-        {
-            //Tooltip.SetDefault("'Works same way as Holy arrows'");  
-        }
         public override void SetDefaults()
         {
             Item.damage = 13;
@@ -17,13 +14,13 @@ namespace AstralAddon.Items.Ammo
             Item.width = 12;
             Item.height = 12;
             Item.maxStack = 999;
-            Item.consumable = true;             //You need to set the item consumable so that the ammo would automatically consumed
+            Item.consumable = true;
             Item.knockBack = 2.0f;
             Item.value = 16;
             Item.rare = 3;
-            Item.shoot = Mod.Find<ModProjectile>("HolyBulletBullet").Type;   //The projectile shoot when your weapon using this ammo
-            Item.shootSpeed = 10f;                  //The speed of the projectile
-            Item.ammo = AmmoID.Bullet;              //The ammo class this ammo belongs to.
+            Item.shoot = ModContent.ProjectileType<HolyBulletBullet>();//Mod.Find<ModProjectile>("HolyBulletBullet").Type;   //The projectile shoot when your weapon using this ammo
+            Item.shootSpeed = 10f;
+            Item.ammo = AmmoID.Bullet;
         }
 
         public override void AddRecipes()

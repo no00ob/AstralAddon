@@ -112,12 +112,12 @@ namespace AstralAddon.Projectiles
                         {
                             WorldGen.SlopeTile(tileX, tileY + 1, 0);
 
-                            if (Main.netMode == NetmodeID.Server)
-                                NetMessage.SendData(MessageID.TileChange, -1, -1, null, 14, tileX, tileY + 1);
+                            //if (Main.netMode == NetmodeID.Server)
+                            //    NetMessage.SendData(MessageID.TileChange, -1, -1, null, 14, tileX, tileY + 1);
                         }
 
-                        if (Main.netMode != NetmodeID.SinglePlayer)
-                            NetMessage.SendData(MessageID.TileChange, -1, -1, null, 1, tileX, tileY, tileType);
+                        //if (Main.netMode != NetmodeID.SinglePlayer)
+                        //    NetMessage.SendData(MessageID.TileChange, -1, -1, null, 1, tileX, tileY, tileType);
                     }
                 }
             }

@@ -39,12 +39,12 @@ namespace AstralAddon.Items.Summoners
         {
             Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.GoldBar, 5);
-            recipe.AddIngredient(ModContent.ItemType<CosmiteBar>(), 3);
+            recipe.AddIngredient(ModContent.ItemType<ElectropeBar>(), 3);
             recipe.AddTile(TileID.LunarCraftingStation);
             recipe.Register();
             recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.PlatinumBar, 5);
-            recipe.AddIngredient(ModContent.ItemType<CosmiteBar>(), 3);
+            recipe.AddIngredient(ModContent.ItemType<ElectropeBar>(), 3);
             recipe.AddTile(TileID.LunarCraftingStation);
             recipe.Register();
         }

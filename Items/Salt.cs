@@ -21,7 +21,7 @@ namespace AstralAddon.Items
 		public override void AddRecipes()
 		{
 			Recipe recipe = CreateRecipe(ItemID.Bottle);
-			recipe.AddIngredient(ModContent.ItemType<SodiumBar>());
+			//recipe.AddIngredient(ModContent.ItemType<SodiumBar>());
 			recipe.AddIngredient(ItemID.BottledWater);
 			recipe.AddTile(TileID.Anvils);
 			recipe.Register();

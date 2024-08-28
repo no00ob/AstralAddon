@@ -20,6 +20,7 @@ namespace AstralAddon.Items.Armor
             Item.value = 6000;
             Item.rare = ItemRarityID.Green;
             Item.defense = 5;
+            Item.maxStack = 1;
         }
         public override bool IsArmorSet(Item head, Item body, Item legs)
         {
@@ -29,7 +30,7 @@ namespace AstralAddon.Items.Armor
         public override void UpdateArmorSet(Player player)
         {
             player.setBonus = "+4 defense";
-            player.statDefense = 20;
+            player.statDefense += 20;
         }
 
         public override void AddRecipes()

@@ -30,7 +30,7 @@ namespace AstralAddon.Items.Weapons
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddRecipeGroup("Wood", 7);
+            recipe.AddRecipeGroup(RecipeGroupID.Wood, 7);
             recipe.AddTile(TileID.WorkBenches);
             recipe.Register();
         }

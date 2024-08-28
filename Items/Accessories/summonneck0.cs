@@ -9,11 +9,9 @@ namespace AstralAddon.Items.Accessories
     [AutoloadEquip(EquipType.Neck)]
     public class summonneck0 : ModItem
 	{
-		// The Display Name and Tooltip of this item can be edited in the 'Localization/en-US_Mods.urmom.hjson' file.
 		public override void SetDefaults()
 		{
             Item.accessory = true;
-			//Item.neckSlot = 1;
             Item.defense = 30;
             Item.width = 26;
 			Item.height = 32;

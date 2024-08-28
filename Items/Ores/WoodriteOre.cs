@@ -31,7 +31,7 @@ namespace AstralAddon.Items.Ores
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddRecipeGroup("Wood", 1);
+            recipe.AddRecipeGroup(RecipeGroupID.Wood, 1);
             recipe.AddTile(TileID.Furnaces);
             recipe.Register();
         }

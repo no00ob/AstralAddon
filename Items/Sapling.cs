@@ -19,7 +19,6 @@ namespace AstralAddon.Items
 		{
 			Recipe recipe = CreateRecipe();
             recipe.AddIngredient(ItemID.Acorn, 1);
-            recipe.AddIngredient(null, "AcorniteBar");
             recipe.AddTile(TileID.Furnaces);
 			recipe.Register();
 		}

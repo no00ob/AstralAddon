@@ -1,7 +1,8 @@
 author = susy_baka, Thumpi
-version = 2.0.0
+version = 2.0.0.0
 displayName = Astral Addon
-modReferences = SubworldLibrary
+modReferences = SubworldLibrary, CalamityMod
+sortAfter = CalamityMod
 homepage = https://discord.gg/K5KqGMD
 hideCode = true
 hideResources = true

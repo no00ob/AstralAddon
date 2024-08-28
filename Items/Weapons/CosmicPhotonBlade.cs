@@ -1,4 +1,5 @@
 ﻿using AstralAddon.Items.Ores;
+using AstralAddon.Projectiles;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -27,7 +28,7 @@ namespace AstralAddon.Items.Weapons
             Item.rare = 10;
             Item.UseSound = SoundID.Item1;
             Item.autoReuse = true;
-            Item.shoot = Mod.Find<ModProjectile>("CosmosBladeProjectile").Type;
+            Item.shoot = ModContent.ProjectileType<CosmosBladeProjectile>();//Mod.Find<ModProjectile>("CosmosBladeProjectile").Type;
             Item.shootSpeed = 10f;
         }
 
