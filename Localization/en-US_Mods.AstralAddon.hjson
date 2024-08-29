@@ -221,8 +221,12 @@ Items: {
 	}
 
 	Ekubo: {
-		DisplayName: Ekubo
-		Tooltip: ""
+		DisplayName: Spirit Vial
+		Tooltip:
+		'''
+		Summons a Evil Spirit to follow you
+		'Wanna shake hands?'
+		'''
 	}
 
 	Plastic: {
@@ -367,12 +371,10 @@ Items: {
 
 	BlessedSaltShaker: {
 		DisplayName: Blessed Salt Shaker
-		Tooltip: ""
-	}
-
-	BrassSickle: {
-		DisplayName: Brass Sickle
-		Tooltip: ""
+		Tooltip: 
+			'''
+			'Purify the unpure!'
+			'''
 	}
 
 	BunnyBlade: {
@@ -402,7 +404,10 @@ Items: {
 
 	Raygun: {
 		DisplayName: Raygun
-		Tooltip: ""
+		Tooltip:
+			'''
+			'Where's this thing keep 160 rounds?'
+			'''
 	}
 
 	SaltShaker: {
@@ -411,7 +416,7 @@ Items: {
 	}
 
 	SpongeBook: {
-		DisplayName: Sponge Book
+		DisplayName: Book Of Kasna
 		Tooltip: ""
 	}
 
@@ -422,7 +427,11 @@ Items: {
 
 	Suomi: {
 		DisplayName: KP31
-		Tooltip: ""
+		Tooltip:
+			'''
+			70% Chance not to consume ammo
+			'Embodiment of Sisu'
+			'''
 	}
 
 	TacticalAssaultRifle: {
@@ -472,11 +481,14 @@ Items: {
 
 	WoodenShortsword: {
 		DisplayName: Wooden Shortsword
-		Tooltip: ""
+		Tooltip:
+		'''
+		'This was a terrible idea'
+		'''
 	}
 
 	Wunderwaffe: {
-		DisplayName: Wunderwaffe
+		DisplayName: DG-2
 		Tooltip: ""
 	}
 }
@@ -496,17 +508,17 @@ Biomes: {
 Buffs: {
 	Corrupted: {
 		DisplayName: Corrupted
-		Description: Mods.AstralAddon.Buffs.Corrupted.Description
+		Description: "Phasing out of existence and slowly losing life."
 	}
 
 	Ekubo: {
-		DisplayName: Ekubo
-		Description: Mods.AstralAddon.Buffs.Ekubo.Description
+		DisplayName: Evil Spirit
+		Description: "Self-proclaimed upper-class evil spirit"
 	}
 
 	WoodSplinters: {
-		DisplayName: Wood Splinters
-		Description: Mods.AstralAddon.Buffs.WoodSplinters.Description
+		DisplayName: Wooden Splinters
+		Description: "Skin is pierced by painful wooden splinters and rapidly loosing life."
 	}
 }
 

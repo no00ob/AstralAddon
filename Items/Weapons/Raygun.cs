@@ -6,11 +6,6 @@ namespace AstralAddon.Items.Weapons
 {
     public class Raygun : ModItem
     {
-        public override void SetStaticDefaults()
-        {
-            //Tooltip.SetDefault("'Where's this thing keep 160 rounds?'");
-        }
-
         public override void SetDefaults()
         {
             Item.damage = 350;

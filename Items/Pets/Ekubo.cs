@@ -7,12 +7,6 @@ namespace AstralAddon.Items.Pets
 {
 	public class Ekubo : ModItem
 	{
-		public override void SetStaticDefaults() {
-			// DisplayName and Tooltip are automatically set from the .lang files, but below is how it is done normally.
-			//DisplayName.SetDefault("Spirit Vial");
-			//Tooltip.SetDefault("Summons a Evil Spirit to follow you\n'Wanna shake hands?'");
-		}
-
 		public override void SetDefaults() {
 			Item.CloneDefaults(ItemID.ZephyrFish);
             Item.width = 18;

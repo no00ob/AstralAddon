@@ -8,12 +8,6 @@ namespace AstralAddon.Items.Weapons
 {
     public class Suomi : ModItem
     {
-        public override void SetStaticDefaults()
-        {
-            //DisplayName.SetDefault("KP31");
-            //Tooltip.SetDefault("70% Chance not to consume ammo\n'Embodiment of Sisu'");  
-        }
-
         public override void SetDefaults()
         {
             Item.damage = 495;

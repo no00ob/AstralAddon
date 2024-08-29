@@ -7,11 +7,6 @@ namespace AstralAddon.Items.Weapons
 {
     public class HeroSword : ModItem
     {
-        public override void SetStaticDefaults()
-        {
-            //Tooltip.SetDefault("'The Hero Sword'");  
-        }
-
         public override void SetDefaults()
         {
             Item.damage = 67;
