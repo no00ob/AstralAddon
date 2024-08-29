@@ -1,4 +1,4 @@
-﻿using AstralAddon.Items;
+﻿using AstralAddon.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;

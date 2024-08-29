@@ -2,14 +2,10 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace AstralAddon.Items
+namespace AstralAddon.Items.Materials
 {
     public class Plastic : ModItem
     {
-        public override void SetStaticDefaults()
-        {
-            //DisplayName.SetDefault("Plastic Sheet");
-        }
         public override void SetDefaults()
         {
             Item.width = 32;

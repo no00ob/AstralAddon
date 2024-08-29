@@ -1,7 +1,6 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using AstralAddon.Items.Ores;
 using AstralAddon.Tiles;
 
 namespace AstralAddon.Items.Ores

@@ -3,13 +3,13 @@ using AstralAddon.Projectiles;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using AstralAddon.Items;
 using Microsoft.Xna.Framework;
 using AstralAddon.Items.Ores;
+using AstralAddon.Items.Materials;
 
 namespace AstralAddon.Items.Weapons
 {
-	public class SaltShaker : ModItem
+    public class SaltShaker : ModItem
 	{
 		public override void SetStaticDefaults() {
 			//Tooltip.SetDefault("'Recommended for ghost hunting'");

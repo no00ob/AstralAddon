@@ -2,6 +2,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using AstralAddon.Items.Ores;
+using AstralAddon.Items.Materials;
 
 namespace AstralAddon.Items.Armor
 {

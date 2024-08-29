@@ -226,7 +226,7 @@ Items: {
 	}
 
 	Plastic: {
-		DisplayName: Plastic
+		DisplayName: Plastic Sheet
 		Tooltip: ""
 	}
 
@@ -281,8 +281,8 @@ Items: {
 	}
 
 	SoulOfHop: {
-		DisplayName: Soul Of Hop
-		Tooltip: ""
+		DisplayName: Soul Of Delight
+		Tooltip: "Essence of happy creatures"
 	}
 
 	AnomaliousMatter: {

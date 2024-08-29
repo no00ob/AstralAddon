@@ -1,10 +1,11 @@
+using AstralAddon.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace AstralAddon.Items.Ores
 {
-	public class ShinyIronBar : ModItem
+    public class ShinyIronBar : ModItem
 	{
         public override void SetStaticDefaults()
         {
